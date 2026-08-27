@@ -1,0 +1,118 @@
+{
+  "origin": {
+    "name": "Google Maps 用户给定中心（乌兰察布 / 集宁城区）",
+    "lat": 41.0181414,
+    "lon": 113.1155004,
+    "maps_url": "https://www.google.com/maps/@41.0181414,113.1155004,552m/data=!3m1!1e3",
+    "note": "552m 卫星原点是集宁城区泉山北街附近住宅/工地，不是数据中心。50km 搜索以此为圆心。"
+  },
+  "search_radius_km": 50,
+  "imagery": {
+    "source": "Google Maps satellite via Chrome 151 (Airbus / CNES / Maxar, copyright 2026)",
+    "caveat": "Google 卫星可能滞后于2026-08地面报道。空地不一定等于未开工；已建成机房可能仍在机电安装。"
+  },
+  "sites": [
+    {
+      "id": "B-YIWUTANG",
+      "name": "察哈尔高新区 益武堂片区",
+      "status": "under_construction_plus_operational",
+      "confidence": "high",
+      "lat": 40.985,
+      "lon": 113.238,
+      "distance_km": 10.9,
+      "within_50km": true,
+      "evidence": [
+        "Google Maps 地名 YIWUTANG / 益武堂",
+        "街道：苹果大道 Pingguo Blvd、阿里大道 Ali Blvd、兴业路 Xingye Rd",
+        "OSM：阿里巴巴乌兰察布数据中心 40.98281,113.24295；华为云数据中心 40.99417,113.23214",
+        "卫星：多栋超大矩形机房 + 屋顶冷机/光伏 + 东侧/南侧土建吊车"
+      ],
+      "construction_hotspots": [
+        {"lat": 40.9825, "lon": 113.247, "note": "阿里园区东扩，屋面未闭合、塔吊"},
+        {"lat": 40.979, "lon": 113.245, "note": "阿里大道南基坑/底板浇筑"}
+      ],
+      "reported_operators": ["华为一二期（多已投运）", "苹果", "阿里巴巴", "优刻得", "快手（一期）", "中银保信", "大唐", "云联", "中联亚信", "企商在线（2026.09备案，可能尚未出地面）"],
+      "screenshots": [
+        "screenshots/annotated/A01_context_20km_corridor.png",
+        "screenshots/annotated/A02_yiwutang_cluster.png",
+        "screenshots/annotated/A03_apple_ali_blvd.png",
+        "screenshots/annotated/A04_alibaba_east_under_construction.png",
+        "screenshots/annotated/A05_ali_south_foundations.png",
+        "screenshots/annotated/A10_alibaba_halls_operational.png"
+      ]
+    },
+    {
+      "id": "C-SIHAO-BAYIN",
+      "name": "G110 北 三号村/四号村 机房集群（巴音片区东段候选）",
+      "status": "under_construction",
+      "confidence": "medium_high",
+      "lat": 40.990,
+      "lon": 113.318,
+      "distance_km": 17.3,
+      "within_50km": true,
+      "evidence": [
+        "紧邻地图标注 巴音塔拉镇、三号村、四号村、G110、X554",
+        "西侧已建成规整大型矩形阵列，东侧模块化垫层 + 超大屋面 + 多台吊车",
+        "2026-08 经济观察报：巴音核心区 1.5×1.5km 几乎全是工地，中金/中联/华为三期/世纪互联/快手二期/悦科/博通"
+      ],
+      "construction_hotspots": [
+        {"lat": 40.988, "lon": 113.325, "note": "四号村东扩垫层与在建屋面"}
+      ],
+      "reported_operators": ["中金数据一二期", "中联四期", "华为三期", "世纪互联", "快手二期", "中奥诺金", "悦科", "博通", "万博"],
+      "verify_next": "与察哈尔高新区巴音片区规划图逐栋核对，排除普通仓储/工业。白家湾炼丰石化不要算作IDC。",
+      "screenshots": [
+        "screenshots/annotated/A06_sihao_bayin_campus.png",
+        "screenshots/annotated/A07_sihao_east_pads.png",
+        "screenshots/annotated/A08_shengjiaying_g110_profile.png"
+      ]
+    },
+    {
+      "id": "D-SHENGJIAYING-WANRUN",
+      "name": "圣家营北 / G335 南 大院（万润/快手星河报道选址，业主待核）",
+      "status": "partially_built_plus_graded_pad",
+      "confidence": "medium_high",
+      "lat": 41.041,
+      "lon": 113.310,
+      "distance_km": 16.5,
+      "within_50km": true,
+      "evidence": [
+        "Photon/OSM 圣家营 41.02301,113.31008",
+        "2026-08 本月高分影像（用户提供的高分截图 + Esri World Imagery z16/z17 同坐标交叉确认 41.041,113.310）：约 600×450 m 围墙院落，15+ 栋白顶超大矩形成排，南侧一排同规格长厅，中部整平待建地块",
+        "Google 卫星仍以农田为主，证实其图层滞后于其他高分源",
+        "经济观察报 2026-08-13 现场：圣家营村北2km 蓝铁皮围地（万润）；西侧1km 快手星河项目部、已打水泥桩未正式动工——与影像上已出楼存在出入，报道可能只指新围地块，或进度超前；大院业主待规划图/牌匾核对"
+      ],
+      "reported_operators": ["万润低碳智能算力基地（待核）", "快手星河（待核）", "规划图还标注中金/中诚力诺/游族/协创仁东/远景/中联/抖音/万国等拟选址，仍为农田"],
+      "screenshots": [
+        "screenshots/annotated/A08_shengjiaying_g110_profile.png",
+        "screenshots/29_shengjiaying_esri_z17.jpg",
+        "screenshots/30_shengjiaying_esri_z16_context.jpg",
+        "screenshots/13_bayin_expected_6km.png",
+        "screenshots/16_wanrun_expected_n_shengjiaying.png"
+      ]
+    },
+    {
+      "id": "E-QIANQI-TUGUIWU",
+      "name": "察右前旗 土贵乌 / 玫瑰营（规划有华为四期、阿里、中联多基地）",
+      "status": "not_confirmed_on_imagery",
+      "confidence": "low",
+      "lat": 40.786,
+      "lon": 113.221,
+      "distance_km": 27.3,
+      "within_50km": true,
+      "evidence": [
+        "规划：土贵山片区承载华为四期、阿里；中联在前旗有京蒙零碳智慧算力产业园，2026 年 6 个基地同时建设",
+        "华为云接入点名称含「乌兰察布-玫瑰营」",
+        "本次 土贵乌东工业园卫星更像传统工业（储罐/密集厂房），未找到典型 IDC 模块"
+      ],
+      "screenshots": ["screenshots/22_search_tuguiwu.png", "screenshots/27_tuguiwu_5km.png", "screenshots/21_search_meiguiying.png"]
+    }
+  ],
+  "out_of_radius": [
+    {
+      "name": "兴和县",
+      "approx": [40.87, 113.83],
+      "distance_km": 62,
+      "note": "有中联云启、辰卫、迅恒云谷等备案，但超过 50km，未纳入。"
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+[
+  {
+    "type": "node",
+    "id": 13428417393,
+    "lat": 40.9937553,
+    "lon": 113.1687897,
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "大数据中心",
+      "public_transport": "platform"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13428417394,
+    "lat": 40.9937561,
+    "lon": 113.1689942,
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "大数据中心",
+      "public_transport": "platform"
+    }
+  },
+  {
+    "type": "way",
+    "id": 444203208,
+    "center": {
+      "lat": 41.0265117,
+      "lon": 113.1534936
+    },
+    "tags": {
+      "landuse": "industrial"
+    }
+  },
+  {
+    "type": "way",
+    "id": 467960522,
+    "center": {
+      "lat": 41.0342252,
+      "lon": 113.063634
+    },
+    "tags": {
+      "barrier": "fence",
+      "landuse": "industrial"
+    }
+  },
+  {
+    "type": "way",
+    "id": 467960568,
+    "center": {
+      "lat": 41.079795,
+      "lon": 113.1690837
+    },
+    "tags": {
+      "barrier": "fence",
+      "landuse": "industrial"
+    }
+  },
+  {
+    "type": "way",
+    "id": 542664131,
+    "center": {
+      "lat": 41.0143203,
+      "lon": 113.1560468
+    },
+    "tags": {
+      "landuse": "industrial"
+    }
+  },
+  {
+    "type": "way",
+    "id": 542866760,
+    "center": {
+      "lat": 41.044908,
+      "lon": 113.1231536
+    },
+    "tags": {
+      "landuse": "industrial"
+    }
+  },
+  {
+    "type": "way",
+    "id": 543244595,
+    "center": {
+      "lat": 41.0087648,
+      "lon": 113.1443283
+    },
+    "tags": {
+      "landuse": "industrial"
+    }
+  },
+  {
+    "type": "way",
+    "id": 543244720,
+    "center": {
+      "lat": 41.0373763,
+      "lon": 113.0790091
+    },
+    "tags": {
+      "landuse": "industrial"
+    }
+  },
+  {
+    "type": "way",
+    "id": 543244726,
+    "center": {
+      "lat": 41.0338573,
+      "lon": 113.0794027
+    },
+    "tags": {
+      "landuse": "industrial"
+    }
+  },
+  {
+    "type": "way",
+    "id": 543244829,
+    "center": {
+      "lat": 41.0122501,
+      "lon": 113.1101006
+    },
+    "tags": {
+      "landuse": "industrial"
+    }
+  },
+  {
+    "type": "way",
+    "id": 543567116,
+    "center": {
+      "lat": 41.0428436,
+      "lon": 113.1718611
+    },
+    "tags": {
+      "landuse": "industrial"
+    }
+  },
+  {
+    "type": "way",
+    "id": 543567118,
+    "center": {
+      "lat": 41.0764063,
+      "lon": 113.1931382
+    },
+    "tags": {
+      "landuse": "industrial"
+    }
+  },
+  {
+    "type": "way",
+    "id": 783305726,
+    "center": {
+      "lat": 41.0431339,
+      "lon": 113.1690956
+    },
+    "tags": {
+      "landuse": "industrial"
+    }
+  },
+  {
+    "type": "way",
+    "id": 783305728,
+    "center": {
+      "lat": 41.0588189,
+      "lon": 113.1715128
+    },
+    "tags": {
+      "landuse": "industrial"
+    }
+  },
+  {
+    "type": "way",
+    "id": 860862318,
+    "center": {
+      "lat": 41.0567191,
+      "lon": 113.1578822
+    },
+    "tags": {
+      "landuse": "industrial",
+      "name": "内蒙古京宁热电有限责任公司",
+      "name:en": "Jingning Power Plant",
+      "operator": "北京能源-京能电力",
+      "plant:method": "combustion",
+      "plant:output:electricity": "2020 MW",
+      "plant:source": "coal",
+      "power": "plant",
+      "source": "https://www.gem.wiki/Jining_power_station"
+    }
+  },
+  {
+    "type": "way",
+    "id": 860862324,
+    "center": {
+      "lat": 41.0200518,
+      "lon": 113.1573015
+    },
+    "tags": {
+      "barrier": "fence",
+      "landuse": "industrial",
+      "name": "内蒙古华宁热电有限公司",
+      "name:en": "Huaning Cogen Thermal Power Plant",
+      "operator": "北京能源-京能电力",
+      "plant:method": "combustion",
+      "plant:output:electricity": "300 MW",
+      "plant:source": "coal",
+      "power": "plant",
+      "source": "https://www.gem.wiki/Huaning_Cogen_power_station"
+    }
+  },
+  {
+    "type": "way",
+    "id": 1121881067,
+    "center": {
+      "lat": 41.0472534,
+      "lon": 113.1592964
+    },
+    "tags": {
+      "landuse": "industrial"
+    }
+  },
+  {
+    "type": "way",
+    "id": 1489759025,
+    "center": {
+      "lat": 40.9828131,
+      "lon": 113.2429465
+    },
+    "tags": {
+      "landuse": "commercial",
+      "name": "阿里巴巴乌兰察布数据中心",
+      "telecom": "data_center"
+    }
+  },
+  {
+    "type": "way",
+    "id": 1489795658,
+    "center": {
+      "lat": 40.9941654,
+      "lon": 113.2321448
+    },
+    "tags": {
+      "landuse": "commercial",
+      "name": "乌兰察布华为云数据中心",
+      "telecom": "data_center"
+    }
+  }
+]
