@@ -1,0 +1,32 @@
+{
+  "city": "克拉玛依",
+  "origin": {
+    "name": "克拉玛依云计算产业园（城区西南，世纪大道以南）",
+    "lat": 45.545,
+    "lon": 84.870,
+    "note": "规划范围东起彩云路/幸福路、北到世纪大道、南至奎北铁路。OSM 没有逐栋机房名。"
+  },
+  "search_radius_km": 50,
+  "imagery": {
+    "source": "Esri World Imagery tiles, 2026-08-27",
+    "caveat": "园区是城市格子地块，机房体量明显小于贵安苹果或中卫六栋大厅。没有 OSM data_centre 标签，业主必须现场或规划图核对。"
+  },
+  "sites": [
+    {
+      "id": "K-PARK",
+      "name": "云计算产业园",
+      "status": "operational_campus_unlabeled",
+      "confidence": "medium",
+      "lat": 45.545,
+      "lon": 84.870,
+      "evidence": [
+        "位置与政府稿一致：城区西南、世纪大道南、铁路北",
+        "若干蓝顶/灰顶无内院矩形，可能对应华为、移动智算、中石油、灾备、碳和、丝路新云",
+        "西侧弧形楼更像办公/培训，不算机房",
+        "没有中卫那种超大白顶阵列"
+      ],
+      "reported_operators": ["华为云", "中国移动智算", "中国石油", "自治区灾备", "碳和液冷", "丝路新云"],
+      "screenshots": ["docs/plates/karamay/K01_park_overview.jpg", "docs/plates/karamay/K02_halls_candidate.jpg"]
+    }
+  ]
+}

@@ -2,7 +2,7 @@ name: GitHub Pages
 
 on:
   push:
-    branches: [main, master, research/ulanqab-50km-dc-satellite]
+    branches: [main, master, research/ulanqab-50km-dc-satellite, research/five-cities-dc-satellite]
   workflow_dispatch:
 
 permissions:

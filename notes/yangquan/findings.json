@@ -1,0 +1,61 @@
+{
+  "city": "阳泉",
+  "origin": {
+    "name": "阳泉经开区东区 大连街 / 百度云计算中心",
+    "lat": 37.86,
+    "lon": 113.623,
+    "note": "圆心取 OSM 百度云计算（阳泉）中心。50 km 圈内未见第二处同等规模机房走廊。"
+  },
+  "search_radius_km": 50,
+  "imagery": {
+    "source": "Esri World Imagery tiles, 2026-08-27",
+    "caveat": "OSM 百度多边形罩住环形广场（云谷创新园办公），但多边形南端三栋已是机房形态；约 8 栋灰顶模组在多边形东北外侧。"
+  },
+  "sites": [
+    {
+      "id": "Y-BAIDU",
+      "name": "百度云计算（阳泉）中心",
+      "status": "operational",
+      "confidence": "high",
+      "lat": 37.8597,
+      "lon": 113.6225,
+      "osm": "way 百度云计算（阳泉）中心 landuse=industrial telecom=data_center 37.8566–37.8628N 113.6202–113.6249E",
+      "evidence": [
+        "OSM 带 telecom=data_center",
+        "大连街两侧，与报道「经开区东区」一致",
+        "OSM 多边形南端三栋屋顶机电密布，已是机房形态（37.8576–37.8590N 113.6204–113.6244E）",
+        "多边形东北外侧约 8 栋灰顶大矩形并排，对应公开的 8 个模组楼（37.8658–37.8680N 113.6252–113.6310E）",
+        "模组南边两栋蓝顶厂房不计"
+      ],
+      "reported_operators": [
+        "百度"
+      ],
+      "screenshots": [
+        "docs/plates/yangquan/Y01_baidu.jpg",
+        "docs/plates/yangquan/Y03_dalian_overview.jpg"
+      ]
+    },
+    {
+      "id": "Y-YUNFENG",
+      "name": "山西云峰智能算力中心",
+      "status": "partially_built",
+      "confidence": "medium_high",
+      "lat": 37.8693,
+      "lon": 113.6273,
+      "osm": "way 山西云峰智能算力中心 landuse=industrial 多边形很小",
+      "evidence": [
+        "OSM 有名，地块约 140×290 m，一栋主楼",
+        "2024–2025 报道正在装柜/通电测试",
+        "模组东侧一栋深色新楼屋顶机电密布（37.8653–37.8660N 113.6285–113.6301E），是云峰或百度扩建候选，归属未分",
+        "右上采坑明确排除"
+      ],
+      "reported_operators": [
+        "云峰 / 云山数据",
+        "商汤、时维、中科瑞华（报道入驻）"
+      ],
+      "screenshots": [
+        "docs/plates/yangquan/Y02_yunfeng.jpg"
+      ]
+    }
+  ]
+}

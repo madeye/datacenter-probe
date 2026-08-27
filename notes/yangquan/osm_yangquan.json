@@ -1,0 +1,49 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-08-27T05:25:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 1413300446,
+  "center": {
+    "lat": 37.8692892,
+    "lon": 113.6272520
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "山西云峰智能算力中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1413300448,
+  "center": {
+    "lat": 37.8597317,
+    "lon": 113.6225054
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "百度云计算（阳泉）中心",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1453597062,
+  "center": {
+    "lat": 37.8811806,
+    "lon": 113.5993476
+  },
+  "tags": {
+    "building": "college",
+    "name": "大数据中心"
+  }
+}
+
+  ]
+}

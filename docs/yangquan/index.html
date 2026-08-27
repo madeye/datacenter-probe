@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>阳泉数据中心建设情况</title>
+  <meta name="description" content="以经开区东区大连街为圆心：百度云计算中心 8 栋模组可指认，云峰智算在北侧。">
+  <link rel="canonical" href="https://madeye.github.io/datacenter-probe/yangquan/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="阳泉数据中心建设情况">
+  <meta property="og:description" content="以经开区东区大连街为圆心：百度云计算中心 8 栋模组可指认，云峰智算在北侧。">
+  <meta property="og:url" content="https://madeye.github.io/datacenter-probe/yangquan/">
+  <meta property="og:image" content="https://madeye.github.io/datacenter-probe/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../probe.css">
+</head>
+<body>
+  <div class="neatline">
+    <span><a href="../">Datacenter Probe</a>  ·  阳泉</span>
+    <span id="tick">37.8600°N  113.6230°E  ·  r = 50 km</span>
+    <span class="hide-narrow">Esri World Imagery  ·  2026-08-27</span>
+  </div>
+  <header class="mast">
+    <p class="series">Satellite reconnaissance  ·  Shanxi</p>
+    <h1>阳泉周边数据中心建设情况</h1>
+    <p class="lede">五座城里阳泉的机房最少，也最集中。能指认的只有大连街这一块：OSM 百度多边形南端三栋屋顶机电密布的楼，东北侧约 8 栋灰顶模组，模组东边一栋屋顶机电密布的新楼。再往北是 OSM 标的云峰智算，地块很小。50 公里圈里没有第二条走廊。</p>
+    <figure class="hero">
+      <img src="../plates/yangquan/Y03_dalian_overview.jpg" alt="阳泉经开区东区大连街：百度和云峰" width="1200" height="1200">
+      <figcaption>HERO  ·  大连街  ·  百度在南、云峰在北</figcaption>
+    </figure>
+  </header>
+  <div id="map" role="region" aria-label="卫星地图"></div>
+  <p class="map-caption">
+    <span><i class="legend-chip" style="background:#c23b22"></i>在建 / 高置信机房</span>
+    <span><i class="legend-chip" style="background:#2ec4b6"></i>已投运 / OSM 具名</span>
+    <span><i class="legend-chip" style="background:#c45c26"></i>候选 / 业主待核</span>
+    <span><i class="legend-chip" style="background:#7a7164"></i>排除或不像机房</span>
+    <span>底图 Esri World Imagery（WGS84）</span>
+  </p>
+  <section class="findings" aria-label="候选">
+    <article class="finding">
+      <div class="id">Y-BAIDU  ·  8 栋模组</div>
+      <h2><a href="#baidu">百度云计算</a></h2>
+      <p>OSM 带 telecom=data_center。多边形南端三栋 + 东北侧约 8 栋灰顶矩形是形态上的机房。</p>
+      <span class="badge high">高置信 · 已投运</span>
+    </article>
+    <article class="finding">
+      <div class="id">Y-YUNFENG  ·  北侧小地块</div>
+      <h2><a href="#yunfeng">云峰智算</a></h2>
+      <p>OSM 有名，地块约 140×290 m。2024–2025 报道装柜测试；模组东侧那栋新楼是扩建候选。</p>
+      <span class="badge mid">中高 · 部分建成</span>
+    </article>
+    <article class="finding">
+      <div class="id">排除  ·  采坑</div>
+      <h2><a href="#baidu">采坑 / 蓝顶厂房</a></h2>
+      <p>右上采坑、模组南边两栋蓝顶厂房、铁路南普通厂房不算机房。</p>
+      <span class="badge low">排除</span>
+    </article>
+    <article class="finding">
+      <div class="id">50 km  ·  无第二走廊</div>
+      <h2><a href="#baidu">其余方向</a></h2>
+      <p>城区、荫营、白泉方向未见同等超大矩形阵列。</p>
+      <span class="badge low">未确认</span>
+    </article>
+  </section>
+  <section class="site" id="baidu">
+    <div class="site-rail">
+      <p class="coord">37.8597°N  113.6225°E</p>
+      <h2>百度云计算中心</h2>
+      <p class="meta">经开区东区，大连街两侧。OSM 多边形罩住环形广场（云谷创新园办公），但多边形南端三栋屋顶机电密布的楼已经是机房形态；约 8 栋灰顶模组在多边形东北外侧。</p>
+      <p class="badge high">高置信 · 已投运</p>
+      <ul>
+        <li>公开报道 8 个高标准模组楼，和东北侧约 8 栋灰顶大厅对应</li>
+        <li>南端三栋屋顶机电密布，不是普通厂房</li>
+        <li>模组南边两栋蓝顶厂房不计</li>
+      </ul>
+      <div class="ops"><span>百度</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@37.8597,113.6225,600m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/yangquan/Y01_baidu.jpg" alt="百度 OSM 多边形与东北 8 栋模组">
+        <figcaption>PLATE Y01  ·  百度  ·  37.8597°N 113.6225°E</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="site" id="yunfeng">
+    <div class="site-rail">
+      <p class="coord">37.8693°N  113.6273°E</p>
+      <h2>云峰智算</h2>
+      <p class="meta">百度模组北侧、隔一条路。OSM 地块约 140×290 m，一栋主楼。报道 2024 年起建设、2025 装柜测试。</p>
+      <p class="badge mid">中高置信 · 部分建成</p>
+      <ul>
+        <li>模组东侧一栋深色新楼屋顶机电密布，是云峰或百度扩建候选，本次无法分归属</li>
+        <li>右上采坑排除</li>
+      </ul>
+      <div class="ops"><span>云峰</span><span>云山数据</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@37.8693,113.6273,600m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/yangquan/Y02_yunfeng.jpg" alt="云峰小地块与 8 栋模组">
+        <figcaption>PLATE Y02  ·  云峰  ·  北侧土建</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="method">
+    <h2>怎么判，什么不算</h2>
+    <p>阳泉不像乌兰察布或贵安那样铺开。50 km 圈里能指认的机房就这一块。</p>
+    <h3>算作机房</h3>
+    <ul><li>并排灰顶大矩形</li><li>屋顶机电密布的方楼</li><li>OSM telecom=data_center</li></ul>
+    <h3>明确排除</h3>
+    <ul class="exclude"><li>采坑</li><li>蓝顶厂房、铁路南侧普通厂房</li><li>环形广场办公（云谷）不要单独当机房</li></ul>
+    <p><a href="https://www.google.com/maps/@37.86,113.623,5000m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开圆心 ↗</a></p>
+  </section>
+  <nav class="city-nav" aria-label="其他城市">
+    <span>五座城</span>
+    <a href="../guian/">贵安</a> · <a href="../ulanqab/">乌兰察布</a> · <a href="../yangquan/">阳泉</a> · <a href="../zhongwei/">中卫</a> · <a href="../karamay/">克拉玛依</a>
+  </nav>
+  <footer>
+    <div>
+      Datacenter Probe  ·  阳泉  ·  标注截图仅供复核，不是权属证明。
+      影像 © Esri, Maxar, Earthstar Geographics。对照：智东西 2022-03-11《数据中心造就的五座城》。
+    </div>
+  </footer>
+  <div class="lightbox" id="lb" hidden>
+    <button type="button" id="lb-close">关闭</button>
+    <img id="lb-img" alt="">
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>window.PROBE = {"origin":[37.860,113.623],"originName":"圆心 · 大连街百度","radiusKm":50,"zoom":14,"sites":[{"id":"baidu","name":"百度云计算","pos":[37.8597,113.6225],"color":"#2ec4b6","note":"南端三栋 + 东北约 8 栋模组"},{"id":"yunfeng","name":"云峰智算","pos":[37.8693,113.6273],"color":"#c45c26","note":"部分建成"}]};</script>
+  <script src="../probe.js"></script>
+</body>
+</html>

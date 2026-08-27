@@ -1,0 +1,111 @@
+{
+  "city": "贵安",
+  "origin": {
+    "name": "贵安数谷大道集群（华为云上屯 / 腾讯七星）",
+    "lat": 26.368,
+    "lon": 106.49,
+    "note": "圆心取 OSM 已钉的华为—腾讯组团，不是贵安管委会驻地。50 km 圈覆盖新区直管区。"
+  },
+  "search_radius_km": 50,
+  "imagery": {
+    "source": "Esri World Imagery tiles, 2026-08-27",
+    "caveat": "Esri 图层可能滞后于地面进度。腾讯主体在山体地下，卫星只能看见洞口山体和洞外大厅。"
+  },
+  "sites": [
+    {
+      "id": "G-HUAWEI",
+      "name": "华为云上屯 / 七星湖",
+      "status": "operational_campus",
+      "confidence": "high",
+      "lat": 26.3708,
+      "lon": 106.5082,
+      "osm": "way 云上屯华为 landuse=commercial 26.3665–26.3751N 106.5036–106.5128E",
+      "evidence": [
+        "OSM 名称 云上屯华为",
+        "环湖低层红顶组团 + 人工湖，与公开报道的园区形态一致；园区内没有超大白顶，机房楼不能单独指认",
+        "路西四栋白顶超大矩形归入腾讯洞外候选，业主待核"
+      ],
+      "reported_operators": [
+        "华为云（全球总部/七星湖）"
+      ],
+      "screenshots": [
+        "docs/plates/guian/G01_cluster_overview.jpg",
+        "docs/plates/guian/G02_huawei_tencent.jpg"
+      ]
+    },
+    {
+      "id": "G-TENCENT",
+      "name": "腾讯贵安七星洞库",
+      "status": "operational_underground",
+      "confidence": "high",
+      "lat": 26.3696,
+      "lon": 106.5007,
+      "osm": "way 腾讯贵安七星数据中心 building=yes layer=-1 natural=scrub telecom=data_center",
+      "evidence": [
+        "OSM 明确标成地下（layer=-1）+ telecom=data_center",
+        "卫星：环路围着的独立山体，山脚一排圆罐（冷却/储水），符合栖凤坡洞库",
+        "山体西侧四栋白顶大厅：洞外扩建候选，业主待核"
+      ],
+      "reported_operators": [
+        "腾讯"
+      ],
+      "screenshots": [
+        "docs/plates/guian/G02_huawei_tencent.jpg"
+      ]
+    },
+    {
+      "id": "G-APPLE",
+      "name": "苹果 iCloud 贵安",
+      "status": "operational",
+      "confidence": "high",
+      "lat": 26.3628,
+      "lon": 106.4672,
+      "osm": "way Apple iCloud Gui'An data center telecom=data_center",
+      "evidence": [
+        "OSM 名称与 Wikidata 品牌",
+        "两栋超大白顶矩形 + 冷机条带，典型超大型机房，已投运"
+      ],
+      "reported_operators": [
+        "苹果 / 云上贵州"
+      ],
+      "screenshots": [
+        "docs/plates/guian/G03_apple_icloud.jpg"
+      ]
+    },
+    {
+      "id": "G-SOUTH",
+      "name": "数谷大道南大院 / 富士康片区",
+      "status": "mixed_industrial_plus_construction",
+      "confidence": "medium",
+      "lat": 26.35,
+      "lon": 106.4774,
+      "osm": "way 贵州富士康 landuse=industrial",
+      "evidence": [
+        "南侧有大片规整厂房和在建区",
+        "富士康绿色隧道数据中心主体在山体，地面影像不能单独当机房",
+        "三大运营商信息园报道在同一走廊，未在 OSM 逐栋标出"
+      ],
+      "reported_operators": [
+        "富士康（隧道）",
+        "中国电信 / 移动 / 联通（待核）"
+      ],
+      "screenshots": [
+        "screenshots/guian/foxconn_z16.jpg"
+      ]
+    },
+    {
+      "id": "G-NORTH",
+      "name": "走廊北侧大白顶厂房（未核）",
+      "status": "unverified",
+      "confidence": "low",
+      "lat": 26.424,
+      "lon": 106.499,
+      "evidence": [
+        "G01 总图北缘一处大白顶矩形厂房，无 OSM 名称、无报道对应，本次不计入"
+      ],
+      "screenshots": [
+        "docs/plates/guian/G01_cluster_overview.jpg"
+      ]
+    }
+  ]
+}

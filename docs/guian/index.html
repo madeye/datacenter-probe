@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>贵安数据中心建设情况</title>
+  <meta name="description" content="以数谷大道华为—腾讯组团为圆心，卫星核对腾讯七星洞库、华为云上屯、苹果 iCloud。">
+  <link rel="canonical" href="https://madeye.github.io/datacenter-probe/guian/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="贵安数据中心建设情况">
+  <meta property="og:description" content="以数谷大道华为—腾讯组团为圆心，卫星核对腾讯七星洞库、华为云上屯、苹果 iCloud。">
+  <meta property="og:url" content="https://madeye.github.io/datacenter-probe/guian/">
+  <meta property="og:image" content="https://madeye.github.io/datacenter-probe/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../probe.css">
+</head>
+<body>
+  <div class="neatline">
+    <span><a href="../">Datacenter Probe</a>  ·  贵安</span>
+    <span id="tick">26.3680°N  106.4900°E  ·  r = 50 km</span>
+    <span class="hide-narrow">Esri World Imagery  ·  2026-08-27</span>
+  </div>
+  <header class="mast">
+    <p class="series">Satellite reconnaissance  ·  Guizhou</p>
+    <h1>贵安周边数据中心建设情况</h1>
+    <p class="lede">智东西写「南贵北乌」，南贵就是贵安。能具名的机房收在数谷大道一条东西向走廊里：东端华为云上屯和腾讯七星隔路相望，西端是苹果 iCloud 两栋超大白顶矩形。腾讯主体在山体地下，地面只看得见洞库山丘和路西四栋大厅。走廊之外还有几处大白顶厂房，本次没有名称对应，不计入。</p>
+    <figure class="hero">
+      <img src="../plates/guian/G01_cluster_overview.jpg" alt="贵安数谷大道集群：华为、腾讯、苹果相对位置" width="1200" height="1200">
+      <figcaption>HERO  ·  数谷大道  ·  1 华为云上屯 / 2 腾讯七星 / 3 苹果 iCloud</figcaption>
+    </figure>
+  </header>
+  <div id="map" role="region" aria-label="卫星地图"></div>
+  <p class="map-caption">
+    <span><i class="legend-chip" style="background:#c23b22"></i>在建 / 高置信机房</span>
+    <span><i class="legend-chip" style="background:#2ec4b6"></i>已投运 / OSM 具名</span>
+    <span><i class="legend-chip" style="background:#c45c26"></i>候选 / 业主待核</span>
+    <span><i class="legend-chip" style="background:#7a7164"></i>排除或不像机房</span>
+    <span>底图 Esri World Imagery（WGS84）</span>
+  </p>
+  <section class="findings" aria-label="候选">
+    <article class="finding">
+      <div class="id">G-HUAWEI  ·  已投运园区</div>
+      <h2><a href="#huawei">华为云上屯</a></h2>
+      <p>环湖红顶园区，OSM 名称云上屯华为。园区本身是办公形态，机房楼未逐栋分出。</p>
+      <span class="badge high">高置信 · 已投运</span>
+    </article>
+    <article class="finding">
+      <div class="id">G-TENCENT  ·  地下洞库</div>
+      <h2><a href="#tencent">腾讯七星</a></h2>
+      <p>OSM 标 layer=-1。卫星只见环路围着的山体和山脚一排圆罐；路西四栋白顶大厅是洞外候选。</p>
+      <span class="badge high">高 · 洞库</span>
+    </article>
+    <article class="finding">
+      <div class="id">G-APPLE  ·  两栋大厅</div>
+      <h2><a href="#apple">苹果 iCloud</a></h2>
+      <p>OSM 具名。两栋并排超大白顶矩形，屋顶冷机成排，已投运。</p>
+      <span class="badge high">高置信 · 已投运</span>
+    </article>
+    <article class="finding">
+      <div class="id">G-SOUTH  ·  南侧混杂</div>
+      <h2><a href="#south">富士康 / 运营商</a></h2>
+      <p>地面厂房和在建区混在一起，隧道机房从上面看不见。</p>
+      <span class="badge mid">中 · 混杂</span>
+    </article>
+  </section>
+  <section class="site" id="huawei">
+    <div class="site-rail">
+      <p class="coord">26.3708°N  106.5082°E</p>
+      <h2>华为云上屯</h2>
+      <p class="meta">金马 / 数谷大道东端。公开报道里的七星湖园区，人工湖加红顶楼，不像普通仓储。</p>
+      <p class="badge high">高置信 · 已投运园区</p>
+      <ul>
+        <li>OSM：云上屯华为，landuse=commercial</li>
+        <li>环湖低层红顶组团、人工湖，与报道的园区形态相符；没有超大白顶，机房楼不能从园区里单独指认</li>
+        <li>马场 AZ3（兴安大道×金普路，2026 招标）本次图层未见典型超大机房</li>
+      </ul>
+      <div class="ops"><span>华为云</span><span>七星湖</span><span>云上屯</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@26.3708,106.5082,800m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/guian/G02_huawei_tencent.jpg" alt="华为云上屯与腾讯七星隔路相望">
+        <figcaption>PLATE G02  ·  华为 × 腾讯  ·  Esri z17</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="site" id="tencent">
+    <div class="site-rail">
+      <p class="coord">26.3696°N  106.5007°E</p>
+      <h2>腾讯七星洞库</h2>
+      <p class="meta">栖凤坡。OSM 把这座山标成腾讯贵安七星数据中心，building=yes 且 layer=-1，是洞库而不是地面大厅。</p>
+      <p class="badge high">高置信 · 地下</p>
+      <ul>
+        <li>卫星：环路围着的独立山丘，山脚一排圆罐（冷却/储水）</li>
+        <li>路西四栋白顶大厅可能是洞外扩建，业主待核</li>
+      </ul>
+      <div class="ops"><span>腾讯</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@26.3696,106.5007,700m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/guian/G02_huawei_tencent.jpg" alt="腾讯洞库山体与路西白顶大厅">
+        <figcaption>PLATE G02  ·  洞库山体  ·  26.3696°N 106.5007°E</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="site" id="apple">
+    <div class="site-rail">
+      <p class="coord">26.3628°N  106.4672°E</p>
+      <h2>苹果 iCloud</h2>
+      <p class="meta">黔中 / 兴安大道一带。OSM 直接写 Apple iCloud Gui'An data center，和两栋超大白顶矩形对得上。</p>
+      <p class="badge high">高置信 · 已投运</p>
+      <ul>
+        <li>两栋并排、屋顶冷机成排，是走廊里最典型的超大型机房形态</li>
+        <li>2021 年报道建成投运，影像符合</li>
+      </ul>
+      <div class="ops"><span>苹果</span><span>云上贵州</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@26.3628,106.4672,500m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/guian/G03_apple_icloud.jpg" alt="苹果 iCloud 两栋超大机房">
+        <figcaption>PLATE G03  ·  苹果 iCloud  ·  已投运</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="site" id="south">
+    <div class="site-rail">
+      <p class="coord">26.3500°N  106.4774°E</p>
+      <h2>南侧大院</h2>
+      <p class="meta">富士康工业用地在此。绿色隧道数据中心在山里，地面影像不能当成机房。三大运营商信息园报道也在这条走廊，OSM 未逐栋标注。</p>
+      <p class="badge mid">中置信 · 混杂</p>
+      <ul>
+        <li>不要把普通厂房算作 IDC</li>
+        <li>走廊北侧约 26.42°N 106.50°E 另有一处大白顶厂房，无名称对应，未计入</li>
+        <li>华为 AZ3 马场续建需更新图层再查</li>
+      </ul>
+      <div class="ops"><span>富士康？</span><span>电信/移动/联通？</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@26.35,106.477,1500m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/guian/G01_cluster_overview.jpg" alt="数谷走廊南侧大院">
+        <figcaption>PLATE G01  ·  走廊总图  ·  南侧大院在苹果东南</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="method">
+    <h2>怎么判，什么不算</h2>
+    <p>Esri World Imagery 对照 OSM 具名要素。腾讯是洞库，判据改成山体 + 洞外方仓，不能要求看见常规大厅。</p>
+    <h3>算作机房</h3>
+    <ul><li>超大无内院矩形、屋顶冷机</li><li>OSM telecom=data_center 或品牌名</li><li>洞库：layer=-1 的山体 + 洞外大厅</li></ul>
+    <h3>明确排除</h3>
+    <ul class="exclude"><li>机场跑道</li><li>住宅和学校操场</li><li>富士康地面厂房本身</li></ul>
+    <p><a href="https://www.google.com/maps/@26.368,106.49,8000m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开圆心 ↗</a></p>
+  </section>
+  <nav class="city-nav" aria-label="其他城市">
+    <span>五座城</span>
+    <a href="../guian/">贵安</a> · <a href="../ulanqab/">乌兰察布</a> · <a href="../yangquan/">阳泉</a> · <a href="../zhongwei/">中卫</a> · <a href="../karamay/">克拉玛依</a>
+  </nav>
+  <footer>
+    <div>
+      Datacenter Probe  ·  贵安  ·  标注截图仅供复核，不是权属证明。
+      影像 © Esri, Maxar, Earthstar Geographics。对照：智东西 2022-03-11《数据中心造就的五座城》。
+    </div>
+  </footer>
+  <div class="lightbox" id="lb" hidden>
+    <button type="button" id="lb-close">关闭</button>
+    <img id="lb-img" alt="">
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>window.PROBE = {"origin":[26.368,106.490],"originName":"圆心 · 数谷组团","radiusKm":50,"zoom":13,"sites":[{"id":"huawei","name":"华为云上屯","pos":[26.3708,106.5082],"color":"#2ec4b6","note":"已投运园区"},{"id":"tencent","name":"腾讯七星","pos":[26.3696,106.5007],"color":"#c45c26","note":"洞库"},{"id":"apple","name":"苹果 iCloud","pos":[26.3628,106.4672],"color":"#2ec4b6","note":"两栋大厅已投运"},{"id":"south","name":"南侧大院","pos":[26.350,106.477],"color":"#7a7164","note":"混杂工业"}]};</script>
+  <script src="../probe.js"></script>
+</body>
+</html>

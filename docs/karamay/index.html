@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>克拉玛依数据中心建设情况</title>
+  <meta name="description" content="城区西南云计算产业园可确认，但 OSM 没有逐栋机房名，体量小于贵安和中卫。">
+  <link rel="canonical" href="https://madeye.github.io/datacenter-probe/karamay/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="克拉玛依数据中心建设情况">
+  <meta property="og:description" content="城区西南云计算产业园可确认，但 OSM 没有逐栋机房名，体量小于贵安和中卫。">
+  <meta property="og:url" content="https://madeye.github.io/datacenter-probe/karamay/">
+  <meta property="og:image" content="https://madeye.github.io/datacenter-probe/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../probe.css">
+</head>
+<body>
+  <div class="neatline">
+    <span><a href="../">Datacenter Probe</a>  ·  克拉玛依</span>
+    <span id="tick">45.5450°N  84.8700°E  ·  r = 50 km</span>
+    <span class="hide-narrow">Esri World Imagery  ·  2026-08-27</span>
+  </div>
+  <header class="mast">
+    <p class="series">Satellite reconnaissance  ·  Xinjiang</p>
+    <h1>克拉玛依周边数据中心建设情况</h1>
+    <p class="lede">克拉玛依把六座机房写在同一座 15 平方公里的园里。卫星能确认园在城区西南、世纪大道以南、铁路以北，格子路网里散着若干蓝顶、灰顶矩形。可是 OSM 没有 data_centre 名称，单栋体量也明显小于贵安苹果或中卫的六栋大厅。哪栋是谁的，要靠规划图或牌匾。</p>
+    <figure class="hero">
+      <img src="../plates/karamay/K01_park_overview.jpg" alt="克拉玛依云计算产业园总览" width="1200" height="1200">
+      <figcaption>HERO  ·  云计算产业园  ·  世纪大道以南、临湖、铁路以北</figcaption>
+    </figure>
+  </header>
+  <div id="map" role="region" aria-label="卫星地图"></div>
+  <p class="map-caption">
+    <span><i class="legend-chip" style="background:#c23b22"></i>在建 / 高置信机房</span>
+    <span><i class="legend-chip" style="background:#2ec4b6"></i>已投运 / OSM 具名</span>
+    <span><i class="legend-chip" style="background:#c45c26"></i>候选 / 业主待核</span>
+    <span><i class="legend-chip" style="background:#7a7164"></i>排除或不像机房</span>
+    <span>底图 Esri World Imagery（WGS84）</span>
+  </p>
+  <section class="findings" aria-label="候选">
+    <article class="finding">
+      <div class="id">K-PARK  ·  整园</div>
+      <h2><a href="#park">云计算产业园</a></h2>
+      <p>位置与政府稿一致。格子地块，没有超大白顶阵列。</p>
+      <span class="badge mid">中 · 园区确认</span>
+    </article>
+    <article class="finding">
+      <div class="id">K-HALLS  ·  矩形厂房</div>
+      <h2><a href="#park">矩形厂房组</a></h2>
+      <p>蓝顶/灰顶无内院矩形，可能是六座中的若干，业主未标。</p>
+      <span class="badge mid">中 · 候选</span>
+    </article>
+    <article class="finding">
+      <div class="id">排除  ·  弧形楼</div>
+      <h2><a href="#park">弧形办公</a></h2>
+      <p>西侧弧形楼更像办公或培训，不像机房。</p>
+      <span class="badge low">排除</span>
+    </article>
+    <article class="finding">
+      <div class="id">排除  ·  油田</div>
+      <h2><a href="#park">油田罐区</a></h2>
+      <p>罐区不在本园，不要算进来。</p>
+      <span class="badge low">排除</span>
+    </article>
+  </section>
+  <section class="site" id="park">
+    <div class="site-rail">
+      <p class="coord">45.5450°N  84.8700°E</p>
+      <h2>云计算产业园</h2>
+      <p class="meta">政府稿：东起彩云路（幸福路），北到世纪大道，南至奎北铁路。华为云、移动智算、中石油、灾备、碳和液冷、丝路新云都写在这个园里。</p>
+      <p class="badge mid">中置信 · 园区确认、楼未钉死</p>
+      <ul>
+        <li>移动智算报道有「玻璃立方」，本次图层未单独指认</li>
+        <li>碳和液冷二期报道在筹备，卫星上还不能当已开工</li>
+      </ul>
+      <div class="ops"><span>华为云？</span><span>移动智算？</span><span>中石油？</span><span>碳和？</span><span>丝路新云？</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@45.545,84.87,2000m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/karamay/K01_park_overview.jpg" alt="克拉玛依云计算产业园总图">
+        <figcaption>PLATE K01  ·  园区总图</figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="sat" src="../plates/karamay/K02_halls_candidate.jpg" alt="园区中部矩形厂房候选">
+        <figcaption>PLATE K02  ·  矩形厂房候选  ·  业主待核</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="method">
+    <h2>怎么判，什么不算</h2>
+    <p>克拉玛依和另外四座城不一样：机房藏在城市产业园格子里，不是戈壁上的超大白盒子。没有 OSM 名称就只标候选。</p>
+    <h3>算作候选</h3>
+    <ul><li>无内院矩形、蓝/灰顶、在世纪大道南规划范围内</li></ul>
+    <h3>明确排除</h3>
+    <ul class="exclude"><li>弧形办公楼</li><li>体育场</li><li>油田储罐</li></ul>
+    <p><a href="https://www.google.com/maps/@45.545,84.87,4000m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开圆心 ↗</a></p>
+  </section>
+  <nav class="city-nav" aria-label="其他城市">
+    <span>五座城</span>
+    <a href="../guian/">贵安</a> · <a href="../ulanqab/">乌兰察布</a> · <a href="../yangquan/">阳泉</a> · <a href="../zhongwei/">中卫</a> · <a href="../karamay/">克拉玛依</a>
+  </nav>
+  <footer>
+    <div>
+      Datacenter Probe  ·  克拉玛依  ·  标注截图仅供复核，不是权属证明。
+      影像 © Esri, Maxar, Earthstar Geographics。对照：智东西 2022-03-11《数据中心造就的五座城》。
+    </div>
+  </footer>
+  <div class="lightbox" id="lb" hidden>
+    <button type="button" id="lb-close">关闭</button>
+    <img id="lb-img" alt="">
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>window.PROBE = {"origin":[45.545,84.870],"originName":"圆心 · 云计算产业园","radiusKm":50,"zoom":14,"sites":[{"id":"park","name":"云计算产业园","pos":[45.545,84.870],"color":"#c45c26","note":"园区确认、楼未钉死"}]};</script>
+  <script src="../probe.js"></script>
+</body>
+</html>

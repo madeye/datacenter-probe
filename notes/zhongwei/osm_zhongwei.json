@@ -1,0 +1,40 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-08-27T05:25:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 12129332738,
+  "lat": 37.4990808,
+  "lon": 105.1957646,
+  "tags": {
+    "name": "云计算大数据发展局",
+    "office": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 817718395,
+  "center": {
+    "lat": 37.5125099,
+    "lon": 105.2793712
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "中冶美利云产业投资股份有限公司自备热电站",
+    "name:en": "Ningxia Meili power station",
+    "operator": "美利云",
+    "plant:method": "combustion",
+    "plant:output:electricity": "36 MW",
+    "plant:source": "coal",
+    "power": "plant"
+  }
+}
+
+  ]
+}
