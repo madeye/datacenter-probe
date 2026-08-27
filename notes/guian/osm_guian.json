@@ -1,0 +1,55 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-08-27T05:24:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 958847154,
+  "center": {
+    "lat": 26.3695793,
+    "lon": 106.5006832
+  },
+  "tags": {
+    "building": "yes",
+    "layer": "-1",
+    "name": "腾讯贵安七星数据中心",
+    "name:en": "Tencent Gui’an Seven Star Data Center",
+    "natural": "scrub",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 958847155,
+  "center": {
+    "lat": 26.3628380,
+    "lon": 106.4671747
+  },
+  "tags": {
+    "brand:wikidata": "Q421253",
+    "name": "Apple iCloud Gui'An data center",
+    "name:zh": "苹果贵安iCloud数据中心",
+    "short_name": "Apple",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1013247757,
+  "center": {
+    "lat": 26.3499733,
+    "lon": 106.4774406
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "贵州富士康"
+  }
+}
+
+  ]
+}

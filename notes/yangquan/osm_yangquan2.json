@@ -1,0 +1,180 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-08-27T05:26:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 154330377,
+  "center": {
+    "lat": 37.8657641,
+    "lon": 113.5886313
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "大连街",
+    "name:en": "Dalian Street",
+    "name:zh": "大连街",
+    "oneway": "yes",
+    "source": "bing"
+  }
+},
+{
+  "type": "way",
+  "id": 209052413,
+  "center": {
+    "lat": 37.8641313,
+    "lon": 113.6138552
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "大连街",
+    "note": "national trunk superceded by expressway",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 387013722,
+  "center": {
+    "lat": 37.8658868,
+    "lon": 113.5886234
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "大连街",
+    "name:en": "Dalian Street",
+    "name:zh": "大连街",
+    "oneway": "yes",
+    "source": "bing"
+  }
+},
+{
+  "type": "way",
+  "id": 704240730,
+  "center": {
+    "lat": 37.8642164,
+    "lon": 113.6138573
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "大连街",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 704240731,
+  "center": {
+    "lat": 37.8642649,
+    "lon": 113.6228086
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "大连街",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 704240732,
+  "center": {
+    "lat": 37.8641806,
+    "lon": 113.6228099
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "大连街",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1230817510,
+  "center": {
+    "lat": 37.8637672,
+    "lon": 113.6057332
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "大连街",
+    "note": "national trunk superceded by expressway",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1230817511,
+  "center": {
+    "lat": 37.8638008,
+    "lon": 113.6071334
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "name": "大连街",
+    "note": "national trunk superceded by expressway",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1230817512,
+  "center": {
+    "lat": 37.8638693,
+    "lon": 113.6057188
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "大连街",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1230817513,
+  "center": {
+    "lat": 37.8638870,
+    "lon": 113.6071382
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "name": "大连街",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1413300446,
+  "center": {
+    "lat": 37.8692892,
+    "lon": 113.6272520
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "山西云峰智能算力中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1413300448,
+  "center": {
+    "lat": 37.8597317,
+    "lon": 113.6225054
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "百度云计算（阳泉）中心",
+    "telecom": "data_center"
+  }
+}
+
+  ]
+}

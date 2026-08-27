@@ -1,0 +1,831 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-08-27T05:26:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 183821218,
+  "center": {
+    "lat": 45.5695073,
+    "lon": 84.8836941
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "世纪大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 183829448,
+  "center": {
+    "lat": 45.5841342,
+    "lon": 84.8727398
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "幸福路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 229290975,
+  "center": {
+    "lat": 45.5393652,
+    "lon": 84.9277719
+  },
+  "tags": {
+    "electrified": "contact_line",
+    "embankment": "yes",
+    "frequency": "50",
+    "gauge": "1435",
+    "loc_name": "奎北铁路奎屯至克拉玛依段",
+    "maxspeed": "160",
+    "name": "奎北线",
+    "name:en": "Kuytun–Beitun Railway",
+    "name:zh": "奎北线",
+    "operator": "中国铁路乌鲁木齐局集团有限公司",
+    "railway": "rail",
+    "ref": "0957",
+    "usage": "main",
+    "voltage": "25000",
+    "wikidata": "Q6449118",
+    "wikipedia": "en:Kuytun–Beitun Railway"
+  }
+},
+{
+  "type": "way",
+  "id": 229290981,
+  "center": {
+    "lat": 45.5380959,
+    "lon": 84.9197458
+  },
+  "tags": {
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "loc_name": "奎北铁路奎屯至克拉玛依段",
+    "maxspeed": "160",
+    "name": "奎北线",
+    "name:en": "Kuytun–Beitun Railway",
+    "name:zh": "奎北线",
+    "operator": "中国铁路乌鲁木齐局集团有限公司",
+    "railway": "rail",
+    "ref": "0957",
+    "usage": "main",
+    "voltage": "25000",
+    "wikidata": "Q6449118",
+    "wikipedia": "en:Kuytun–Beitun Railway"
+  }
+},
+{
+  "type": "way",
+  "id": 229290987,
+  "center": {
+    "lat": 45.5696223,
+    "lon": 84.8834999
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "世纪大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 316503940,
+  "center": {
+    "lat": 45.5402640,
+    "lon": 84.9412471
+  },
+  "tags": {
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "loc_name": "奎北铁路奎屯至克拉玛依段",
+    "maxspeed": "160",
+    "name": "奎北线",
+    "name:en": "Kuytun–Beitun Railway",
+    "name:zh": "奎北线",
+    "operator": "中国铁路乌鲁木齐局集团有限公司",
+    "railway": "rail",
+    "ref": "0957",
+    "usage": "main",
+    "voltage": "25000",
+    "wikidata": "Q6449118",
+    "wikipedia": "en:Kuytun–Beitun Railway"
+  }
+},
+{
+  "type": "way",
+  "id": 316503955,
+  "center": {
+    "lat": 45.5402980,
+    "lon": 84.9347012
+  },
+  "tags": {
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "loc_name": "奎北铁路奎屯至克拉玛依段",
+    "maxspeed": "160",
+    "name": "奎北线",
+    "name:en": "Kuytun–Beitun Railway",
+    "name:zh": "奎北线",
+    "operator": "中国铁路乌鲁木齐局集团有限公司",
+    "railway": "rail",
+    "ref": "0957",
+    "usage": "main",
+    "voltage": "25000",
+    "wikidata": "Q6449118",
+    "wikipedia": "en:Kuytun–Beitun Railway"
+  }
+},
+{
+  "type": "way",
+  "id": 316503957,
+  "center": {
+    "lat": 45.5398500,
+    "lon": 84.9464560
+  },
+  "tags": {
+    "electrified": "contact_line",
+    "embankment": "yes",
+    "frequency": "50",
+    "gauge": "1435",
+    "loc_name": "奎北铁路奎屯至克拉玛依段",
+    "maxspeed": "160",
+    "name": "奎北线",
+    "name:en": "Kuytun–Beitun Railway",
+    "name:zh": "奎北线",
+    "operator": "中国铁路乌鲁木齐局集团有限公司",
+    "railway": "rail",
+    "ref": "0957",
+    "usage": "main",
+    "voltage": "25000",
+    "wikidata": "Q6449118",
+    "wikipedia": "en:Kuytun–Beitun Railway"
+  }
+},
+{
+  "type": "way",
+  "id": 316503959,
+  "center": {
+    "lat": 45.5403303,
+    "lon": 84.9376683
+  },
+  "tags": {
+    "electrified": "contact_line",
+    "embankment": "yes",
+    "frequency": "50",
+    "gauge": "1435",
+    "loc_name": "奎北铁路奎屯至克拉玛依段",
+    "maxspeed": "160",
+    "name": "奎北线",
+    "name:en": "Kuytun–Beitun Railway",
+    "name:zh": "奎北线",
+    "operator": "中国铁路乌鲁木齐局集团有限公司",
+    "railway": "rail",
+    "ref": "0957",
+    "usage": "main",
+    "voltage": "25000",
+    "wikidata": "Q6449118",
+    "wikipedia": "en:Kuytun–Beitun Railway"
+  }
+},
+{
+  "type": "way",
+  "id": 316548809,
+  "center": {
+    "lat": 45.5393106,
+    "lon": 84.8976110
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 316548891,
+  "center": {
+    "lat": 45.5200724,
+    "lon": 84.8793797
+  },
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "loc_name": "奎北铁路奎屯至克拉玛依段",
+    "maxspeed": "160",
+    "name": "奎北线",
+    "name:en": "Kuytun–Beitun Railway",
+    "name:zh": "奎北线",
+    "operator": "中国铁路乌鲁木齐局集团有限公司",
+    "railway": "rail",
+    "ref": "0957",
+    "usage": "main",
+    "voltage": "25000",
+    "wikidata": "Q6449118",
+    "wikipedia": "en:Kuytun–Beitun Railway"
+  }
+},
+{
+  "type": "way",
+  "id": 316548892,
+  "center": {
+    "lat": 45.5342290,
+    "lon": 84.9089865
+  },
+  "tags": {
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "loc_name": "奎北铁路奎屯至克拉玛依段",
+    "maxspeed": "160",
+    "name": "奎北线",
+    "name:en": "Kuytun–Beitun Railway",
+    "name:zh": "奎北线",
+    "operator": "中国铁路乌鲁木齐局集团有限公司",
+    "railway": "rail",
+    "ref": "0957",
+    "usage": "main",
+    "voltage": "25000",
+    "wikidata": "Q6449118",
+    "wikipedia": "en:Kuytun–Beitun Railway"
+  }
+},
+{
+  "type": "way",
+  "id": 316548894,
+  "center": {
+    "lat": 45.5205066,
+    "lon": 84.8800277
+  },
+  "tags": {
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "loc_name": "奎北铁路奎屯至克拉玛依段",
+    "maxspeed": "160",
+    "name": "奎北线",
+    "name:en": "Kuytun–Beitun Railway",
+    "name:zh": "奎北线",
+    "operator": "中国铁路乌鲁木齐局集团有限公司",
+    "railway": "rail",
+    "ref": "0957",
+    "usage": "main",
+    "voltage": "25000",
+    "wikidata": "Q6449118",
+    "wikipedia": "en:Kuytun–Beitun Railway"
+  }
+},
+{
+  "type": "way",
+  "id": 316548896,
+  "center": {
+    "lat": 45.5360152,
+    "lon": 84.9137542
+  },
+  "tags": {
+    "electrified": "contact_line",
+    "embankment": "yes",
+    "frequency": "50",
+    "gauge": "1435",
+    "loc_name": "奎北铁路奎屯至克拉玛依段",
+    "maxspeed": "160",
+    "name": "奎北线",
+    "name:en": "Kuytun–Beitun Railway",
+    "name:zh": "奎北线",
+    "operator": "中国铁路乌鲁木齐局集团有限公司",
+    "railway": "rail",
+    "ref": "0957",
+    "usage": "main",
+    "voltage": "25000",
+    "wikidata": "Q6449118",
+    "wikipedia": "en:Kuytun–Beitun Railway"
+  }
+},
+{
+  "type": "way",
+  "id": 316548897,
+  "center": {
+    "lat": 45.5265646,
+    "lon": 84.8927105
+  },
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "loc_name": "奎北铁路奎屯至克拉玛依段",
+    "maxspeed": "160",
+    "name": "奎北线",
+    "name:en": "Kuytun–Beitun Railway",
+    "name:zh": "奎北线",
+    "operator": "中国铁路乌鲁木齐局集团有限公司",
+    "railway": "rail",
+    "ref": "0957",
+    "usage": "main",
+    "voltage": "25000",
+    "wikidata": "Q6449118",
+    "wikipedia": "en:Kuytun–Beitun Railway"
+  }
+},
+{
+  "type": "way",
+  "id": 328935061,
+  "center": {
+    "lat": 45.5326939,
+    "lon": 84.9056279
+  },
+  "tags": {
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "50",
+    "gauge": "1435",
+    "layer": "1",
+    "loc_name": "奎北铁路奎屯至克拉玛依段",
+    "maxspeed": "160",
+    "name": "奎北线",
+    "name:en": "Kuytun–Beitun Railway",
+    "name:zh": "奎北线",
+    "operator": "中国铁路乌鲁木齐局集团有限公司",
+    "railway": "rail",
+    "ref": "0957",
+    "usage": "main",
+    "voltage": "25000",
+    "wikidata": "Q6449118",
+    "wikipedia": "en:Kuytun–Beitun Railway"
+  }
+},
+{
+  "type": "way",
+  "id": 328935068,
+  "center": {
+    "lat": 45.5335304,
+    "lon": 84.9074570
+  },
+  "tags": {
+    "electrified": "contact_line",
+    "embankment": "yes",
+    "frequency": "50",
+    "gauge": "1435",
+    "loc_name": "奎北铁路奎屯至克拉玛依段",
+    "maxspeed": "160",
+    "name": "奎北线",
+    "name:en": "Kuytun–Beitun Railway",
+    "name:zh": "奎北线",
+    "operator": "中国铁路乌鲁木齐局集团有限公司",
+    "railway": "rail",
+    "ref": "0957",
+    "usage": "main",
+    "voltage": "25000",
+    "wikidata": "Q6449118",
+    "wikipedia": "en:Kuytun–Beitun Railway"
+  }
+},
+{
+  "type": "way",
+  "id": 443322602,
+  "center": {
+    "lat": 45.6052041,
+    "lon": 84.8793816
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "星云路"
+  }
+},
+{
+  "type": "way",
+  "id": 734418323,
+  "center": {
+    "lat": 45.5341849,
+    "lon": 84.7979557
+  },
+  "tags": {
+    "landuse": "industrial",
+    "prison_camp": "re-education"
+  }
+},
+{
+  "type": "way",
+  "id": 879307438,
+  "center": {
+    "lat": 45.5334953,
+    "lon": 84.8835308
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 879307439,
+  "center": {
+    "lat": 45.5360467,
+    "lon": 84.8812912
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 879307440,
+  "center": {
+    "lat": 45.5388032,
+    "lon": 84.8788184
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 880310932,
+  "center": {
+    "lat": 45.5205628,
+    "lon": 84.8685635
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1028079438,
+  "center": {
+    "lat": 45.5841802,
+    "lon": 84.8727234
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "幸福路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272665,
+  "center": {
+    "lat": 45.5373419,
+    "lon": 84.8143624
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272666,
+  "center": {
+    "lat": 45.5309180,
+    "lon": 84.8136870
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272667,
+  "center": {
+    "lat": 45.5320320,
+    "lon": 84.8170869
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272668,
+  "center": {
+    "lat": 45.5354378,
+    "lon": 84.8233563
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272669,
+  "center": {
+    "lat": 45.5260957,
+    "lon": 84.8274970
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272670,
+  "center": {
+    "lat": 45.5277881,
+    "lon": 84.8308562
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272671,
+  "center": {
+    "lat": 45.5296574,
+    "lon": 84.8339759
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272672,
+  "center": {
+    "lat": 45.5317532,
+    "lon": 84.8319646
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272673,
+  "center": {
+    "lat": 45.5334565,
+    "lon": 84.8303489
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272674,
+  "center": {
+    "lat": 45.5373407,
+    "lon": 84.8280331
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272675,
+  "center": {
+    "lat": 45.5418804,
+    "lon": 84.8219553
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272679,
+  "center": {
+    "lat": 45.5467227,
+    "lon": 84.8666383
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272680,
+  "center": {
+    "lat": 45.5454047,
+    "lon": 84.8677384
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272681,
+  "center": {
+    "lat": 45.5477353,
+    "lon": 84.8688479
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272682,
+  "center": {
+    "lat": 45.5459084,
+    "lon": 84.8702591
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272683,
+  "center": {
+    "lat": 45.5467701,
+    "lon": 84.8722556
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272684,
+  "center": {
+    "lat": 45.5475570,
+    "lon": 84.8736667
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272685,
+  "center": {
+    "lat": 45.5482034,
+    "lon": 84.8726089
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272686,
+  "center": {
+    "lat": 45.5489407,
+    "lon": 84.8719351
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272687,
+  "center": {
+    "lat": 45.5495526,
+    "lon": 84.8750643
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272689,
+  "center": {
+    "lat": 45.5515288,
+    "lon": 84.8696736
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272693,
+  "center": {
+    "lat": 45.5429349,
+    "lon": 84.8737023
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272694,
+  "center": {
+    "lat": 45.5429190,
+    "lon": 84.8675053
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272695,
+  "center": {
+    "lat": 45.5388887,
+    "lon": 84.8700149
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272696,
+  "center": {
+    "lat": 45.5417771,
+    "lon": 84.8859054
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272699,
+  "center": {
+    "lat": 45.5355759,
+    "lon": 84.8864744
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272700,
+  "center": {
+    "lat": 45.5398192,
+    "lon": 84.9062033
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272701,
+  "center": {
+    "lat": 45.5365142,
+    "lon": 84.8988930
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272702,
+  "center": {
+    "lat": 45.5419603,
+    "lon": 84.8939886
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1301272704,
+  "center": {
+    "lat": 45.5453031,
+    "lon": 84.8956095
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "relation",
+  "id": 2614328,
+  "center": {
+    "lat": 45.8629096,
+    "lon": 86.2645208
+  },
+  "tags": {
+    "alt_name:en": "Kuytun-Beitun Railway",
+    "name": "奎北线",
+    "name:en": "Kuibei Railway",
+    "operator": "奎北铁路有限责任公司",
+    "route": "railway",
+    "start_date": "2009",
+    "type": "route",
+    "wikipedia": "en:Kuytun–Beitun Railway"
+  }
+}
+
+  ]
+}

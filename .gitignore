@@ -2,3 +2,4 @@
 docs/preview/
 *.pyc
 .venv/
+screenshots/**/_tiles/

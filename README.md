@@ -1,41 +1,46 @@
-# Datacenter Probe · 乌兰察布
+# Datacenter Probe · 五座城
 
-以集宁城区 `41.0181°N, 113.1155°E` 为圆心，用 Chrome 打开 Google 卫星图，标注 **50 公里内在建数据中心** 候选地块。
+按智东西 [《数据中心造就的五座城》](https://zhidx.com/p/314607.html)（2022-03-11）做卫星核查：贵安、乌兰察布、阳泉、中卫、克拉玛依。每座城圆心取主园区，半径 50 km。
+
+乌兰察布是第一卷（集宁以东 G110 走廊）。另外四座城 2026-08 补做，底图改为 Esri World Imagery 瓦片。
 
 ## GitHub Pages
 
-静态站在 `docs/`。开启方式：
-
-1. 把仓库推到 GitHub
-2. **Settings → Pages → Build and deployment**
-3. Source 选 **GitHub Actions**（仓库已带 `.github/workflows/pages.yml`）  
-   或 Source 选 **Deploy from a branch**，Branch 选 `main` / `docs/`
-4. 站点地址：`https://<user>.github.io/datacenter-probe/`
-
-本地预览：
+静态站在 `docs/`。
 
 ```bash
 python3 -m http.server 8080 --directory docs
 # http://127.0.0.1:8080/
 ```
 
+| 路径 | 内容 |
+|---|---|
+| `/` | 五座城目录 |
+| `/ulanqab/` | 乌兰察布 50 km 走廊 |
+| `/guian/` | 贵安数谷大道 |
+| `/yangquan/` | 阳泉大连街 |
+| `/zhongwei/` | 中卫西部云基地 |
+| `/karamay/` | 克拉玛依云计算产业园 |
+
+## 结论摘要
+
+| 城市 | 圆心 | 卫星上能看见的 | 置信 |
+|---|---|---|---|
+| 贵安 | 26.368°N 106.490°E | 华为云上屯、腾讯七星洞库、苹果 iCloud 两栋大厅 | 高 |
+| 乌兰察布 | 41.018°N 113.116°E | G110 走廊：益武堂、四号村、圣家营 | 高 / 中高 |
+| 阳泉 | 37.860°N 113.623°E | 百度南端三栋 + 东北约 8 栋模组；云峰北侧小地块 | 高 / 中高 |
+| 中卫 | 37.637°N 105.347°E | 戈壁上六栋白顶大厅、东邻三栋、西侧在建、路南一组 | 高（形态）/ 中（业主） |
+| 克拉玛依 | 45.545°N 84.870°E | 园区确认，逐栋业主未标 | 中 |
+
 ## 目录
 
 | 路径 | 内容 |
 |---|---|
-| `docs/` | GitHub Pages 站点 |
-| `docs/plates/` | 裁切后的标注卫星图 |
-| `screenshots/` | Chrome 窗口原图（含界面） |
-| `screenshots/annotated/` | 标注图版 A01–A10 |
-| `notes/findings.json` | 结构化结论（坐标、距离、证据） |
-| `notes/overpass.json` | OSM Overpass 原始查询结果 |
-| `notes/VERIFICATION_CATALOG.md` | 核查目录 |
+| `docs/` | GitHub Pages |
+| `docs/plates/<city>/` | 标注卫星图 |
+| `screenshots/<city>/` | Esri 拼接原图（`_tiles/` 不入库） |
+| `notes/<city>/` | findings.json、Overpass、核查目录 |
+| `scripts/annotate_plates.py` | 把 WGS84 框投到 Esri 拼接图上，出 `docs/plates/` |
+| `scripts/render_city_pages.py` | 从脚本内数据渲染四座城的页面 |
 
-## 结论摘要
-
-在建机房不在给定的城区原点，而在集宁以东 G110 走廊：
-
-- **益武堂**（苹果大道 / 阿里大道，10.9 km）— 高置信在建
-- **四号村**（巴音东段候选，17.3 km）— 中高，东扩施工
-- **圣家营北**（万润 / 快手星河报道选址，16.5 km）— 本月影像已出楼：15+ 栋白顶矩形，业主待核
-- **前旗土贵乌**（27.3 km）— 规划有项目，本次未确认机房
+标注图不是权属证明。没有牌匾或规划图，不把候选地块写成某家的产权。

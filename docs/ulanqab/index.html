@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>乌兰察布周边数据中心建设情况</title>
+  <meta name="description" content="以集宁城区 41.0181°N 113.1155°E 为圆心核查 50 公里：在建数据中心全部落在集宁以东的 G110 走廊带，城区原点周边没有机房。">
+  <link rel="canonical" href="https://madeye.github.io/datacenter-probe/ulanqab/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="Datacenter Probe">
+  <meta property="og:title" content="乌兰察布周边数据中心建设情况">
+  <meta property="og:description" content="以集宁城区为圆心，50 公里卫星核查。在建数据中心集中在城区以东的 G110 走廊。">
+  <meta property="og:url" content="https://madeye.github.io/datacenter-probe/">
+  <meta property="og:image" content="https://madeye.github.io/datacenter-probe/social-card.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="乌兰察布周边数据中心建设情况">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="乌兰察布周边数据中心建设情况">
+  <meta name="twitter:description" content="以集宁城区为圆心，50 公里卫星核查。在建数据中心集中在城区以东的 G110 走廊。">
+  <meta name="twitter:image" content="https://madeye.github.io/datacenter-probe/social-card.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    :root {
+      --darkroom: #12100c;
+      --panel: #1b1813;
+      --bone: #e8e1d4;
+      --dust: #c9b896;
+      --rust: #c45c26;
+      --verdigris: #4a9b8c;
+      --alert: #c23b22;
+      --mute: #7a7164;
+      --rule: rgba(201, 184, 150, 0.22);
+      --serif: "Noto Serif SC", "Songti SC", serif;
+      --sans: "Noto Sans SC", "PingFang SC", sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, monospace;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+    body {
+      margin: 0;
+      background: var(--darkroom);
+      color: var(--bone);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      font-feature-settings: "palt";
+    }
+    a { color: var(--rust); text-underline-offset: 3px; }
+    a:hover { color: var(--dust); }
+    a:focus-visible { outline: 2px solid var(--verdigris); outline-offset: 3px; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    .neatline {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.55rem 1.25rem;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dust);
+      border-bottom: 1px solid var(--rule);
+      background: #0d0b09;
+    }
+    .neatline span { white-space: nowrap; }
+    .neatline .hide-narrow { }
+
+    .mast {
+      padding: 2.2rem 1.25rem 1.4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .mast .series {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rust);
+      margin: 0 0 0.8rem;
+    }
+    .mast h1 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(1.8rem, 4.5vw, 3.1rem);
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      margin: 0 0 0.75rem;
+    }
+    .mast .lede {
+      max-width: 40rem;
+      color: var(--dust);
+      margin: 0;
+      font-size: 1.02rem;
+    }
+    figure.hero {
+      margin: 1.6rem 0 0;
+      max-width: 720px;
+      background: var(--bone);
+      padding: 10px 10px 0;
+      color: var(--darkroom);
+    }
+    figure.hero img {
+      width: 100%;
+      background: #1a1712;
+      cursor: zoom-in;
+    }
+    figure.hero figcaption {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      padding: 0.55rem 2px 0.7rem;
+    }
+
+    #map {
+      height: min(72vh, 720px);
+      width: 100%;
+      background: #1a1712;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+    .leaflet-container { background: #1a1712; font-family: var(--sans); }
+    .leaflet-popup-content-wrapper {
+      background: var(--panel);
+      color: var(--bone);
+      border-radius: 0;
+      box-shadow: none;
+      border: 1px solid var(--rule);
+    }
+    .leaflet-popup-tip { background: var(--panel); }
+    .leaflet-popup-content { margin: 0.7rem 0.85rem; font-size: 13px; }
+    .leaflet-popup-content strong { font-family: var(--serif); display: block; margin-bottom: 0.2rem; }
+    .leaflet-popup-content a { color: var(--dust); }
+    .legend-chip {
+      display: inline-block;
+      width: 8px; height: 8px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    .map-caption {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.7rem 1.25rem 0;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--mute);
+      letter-spacing: 0.04em;
+    }
+
+    .findings {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.8rem 1.25rem 0.5rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+    }
+    .finding {
+      background: var(--darkroom);
+      padding: 1rem 1.1rem 1.15rem;
+    }
+    .finding .id {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      color: var(--rust);
+    }
+    .finding h2 {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      margin: 0.35rem 0 0.4rem;
+      font-weight: 700;
+    }
+    .finding p { margin: 0; color: var(--dust); font-size: 0.9rem; }
+    .badge {
+      display: inline-block;
+      margin-top: 0.65rem;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.45rem;
+      border: 1px solid currentColor;
+    }
+    .badge.high { color: var(--alert); }
+    .badge.mid { color: var(--rust); }
+    .badge.site { color: var(--dust); }
+    .badge.low { color: var(--mute); }
+
+    .site {
+      display: grid;
+      grid-template-columns: minmax(240px, 320px) 1fr;
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2.6rem 1.25rem;
+      border-bottom: 1px solid var(--rule);
+      scroll-margin-top: 0.75rem;
+    }
+    .site-rail {
+      position: sticky;
+      top: 1rem;
+      align-self: start;
+    }
+    .site-rail h2 {
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      margin: 0.3rem 0 0.5rem;
+    }
+    .coord {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--verdigris);
+      letter-spacing: 0.04em;
+      margin: 0;
+    }
+    .site-rail .meta { color: var(--dust); margin: 0 0 1rem; }
+    .site-rail ul {
+      padding-left: 1.1rem;
+      color: var(--dust);
+      font-size: 0.92rem;
+    }
+    .ops {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin: 1rem 0;
+    }
+    .ops span {
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 0.2rem 0.45rem;
+      background: var(--panel);
+      color: var(--bone);
+      border: 1px solid var(--rule);
+    }
+    .maps-link {
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+
+    .plates {
+      display: grid;
+      gap: 1.25rem;
+    }
+    figure.plate {
+      margin: 0;
+      background: var(--bone);
+      padding: 10px 10px 0;
+      color: var(--darkroom);
+    }
+    figure.plate img {
+      width: 100%;
+      aspect-ratio: 1266 / 2010;
+      object-fit: cover;
+      object-position: top;
+      background: #1a1712;
+      cursor: zoom-in;
+    }
+    figure.plate figcaption {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      padding: 0.55rem 2px 0.7rem;
+    }
+
+    .method {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2.8rem 1.25rem 3.5rem;
+    }
+    .method h2 {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      margin: 0 0 1rem;
+    }
+    .method h3 {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      margin: 1.6rem 0 0.4rem;
+    }
+    .method li { margin: 0.3rem 0; color: var(--dust); }
+    .exclude { color: var(--mute); }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 1.2rem 1.25rem 2rem;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--mute);
+      letter-spacing: 0.04em;
+    }
+    footer div { max-width: 1200px; margin: 0 auto; }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 7, 5, 0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      z-index: 4000;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-height: 92vh; max-width: 96vw; box-shadow: 0 0 0 8px var(--bone); }
+    .lightbox button {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: transparent;
+      color: var(--bone);
+      border: 1px solid var(--dust);
+      font-family: var(--mono);
+      padding: 0.4rem 0.7rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 860px) {
+      .findings { grid-template-columns: 1fr 1fr; }
+      .site { grid-template-columns: 1fr; padding: 1.8rem 1rem; }
+      .site-rail { position: static; }
+      .neatline { font-size: 10px; padding: 0.5rem 0.8rem; gap: 0.6rem; }
+      .neatline .hide-narrow { display: none; }
+      .mast { padding: 1.5rem 1rem 1.1rem; }
+    }
+    @media (max-width: 560px) {
+      .findings { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="neatline">
+    <span><a href="../" style="color:inherit;text-decoration:none">Datacenter Probe</a>  ·  乌兰察布</span>
+    <span id="tick">41.0181°N  113.1155°E  ·  r = 50 km</span>
+    <span class="hide-narrow">Chrome satellite  ·  2026-08-24</span>
+  </div>
+
+  <header class="mast">
+    <p class="series">Satellite reconnaissance  ·  Inner Mongolia</p>
+    <h1>乌兰察布周边数据中心建设情况</h1>
+    <p class="lede">用户给定的 Google 地图点（41.0181°N, 113.1155°E）是集宁城区，552 米视野内只有住宅工地。以它为圆心扫 50 公里，能看见施工的数据中心呈现一条清晰的分布线：全部落在城区以东 11–17 公里、G110 与 G335 之间的走廊带内——西端益武堂、东端四号村，圣家营在北翼已整片出楼；唯一脱离这条走廊的是东南 27 公里的前旗组团。</p>
+    <figure class="hero">
+      <img src="../plates/ulanqab/hero_corridor.jpg" alt="集宁以东 G110 走廊总览：原点、益武堂、三四号村、圣家营四处地块相对位置" width="1386" height="1815">
+      <figcaption>HERO  ·  集宁—G110 走廊  ·  A 原点 / B 益武堂 / C 三四号村 / D 圣家营</figcaption>
+    </figure>
+  </header>
+
+  <div id="map" role="region" aria-label="50公里范围卫星地图"></div>
+  <p class="map-caption">
+    <span><i class="legend-chip" style="background:#c23b22"></i>在建 / 高置信</span>
+    <span><i class="legend-chip" style="background:#c45c26"></i>在建候选 / 已出楼</span>
+    <span><i class="legend-chip" style="background:#7a7164"></i>规划有、影像未确认</span>
+    <span>底图 Esri World Imagery（WGS84，与 Google 坐标可能偏差数百米）</span>
+  </p>
+
+  <section class="findings" aria-label="四处候选">
+    <article class="finding">
+      <div class="id">B  ·  10.9 km  ·  走廊西端</div>
+      <h2><a href="#yiwutang">益武堂</a></h2>
+      <p>距城最近、最成熟的一极。苹果大道 / 阿里大道交叉口，已投运机房与东扩、南扩工地并排。</p>
+      <span class="badge high">高置信 · 在建</span>
+    </article>
+    <article class="finding">
+      <div class="id">C  ·  17.3 km  ·  走廊东端</div>
+      <h2><a href="#sihao">四号村</a></h2>
+      <p>G110 北、巴音塔拉镇旁，走廊带的东扩前沿。西侧阵列已成型，东侧垫层和屋面仍在施工。</p>
+      <span class="badge mid">中高 · 在建候选</span>
+    </article>
+    <article class="finding">
+      <div class="id">D  ·  16.5 km  ·  走廊北翼</div>
+      <h2><a href="#shengjiaying">圣家营</a></h2>
+      <p>G110 与 G335 之间、东段以北。本月高分影像：围墙内 15+ 栋白顶大矩形成排，Google 图层滞后。</p>
+      <span class="badge mid">中高 · 已出楼</span>
+    </article>
+    <article class="finding">
+      <div class="id">E  ·  27.3 km  ·  东南离群</div>
+      <h2><a href="#qianqi">前旗</a></h2>
+      <p>土贵乌 / 玫瑰营，脱离 G110 走廊的南向组团。规划有华为四期和中联基地，本次工业园影像不像机房。</p>
+      <span class="badge low">低 · 未确认</span>
+    </article>
+  </section>
+
+  <section class="site" id="yiwutang">
+    <div class="site-rail">
+      <p class="coord">40.9850°N  113.2380°E</p>
+      <h2>益武堂</h2>
+      <p class="meta">走廊西端，距集宁城区最近的一极（10.9 km），察哈尔高新区。地图自带地名「益武堂」，路名苹果大道、阿里大道、兴业路对得上华为—苹果—阿里三角。</p>
+      <p class="badge high">高置信 · 在建 + 已投运</p>
+      <ul>
+        <li>OSM：阿里巴巴数据中心 40.98281, 113.24295；华为云 40.99417, 113.23214</li>
+        <li>东扩：屋面未闭合、塔吊、裸露楼板</li>
+        <li>阿里大道南：基坑与底板浇筑，南侧已投运楼顶有光伏</li>
+      </ul>
+      <div class="ops">
+        <span>华为 1/2 期</span><span>苹果</span><span>阿里</span><span>优刻得</span><span>快手一期</span><span>大唐</span><span>中银保信</span>
+      </div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@40.9825,113.247,500m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img src="../plates/ulanqab/A02_yiwutang_cluster.jpg" alt="益武堂组团全景：华为、苹果、阿里机房沿苹果大道与阿里大道排布" width="1266" height="2010">
+        <figcaption>PLATE A02  ·  益武堂组团  ·  10.9 km</figcaption>
+      </figure>
+      <figure class="plate">
+        <img src="../plates/ulanqab/A03_apple_ali_blvd.jpg" alt="苹果大道超大机房与阿里大道南侧在建工地" width="1266" height="2010">
+        <figcaption>PLATE A03  ·  苹果大道 × 阿里大道  ·  11.2 km</figcaption>
+      </figure>
+      <figure class="plate">
+        <img src="../plates/ulanqab/A04_alibaba_east_under_construction.jpg" alt="阿里园区东扩：未闭合屋面、冷却阵列与南侧基坑" width="1266" height="2010">
+        <figcaption>PLATE A04  ·  阿里东扩特写  ·  40.9825°N 113.2470°E</figcaption>
+      </figure>
+      <figure class="plate">
+        <img src="../plates/ulanqab/A05_ali_south_foundations.jpg" alt="阿里大道南基坑施工与已投运光伏屋顶" width="1266" height="2010">
+        <figcaption>PLATE A05  ·  阿里大道南基坑  ·  12.0 km</figcaption>
+      </figure>
+      <figure class="plate">
+        <img src="../plates/ulanqab/A10_alibaba_halls_operational.jpg" alt="阿里已投运机房模块，作为在建形态的对照" width="1266" height="2010">
+        <figcaption>PLATE A10  ·  阿里已投运模块（对照）  ·  40.9828°N 113.2430°E</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="site" id="sihao">
+    <div class="site-rail">
+      <p class="coord">40.9900°N  113.3180°E</p>
+      <h2>四号村 / 巴音东段</h2>
+      <p class="meta">走廊东端，益武堂正东约 7 公里。G110 北、X554 两侧，邻近巴音塔拉镇、三号村、四号村。形态像超大型机房集群，业主需规划图或工地牌匾钉死。</p>
+      <p class="badge mid">中高置信 · 在建候选</p>
+      <ul>
+        <li>西侧：规整大型矩形阵列，已封顶</li>
+        <li>东侧：模块化垫层、超大屋面、多台吊车</li>
+        <li>报道中巴音核心区（中金、华为三期、快手二期、中联、世纪互联等）大部分在建，此地块最像，但未在图上标业主</li>
+        <li>白家湾炼丰石化不要算作数据中心</li>
+      </ul>
+      <div class="ops">
+        <span>中金？</span><span>华为三期？</span><span>快手二期？</span><span>中联？</span><span>世纪互联？</span>
+      </div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@40.988,113.325,700m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img src="../plates/ulanqab/A06_sihao_bayin_campus.jpg" alt="四号村西侧已建成机房阵列与东侧施工区" width="1266" height="2010">
+        <figcaption>PLATE A06  ·  四号村集群  ·  17.3 km</figcaption>
+      </figure>
+      <figure class="plate">
+        <img src="../plates/ulanqab/A07_sihao_east_pads.jpg" alt="四号村东扩：矩形垫层与在建屋面" width="1266" height="2010">
+        <figcaption>PLATE A07  ·  东扩垫层特写  ·  40.988°N 113.325°E</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="site" id="shengjiaying">
+    <div class="site-rail">
+      <p class="coord">41.0410°N  113.3100°E</p>
+      <h2>圣家营北</h2>
+      <p class="meta">走廊北翼：G110 以北、G335 以南，与四号村同处东段，把条带向北顶出约 6 公里。2026-08 本月高分影像（用户提供的高分截图 + Esri 同坐标交叉确认）：约 600×450 m 围墙院落内 15 栋以上白顶超大矩形已成排，南侧一排同规格长厅，中部尚有整平待建地块。Google 图层仍是农田，明显滞后。</p>
+      <p class="badge mid">中高置信 · 已出楼（业主待核）</p>
+      <ul>
+        <li>Photon/OSM 圣家营 41.02301, 113.31008</li>
+        <li>与 08-13 报道「万润围地、快手星河打桩未动工」存在出入：报道可能只指新围地块，或进度已超前；大院业主需规划图 / 工地牌匾钉死</li>
+        <li>G335 南还标有远景、抖音、万国等拟选址，仍是农田，不能当成已开工</li>
+      </ul>
+      <div class="ops">
+        <span>万润？</span><span>快手星河？</span>
+      </div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@41.023,113.310,2500m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img src="../plates/ulanqab/A08_shengjiaying_g110_profile.jpg" alt="圣家营到 G110 剖面，北侧农田、南侧工业与机房候选" width="1266" height="2010">
+        <figcaption>PLATE A08  ·  圣家营—G110 剖面  ·  16 km</figcaption>
+      </figure>
+      <figure class="plate">
+        <img src="../plates/ulanqab/A01_context_20km_corridor.jpg" alt="集宁以东 20 公里走廊，益武堂与圣家营相对位置" width="1266" height="2010">
+        <figcaption>PLATE A01  ·  20 km 走廊  ·  益武堂地名在底图上</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="site" id="qianqi">
+    <div class="site-rail">
+      <p class="coord">40.7860°N  113.2210°E</p>
+      <h2>前旗土贵乌</h2>
+      <p class="meta">东南约 27 公里，50 公里圈内唯一脱离 G110 走廊的组团。规划土贵山片区有华为四期、阿里；中联在前旗有多个在建基地。土贵乌东工业园更像传统厂房和储罐，不能当数据中心。</p>
+      <p class="badge low">低置信 · 影像未确认</p>
+      <ul>
+        <li>华为云接入点名称含「乌兰察布-玫瑰营」</li>
+        <li>兴和县城约 62 公里，超出 50 公里，未纳入</li>
+      </ul>
+      <p><a class="maps-link" href="https://www.google.com/maps/@40.79,113.23,5000m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img src="../plates/ulanqab/A09_50km_search_radius.jpg" alt="以集宁为圆心的 50 公里搜索范围" width="1266" height="2010">
+        <figcaption>PLATE A09  ·  50 km 搜索圈  ·  圆心为城区不是园区</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="method">
+    <h2>怎么判，什么不算</h2>
+    <p>Chrome 打开 Google Maps 卫星（Airbus / CNES / Maxar，版权 2026），对照 OSM 地名和 2026-08 公开报道。卫星可能滞后于地面进度——圣家营已是实例：Google 图层仍是农田，其他高分源（Esri 等）同坐标已出楼。</p>
+    <h3>分布规律</h3>
+    <ul>
+      <li>三处确认 / 候选点落在同一东西向条带：北纬 40.98°–41.04°、东经 113.24°–113.33°，G6 以北、G335 以南，紧贴 G110 两侧，距城区 11–17 公里</li>
+      <li>条带西端益武堂最成熟，向东到四号村是施工最密集的一段，圣家营把集聚区向北顶出一翼</li>
+      <li>城区及以西、黄旗海方向 50 公里圈内未见机房形态；前旗是唯一的南向离群点</li>
+    </ul>
+    <h3>算作在建机房</h3>
+    <ul>
+      <li>超大无内院矩形、模块化并排</li>
+      <li>屋顶冷机、裸露楼板、塔吊、矩形垫层</li>
+      <li>与苹果大道 / 阿里大道 / 益武堂或 OSM 机房名交叉</li>
+    </ul>
+    <h3>明确排除</h3>
+    <ul class="exclude">
+      <li>白家湾炼丰石化（储罐、排烟）</li>
+      <li>土贵乌东传统工业园</li>
+      <li>圣家营附近农业大棚</li>
+      <li>城区 552 m 原点的住宅工地</li>
+    </ul>
+    <h3>还需要现场做的</h3>
+    <ul>
+      <li>用高新区规划图把 PLATE A03–A07 和业主对上</li>
+      <li>钉死圣家营北大院业主：规划图或工地牌匾（万润？快手星河？其他运营商？）</li>
+      <li>前旗京蒙零碳园需要单独坐标，不要用土贵乌工业园顶替</li>
+    </ul>
+    <p><a href="https://www.google.com/maps/@41.0181414,113.1155004,100000m/data=!3m1!1e3" target="_blank" rel="noopener">打开圆心 50 km 卫星总图 ↗</a></p>
+  </section>
+
+  <footer>
+    <div>
+      Datacenter Probe  ·  乌兰察布  ·  标注截图仅供复核，不是权属证明。
+      影像 © 2026 Airbus, CNES / Airbus, Maxar, Esri。
+      报道对照：经济观察报 2026-08-16《算力热土乌兰察布》。
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lb" hidden>
+    <button type="button" id="lb-close">关闭</button>
+    <img id="lb-img" alt="">
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const ORIGIN = [41.0181414, 113.1155004];
+    const sites = [
+      { id: "yiwutang", name: "益武堂", pos: [40.985, 113.238], km: 10.9, color: "#c23b22", note: "苹果大道 / 阿里大道 · 在建+投运" },
+      { id: "sihao", name: "四号村", pos: [40.990, 113.318], km: 17.3, color: "#c45c26", note: "巴音东段候选 · 东扩施工" },
+      { id: "shengjiaying", name: "圣家营北", pos: [41.041, 113.310], km: 16.5, color: "#c45c26", note: "本月影像已出楼：15+ 栋白顶矩形 · 业主待核" },
+      { id: "qianqi", name: "前旗土贵乌", pos: [40.786, 113.221], km: 27.3, color: "#7a7164", note: "规划有项目 · 本次未确认机房" }
+    ];
+
+    const map = L.map("map", { scrollWheelZoom: false, zoomControl: true }).setView(ORIGIN, 10);
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
+      attribution: "Tiles © Esri",
+      maxZoom: 18
+    }).addTo(map);
+    L.circle(ORIGIN, { radius: 50000, color: "#4a9b8c", weight: 1.2, fillOpacity: 0.04 }).addTo(map);
+    L.circleMarker(ORIGIN, { radius: 5, color: "#e8e1d4", fillColor: "#4a9b8c", fillOpacity: 1, weight: 1 }).addTo(map)
+      .bindPopup("<strong>圆心 · 集宁城区</strong>41.0181°N 113.1155°E<br>不是数据中心");
+    sites.forEach((s) => {
+      L.circleMarker(s.pos, { radius: 8, color: s.color, fillColor: s.color, fillOpacity: 0.9, weight: 1 }).addTo(map)
+        .bindPopup(`<strong>${s.name}</strong>${s.km} km<br>${s.note}<br><a href="#${s.id}">看标注图</a>`);
+    });
+
+    function goHash() {
+      const id = location.hash.replace("#", "");
+      if (!id) return;
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ block: "start" });
+    }
+    map.whenReady(() => setTimeout(goHash, 80));
+    window.addEventListener("hashchange", goHash);
+
+    const lb = document.getElementById("lb");
+    const lbImg = document.getElementById("lb-img");
+    document.querySelectorAll("figure.plate img, figure.hero img").forEach((img) => {
+      img.addEventListener("click", () => {
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lb.hidden = false;
+        lb.classList.add("open");
+      });
+    });
+    function closeLb() {
+      lb.classList.remove("open");
+      lb.hidden = true;
+      lbImg.src = "";
+    }
+    document.getElementById("lb-close").addEventListener("click", closeLb);
+    lb.addEventListener("click", (e) => { if (e.target === lb) closeLb(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLb(); });
+  </script>
+</body>
+</html>

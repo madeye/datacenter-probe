@@ -1,0 +1,56 @@
+{
+  "city": "中卫",
+  "origin": {
+    "name": "西部云基地 / OSM Amazon Web Services China (Ningxia)",
+    "lat": 37.6368,
+    "lon": 105.3468,
+    "note": "圆心取 OSM 标注的 AWS 工业用地中心，位于中卫工业园凤云路一带，不是中卫城区。"
+  },
+  "search_radius_km": 50,
+  "imagery": {
+    "source": "Esri World Imagery tiles, 2026-08-27",
+    "caveat": "OSM 把整条东西向园区标成 AWS，实际上美利云、三大运营商、天云等同园。迎水桥、寺口子两处 AWS 分园本次未单独出图。"
+  },
+  "sites": [
+    {
+      "id": "Z-HALLS",
+      "name": "西部云基地白顶机房组",
+      "status": "operational_plus_pads",
+      "confidence": "high",
+      "lat": 37.6372,
+      "lon": 105.3445,
+      "osm": "way Amazon Web Services China (Ningxia) Data Centre landuse=industrial 37.6345–37.6391N 105.3326–105.3610E",
+      "evidence": [
+        "戈壁中东西向超大园区，光伏夹在南北两侧",
+        "六栋并排白顶大厅（37.6356–37.6388N 105.3422–105.3468E），典型风冷机房",
+        "紧邻东侧两栋带屋顶机电的大厅（37.6359–37.6389N 105.3458–105.3476E），再往东一栋独立大厅（37.6356–37.6386N 105.3510–105.3558E）",
+        "西侧有塔吊、部分封顶；路南一组带圆池和条状机房（37.6310–37.6332N 105.3338–105.3388E）",
+        "东端仍有整平垫层，符合续建报道"
+      ],
+      "reported_operators": [
+        "亚马逊 AWS（西云数据）",
+        "美利云",
+        "中国移动 / 联通 / 电信",
+        "天云网络"
+      ],
+      "screenshots": [
+        "docs/plates/zhongwei/Z01_cloudbase_overview.jpg",
+        "docs/plates/zhongwei/Z02_white_halls.jpg"
+      ]
+    },
+    {
+      "id": "Z-CHEM",
+      "name": "云基地南化工厂（排除）",
+      "status": "excluded",
+      "confidence": "high",
+      "lat": 37.6072,
+      "lon": 105.3099,
+      "evidence": [
+        "储罐、管廊、蓝顶厂房，是化工/材料，不是机房"
+      ],
+      "screenshots": [
+        "screenshots/zhongwei/industrial_south_z16.jpg"
+      ]
+    }
+  ]
+}

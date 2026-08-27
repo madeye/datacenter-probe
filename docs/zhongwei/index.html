@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>中卫数据中心建设情况</title>
+  <meta name="description" content="西部云基地在城北戈壁。六栋白顶大厅是典型风冷机房，OSM 把整条带标成 AWS。">
+  <link rel="canonical" href="https://madeye.github.io/datacenter-probe/zhongwei/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="中卫数据中心建设情况">
+  <meta property="og:description" content="西部云基地在城北戈壁。六栋白顶大厅是典型风冷机房，OSM 把整条带标成 AWS。">
+  <meta property="og:url" content="https://madeye.github.io/datacenter-probe/zhongwei/">
+  <meta property="og:image" content="https://madeye.github.io/datacenter-probe/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../probe.css">
+</head>
+<body>
+  <div class="neatline">
+    <span><a href="../">Datacenter Probe</a>  ·  中卫</span>
+    <span id="tick">37.6368°N  105.3468°E  ·  r = 50 km</span>
+    <span class="hide-narrow">Esri World Imagery  ·  2026-08-27</span>
+  </div>
+  <header class="mast">
+    <p class="series">Satellite reconnaissance  ·  Ningxia</p>
+    <h1>中卫周边数据中心建设情况</h1>
+    <p class="lede">中卫的机房不在沙坡头城区，而在北面戈壁上的西部云基地。Esri 图上是一条东西向、光伏夹着的园区：六栋白顶大厅并排是主体，紧邻东侧两栋带屋顶机电，再往东一栋，西侧在建，路南另有一组；东端还有整平垫层空着。OSM 把整条带写成 AWS，实际上美利云和三大运营商也在同一个园。</p>
+    <figure class="hero">
+      <img src="../plates/zhongwei/Z01_cloudbase_overview.jpg" alt="中卫西部云基地戈壁园区总览" width="1200" height="1200">
+      <figcaption>HERO  ·  西部云基地  ·  OSM 标注为 AWS 的整条工业用地</figcaption>
+    </figure>
+  </header>
+  <div id="map" role="region" aria-label="卫星地图"></div>
+  <p class="map-caption">
+    <span><i class="legend-chip" style="background:#c23b22"></i>在建 / 高置信机房</span>
+    <span><i class="legend-chip" style="background:#2ec4b6"></i>已投运 / OSM 具名</span>
+    <span><i class="legend-chip" style="background:#c45c26"></i>候选 / 业主待核</span>
+    <span><i class="legend-chip" style="background:#7a7164"></i>排除或不像机房</span>
+    <span>底图 Esri World Imagery（WGS84）</span>
+  </p>
+  <section class="findings" aria-label="候选">
+    <article class="finding">
+      <div class="id">Z-HALLS  ·  六栋白顶</div>
+      <h2><a href="#halls">云基地机房组</a></h2>
+      <p>并排白顶大厅 + 冷机，典型风冷机房。业主未逐栋标出。</p>
+      <span class="badge high">高 · 是机房</span>
+    </article>
+    <article class="finding">
+      <div class="id">Z-EAST  ·  东侧三栋</div>
+      <h2><a href="#halls">中间两栋 + 东侧一栋</a></h2>
+      <p>六栋东邻两栋带屋顶机电，再往东一栋独立大厅，旁边整平垫层。</p>
+      <span class="badge high">高 · 已建+垫层</span>
+    </article>
+    <article class="finding">
+      <div class="id">Z-WEST  ·  续建</div>
+      <h2><a href="#halls">西侧 / 路南</a></h2>
+      <p>西侧有塔吊、部分封顶；路南一组带圆池和条状机房。符合续建报道。</p>
+      <span class="badge mid">中高 · 在建</span>
+    </article>
+    <article class="finding">
+      <div class="id">排除  ·  化工厂</div>
+      <h2><a href="#halls">南侧化工</a></h2>
+      <p>储罐管廊，不是机房。</p>
+      <span class="badge low">排除</span>
+    </article>
+  </section>
+  <section class="site" id="halls">
+    <div class="site-rail">
+      <p class="coord">37.6372°N  105.3445°E</p>
+      <h2>西部云基地</h2>
+      <p class="meta">中卫工业园凤云路一带。OSM 名称 Amazon Web Services China (Ningxia) Data Centre，多边形宽约 2.5 km，覆盖整园。</p>
+      <p class="badge high">高置信 · 机房形态 / 中 · 业主</p>
+      <ul>
+        <li>六栋白顶大厅是影像上最像美利云/AWS 风冷机房的一组</li>
+        <li>东邻两栋、再东一栋都带屋顶机电，同一园区连片</li>
+        <li>东端垫层说明还在扩</li>
+        <li>迎水桥、寺口子分园在 50 km 圈内，本次未出特写</li>
+      </ul>
+      <div class="ops"><span>AWS？</span><span>美利云？</span><span>移动/联通/电信？</span><span>天云？</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@37.6368,105.3468,800m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/zhongwei/Z02_white_halls.jpg" alt="西部云基地六栋白顶大厅">
+        <figcaption>PLATE Z02  ·  白顶机房组  ·  Esri z17</figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="sat" src="../plates/zhongwei/Z01_cloudbase_overview.jpg" alt="西部云基地戈壁总图">
+        <figcaption>PLATE Z01  ·  总图  ·  光伏围着园区</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="method">
+    <h2>怎么判，什么不算</h2>
+    <p>圆心不在中卫城区，在城北戈壁。南侧化工厂容易被 OSM 工业用地带进来，必须看储罐。</p>
+    <h3>算作机房</h3>
+    <ul><li>戈壁上超大白顶无内院矩形、模块化并排</li><li>旁边光伏可以当配套，本身不是机房</li></ul>
+    <h3>明确排除</h3>
+    <ul class="exclude"><li>储罐、管廊、排烟</li><li>城区政府办公楼（云计算大数据发展局）</li></ul>
+    <p><a href="https://www.google.com/maps/@37.6368,105.3468,8000m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开圆心 ↗</a></p>
+  </section>
+  <nav class="city-nav" aria-label="其他城市">
+    <span>五座城</span>
+    <a href="../guian/">贵安</a> · <a href="../ulanqab/">乌兰察布</a> · <a href="../yangquan/">阳泉</a> · <a href="../zhongwei/">中卫</a> · <a href="../karamay/">克拉玛依</a>
+  </nav>
+  <footer>
+    <div>
+      Datacenter Probe  ·  中卫  ·  标注截图仅供复核，不是权属证明。
+      影像 © Esri, Maxar, Earthstar Geographics。对照：智东西 2022-03-11《数据中心造就的五座城》。
+    </div>
+  </footer>
+  <div class="lightbox" id="lb" hidden>
+    <button type="button" id="lb-close">关闭</button>
+    <img id="lb-img" alt="">
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>window.PROBE = {"origin":[37.6368,105.3468],"originName":"圆心 · 西部云基地","radiusKm":50,"zoom":13,"sites":[{"id":"halls","name":"白顶机房组","pos":[37.6372,105.3445],"color":"#c23b22","note":"六栋白顶大厅"}]};</script>
+  <script src="../probe.js"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-08-27T05:26:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 442977553,
+  "center": {
+    "lat": 26.3932610,
+    "lon": 106.4695385
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "4",
+    "name": "兴安大道",
+    "oneway": "yes",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 460030916,
+  "center": {
+    "lat": 26.3990499,
+    "lon": 106.5071544
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "4",
+    "name": "数谷大道",
+    "oneway": "yes",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 503417591,
+  "center": {
+    "lat": 26.3471457,
+    "lon": 106.4977152
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "4",
+    "name": "数谷大道",
+    "oneway": "yes",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 587152087,
+  "center": {
+    "lat": 26.3453219,
+    "lon": 106.5277794
+  },
+  "tags": {
+    "landuse": "industrial",
+    "source": "digitalGlobe Premium"
+  }
+},
+{
+  "type": "way",
+  "id": 673653866,
+  "center": {
+    "lat": 26.3904272,
+    "lon": 106.4697328
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "4",
+    "name": "兴安大道",
+    "oneway": "yes",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 720328699,
+  "center": {
+    "lat": 26.3990937,
+    "lon": 106.5073970
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "4",
+    "name": "数谷大道",
+    "oneway": "yes",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 720328701,
+  "center": {
+    "lat": 26.3471040,
+    "lon": 106.4974460
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "4",
+    "name": "数谷大道",
+    "oneway": "yes",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 958847154,
+  "center": {
+    "lat": 26.3695793,
+    "lon": 106.5006832
+  },
+  "tags": {
+    "building": "yes",
+    "layer": "-1",
+    "name": "腾讯贵安七星数据中心",
+    "name:en": "Tencent Gui’an Seven Star Data Center",
+    "natural": "scrub",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 958847155,
+  "center": {
+    "lat": 26.3628380,
+    "lon": 106.4671747
+  },
+  "tags": {
+    "brand:wikidata": "Q421253",
+    "name": "Apple iCloud Gui'An data center",
+    "name:zh": "苹果贵安iCloud数据中心",
+    "short_name": "Apple",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 986228856,
+  "center": {
+    "lat": 26.3561606,
+    "lon": 106.5039298
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "泰豪国际数字文化产业园"
+  }
+},
+{
+  "type": "way",
+  "id": 1013247697,
+  "center": {
+    "lat": 26.3707762,
+    "lon": 106.5082048
+  },
+  "tags": {
+    "landuse": "commercial",
+    "name": "云上屯华为"
+  }
+},
+{
+  "type": "way",
+  "id": 1013247725,
+  "center": {
+    "lat": 26.3750987,
+    "lon": 106.4982242
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1013247726,
+  "center": {
+    "lat": 26.3696964,
+    "lon": 106.5014956
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1013247729,
+  "center": {
+    "lat": 26.3591244,
+    "lon": 106.5035206
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1013247736,
+  "center": {
+    "lat": 26.3552714,
+    "lon": 106.4970087
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "4",
+    "name": "数谷大道",
+    "oneway": "yes",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 1013247737,
+  "center": {
+    "lat": 26.3552970,
+    "lon": 106.4972528
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "4",
+    "name": "数谷大道",
+    "oneway": "yes",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 1013247738,
+  "center": {
+    "lat": 26.3602813,
+    "lon": 106.4973821
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "lanes": "4",
+    "layer": "1",
+    "name": "数谷大道",
+    "oneway": "yes",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 1013247739,
+  "center": {
+    "lat": 26.3602654,
+    "lon": 106.4976604
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "lanes": "4",
+    "layer": "1",
+    "name": "数谷大道",
+    "oneway": "yes",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 1013247748,
+  "center": {
+    "lat": 26.3572672,
+    "lon": 106.4757829
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1013247755,
+  "center": {
+    "lat": 26.3492813,
+    "lon": 106.4948611
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1013247756,
+  "center": {
+    "lat": 26.3465445,
+    "lon": 106.4817838
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1013247757,
+  "center": {
+    "lat": 26.3499733,
+    "lon": 106.4774406
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "贵州富士康"
+  }
+},
+{
+  "type": "way",
+  "id": 1013247798,
+  "center": {
+    "lat": 26.3800676,
+    "lon": 106.5376324
+  },
+  "tags": {
+    "industrial": "factory",
+    "landuse": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1013247813,
+  "center": {
+    "lat": 26.3599375,
+    "lon": 106.4614793
+  },
+  "tags": {
+    "landuse": "industrial"
+  }
+}
+
+  ]
+}
