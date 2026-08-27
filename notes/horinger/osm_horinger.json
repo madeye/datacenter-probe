@@ -1,0 +1,60 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-08-27T10:15:41Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 13422748729,
+  "lat": 40.5421796,
+  "lon": 111.8216027,
+  "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "云计算数据中心",
+    "public_transport": "platform"
+  }
+},
+{
+  "type": "node",
+  "id": 13422748730,
+  "lat": 40.5441499,
+  "lon": 111.8223180,
+  "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "云计算数据中心",
+    "public_transport": "platform"
+  }
+},
+{
+  "type": "way",
+  "id": 566233416,
+  "center": {
+    "lat": 40.5410927,
+    "lon": 111.8290536
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "中国电信云计算内蒙古信息园"
+  }
+},
+{
+  "type": "way",
+  "id": 699967332,
+  "center": {
+    "lat": 40.5368771,
+    "lon": 111.8163596
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "中国移动呼和浩特数据中心"
+  }
+}
+
+  ]
+}

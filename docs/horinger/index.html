@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>和林格尔数据中心建设情况</title>
+  <meta name="description" content="盛乐园区：中国移动白顶大厅可指认，中国电信信息园能钉园。不是乌兰察布走廊。">
+  <link rel="canonical" href="https://madeye.github.io/datacenter-probe/horinger/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="和林格尔数据中心建设情况">
+  <meta property="og:description" content="盛乐园区：中国移动白顶大厅可指认，中国电信信息园能钉园。不是乌兰察布走廊。">
+  <meta property="og:url" content="https://madeye.github.io/datacenter-probe/horinger/">
+  <meta property="og:image" content="https://madeye.github.io/datacenter-probe/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../probe.css">
+</head>
+<body>
+  <div class="neatline">
+    <span><a href="../">Datacenter Probe</a>  ·  和林格尔</span>
+    <span id="tick">40.5390°N  111.8230°E  ·  r = 50 km</span>
+    <span class="hide-narrow">Esri World Imagery  ·  2026-08-27</span>
+  </div>
+  <header class="mast">
+    <p class="series">Satellite reconnaissance  ·  Inner Mongolia</p>
+    <h1>和林格尔周边数据中心建设情况</h1>
+    <p class="lede">和林格尔是内蒙古枢纽的呼和浩特翼，机房在盛乐经济园区格子里，不在县城。西侧 OSM 中国移动呼和浩特数据中心是最典型的一处：北半无内院白顶大厅并排，南半还在挖。东侧中国电信云计算内蒙古信息园能钉园，环形广场那几栋曲面楼更像办公。华为云报道没有 OSM 名，不写入业主。</p>
+    <figure class="hero">
+      <img src="../plates/horinger/HG01_yungu_overview.jpg" alt="和林格尔盛乐园区：移动与电信相对位置" width="1200" height="1200">
+      <figcaption>HERO  ·  盛乐园区  ·  西移动 / 东电信</figcaption>
+    </figure>
+  </header>
+  <div id="map" role="region" aria-label="卫星地图"></div>
+  <p class="map-caption">
+    <span><i class="legend-chip" style="background:#c23b22"></i>在建 / 高置信机房</span>
+    <span><i class="legend-chip" style="background:#2ec4b6"></i>已投运 / OSM 具名</span>
+    <span><i class="legend-chip" style="background:#c45c26"></i>候选 / 业主待核</span>
+    <span><i class="legend-chip" style="background:#7a7164"></i>排除或不像机房</span>
+    <span>底图 Esri World Imagery（WGS84）</span>
+  </p>
+  <section class="findings" aria-label="候选">
+    <article class="finding">
+      <div class="id">HG-CMCC  ·  白顶大厅</div>
+      <h2><a href="#cmcc">中国移动呼和浩特</a></h2>
+      <p>OSM 具名。北半无内院大厅并排，南半基坑续建。</p>
+      <span class="badge high">高置信 · 投运+在建</span>
+    </article>
+    <article class="finding">
+      <div class="id">HG-CT  ·  东邻</div>
+      <h2><a href="#telecom">中国电信信息园</a></h2>
+      <p>OSM 具名。环形广场偏办公，南侧土建。</p>
+      <span class="badge mid">中高 · 园可钉</span>
+    </article>
+    <article class="finding">
+      <div class="id">HG-NORTH  ·  候选</div>
+      <h2><a href="#cmcc">北侧黑顶模组</a></h2>
+      <p>移动多边形北外侧模块化黑顶，无 OSM 名。</p>
+      <span class="badge mid">中 · 候选</span>
+    </article>
+    <article class="finding">
+      <div class="id">排除  ·  厂房</div>
+      <h2><a href="#telecom">蓝顶大跨 / 办公</a></h2>
+      <p>右下仓储厂房、广场曲面楼不算机房。</p>
+      <span class="badge low">排除</span>
+    </article>
+  </section>
+  <section class="site" id="cmcc">
+    <div class="site-rail">
+      <p class="coord">40.5369°N  111.8164°E</p>
+      <h2>中国移动呼和浩特数据中心</h2>
+      <p class="meta">盛乐园区西。OSM way/699967332，40.5315–40.5423N 111.8087–111.8240E。</p>
+      <p class="badge high">高置信 · 已投运 + 南扩</p>
+      <ul>
+        <li>北半多栋无内院白顶/灰顶大厅，屋顶机电密布</li>
+        <li>南半基坑、蓝顶临建</li>
+        <li>北侧黑顶模组组无 OSM 名，只标候选</li>
+      </ul>
+      <div class="ops"><span>中国移动</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@40.5369,111.8164,800m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/horinger/HG02_cmcc.jpg" alt="移动园区白顶大厅与南侧土建">
+        <figcaption>PLATE HG02  ·  移动  ·  Esri z17</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="site" id="telecom">
+    <div class="site-rail">
+      <p class="coord">40.5411°N  111.8291°E</p>
+      <h2>中国电信云计算内蒙古信息园</h2>
+      <p class="meta">紧贴移动东侧。OSM way/566233416，40.5365–40.5457N 111.8228–111.8353E。</p>
+      <p class="badge mid">中高 · 园可钉 / 楼要分</p>
+      <ul>
+        <li>环形广场北侧曲面楼偏办公，不单独当机房</li>
+        <li>南侧仍有土建</li>
+        <li>大厅形态不如西侧移动园区典型</li>
+      </ul>
+      <div class="ops"><span>中国电信</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@40.5411,111.8291,800m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/horinger/HG03_telecom.jpg" alt="电信信息园环形广场">
+        <figcaption>PLATE HG03  ·  电信  ·  广场偏办公</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="method">
+    <h2>怎么判，什么不算</h2>
+    <p>圆心在盛乐园区，不在和林格尔县城，也不是乌兰察布。</p>
+    <h3>算作机房</h3>
+    <ul><li>无内院白顶/灰顶大厅并排、屋顶机电</li><li>OSM 具名 industrial（移动、电信）</li></ul>
+    <h3>明确排除</h3>
+    <ul class="exclude"><li>曲面办公楼、体育场、住宅</li><li>大跨蓝顶仓储厂房</li><li>没有 OSM 名的华为报道</li></ul>
+    <p><a href="https://www.google.com/maps/@40.539,111.823,8000m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开圆心 ↗</a></p>
+  </section>
+  <nav class="city-nav" aria-label="其他城市">
+    <span>五座城</span>
+    <a href="../guian/">贵安</a> · <a href="../ulanqab/">乌兰察布</a> · <a href="../yangquan/">阳泉</a> · <a href="../zhongwei/">中卫</a> · <a href="../karamay/">克拉玛依</a>
+    <span>续卷</span>
+    <a href="../zhangbei/">张北</a> · <a href="../huailai/">怀来</a> · <a href="../qingyang/">庆阳</a> · <a href="../horinger/">和林格尔</a> · <a href="../shaoguan/">韶关</a> · <a href="../wuhu/">芜湖</a>
+  </nav>
+  <footer>
+    <div>
+      Datacenter Probe  ·  和林格尔  ·  标注截图仅供复核，不是权属证明。
+      影像 © Esri, Maxar, Earthstar Geographics。续卷 · 东数西算枢纽，不是 2022 智东西原文里的五座城。
+    </div>
+  </footer>
+  <div class="lightbox" id="lb" hidden>
+    <button type="button" id="lb-close">关闭</button>
+    <img id="lb-img" alt="">
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>window.PROBE = {"origin":[40.539,111.823],"originName":"圆心 · 盛乐园区","radiusKm":50,"zoom":13,"sites":[{"id":"cmcc","name":"中国移动","pos":[40.5369,111.8164],"color":"#2ec4b6","note":"白顶大厅+南扩"},{"id":"telecom","name":"中国电信信息园","pos":[40.5411,111.8291],"color":"#c45c26","note":"园可钉、楼要分"}]};</script>
+  <script src="../probe.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+{
+  "city": "芜湖",
+  "origin": {
+    "name": "华为云华东（芜湖）数据中心（三山 / 峨溪路一带）",
+    "lat": 31.3484,
+    "lon": 118.2862,
+    "note": "圆心取 OSM way/1341908908，田里独立在建大厅，不是芜湖市政府、也不是江北城区。"
+  },
+  "search_radius_km": 50,
+  "imagery": {
+    "source": "Esri World Imagery tiles, 2026-08-27",
+    "caveat": "智算中心那幅 Esri 有新旧瓦片接缝。接缝以东冷却塔是电厂，排除。东华金融云计算中心在圈东北缘约 47 km，本次未出图。"
+  },
+  "sites": [
+    {
+      "id": "WH-HUAWEI",
+      "name": "华为云华东（芜湖）数据中心",
+      "status": "under_construction",
+      "confidence": "high",
+      "lat": 31.3484,
+      "lon": 118.2862,
+      "osm": "way/1341908908 华为云华东（芜湖）数据中心 landuse=industrial 31.346782–31.350043N 118.283760–118.288691E",
+      "evidence": [
+        "OSM 具名，水田中独立大院",
+        "Esri z17：超大无内院矩形在建，钢结构、塔吊、部分封顶，东侧刮地垫层",
+        "典型机房土建，不是厂房"
+      ],
+      "reported_operators": ["华为云"],
+      "screenshots": [
+        "docs/plates/wuhu/WH01_cluster_overview.jpg",
+        "docs/plates/wuhu/WH02_huawei.jpg"
+      ]
+    },
+    {
+      "id": "WH-ZHISUAN",
+      "name": "芜湖一体化智算中心 / 硅立方",
+      "status": "under_construction",
+      "confidence": "medium",
+      "lat": 31.3424,
+      "lon": 118.2971,
+      "osm": "way/1341908877 芜湖一体化智算中心 landuse=commercial 31.341998–31.342829N 118.296593–118.297570E; way/1341908873 硅立方智算机房; way/1341908874 数据中心楼",
+      "evidence": [
+        "OSM 三块嵌套很小，约 80–100 m",
+        "Esri z18：路西一栋白顶小楼 + 基坑/垫层，不是超大阵列",
+        "同幅接缝以东冷却塔是电厂，排除"
+      ],
+      "reported_operators": [],
+      "screenshots": [
+        "docs/plates/wuhu/WH03_zhisuan.jpg"
+      ]
+    },
+    {
+      "id": "WH-DONGHUA",
+      "name": "东华金融云计算中心（圈缘）",
+      "status": "named_unverified",
+      "confidence": "low",
+      "lat": 31.6952,
+      "lon": 118.5725,
+      "osm": "way/1374164018 东华金融云计算中心 landuse=commercial 31.694247–31.696202N 118.571646–118.573327E",
+      "evidence": [
+        "OSM 有名，距圆心约 47 km，落在马鞍山/当涂方向",
+        "多边形很小，本次未出 Esri 特写"
+      ],
+      "reported_operators": [],
+      "screenshots": []
+    }
+  ]
+}

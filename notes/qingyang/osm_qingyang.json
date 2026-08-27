@@ -1,0 +1,108 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.7 375dc00a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-08-27T10:59:37Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 1339493828,
+  "center": {
+    "lat": 35.7239861,
+    "lon": 107.6622819
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "庆阳数据中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1412509897,
+  "center": {
+    "lat": 35.7335478,
+    "lon": 107.7044087
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "秦淮数据零碳数据中心产业基地"
+  }
+},
+{
+  "type": "way",
+  "id": 1412509914,
+  "center": {
+    "lat": 35.7368006,
+    "lon": 107.6987116
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "中国能建庆阳大数据中心产业园"
+  }
+},
+{
+  "type": "way",
+  "id": 1552397191,
+  "center": {
+    "lat": 35.7254405,
+    "lon": 107.6945433
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "中国移动(甘肃·庆阳)数据中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1552397192,
+  "center": {
+    "lat": 35.7266322,
+    "lon": 107.7002010
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "中国电信庆阳智算产业园"
+  }
+},
+{
+  "type": "way",
+  "id": 1552397193,
+  "center": {
+    "lat": 35.7227813,
+    "lon": 107.6953958
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "中国联通庆阳数据中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1552409409,
+  "center": {
+    "lat": 35.7332452,
+    "lon": 107.6983870
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "智慧蓝图西部智算中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1552409413,
+  "center": {
+    "lat": 35.7245974,
+    "lon": 107.6905277
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "西北零碳智慧云智算中心"
+  }
+}
+
+  ]
+}

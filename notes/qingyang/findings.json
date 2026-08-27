@@ -1,0 +1,149 @@
+{
+  "city": "庆阳",
+  "origin": {
+    "name": "庆阳东数西算产业园（西峰区温泉镇新桥村 秦淮数据零碳数据中心产业基地）",
+    "lat": 35.7335,
+    "lon": 107.7044,
+    "note": "圆心取 OSM way/1412509897 秦淮多边形中心，不是西峰城区。距中卫约 280 km。"
+  },
+  "search_radius_km": 50,
+  "imagery": {
+    "source": "Esri World Imagery tiles, 2026-08-27",
+    "caveat": "本幅 Esri 在园内有一道南北向新旧瓦片接缝。接缝以东（较新）能看见秦淮大厅；接缝以西的能建/移动/电信/联通/智慧蓝图/西北零碳 OSM 多边形仍落在村庄条田上。城区 way/1339493828 庆阳数据中心是住宅空地，排除。华为无 OSM 名或牌匾，不记为业主。"
+  },
+  "sites": [
+    {
+      "id": "QY-CHINDATA",
+      "name": "秦淮数据零碳数据中心产业基地",
+      "status": "mixed",
+      "confidence": "medium_high",
+      "lat": 35.7334,
+      "lon": 107.7018,
+      "osm": "way/1412509897 秦淮数据零碳数据中心产业基地 landuse=industrial 35.731741–35.735355N 107.700939–107.707879E",
+      "evidence": [
+        "OSM 有名。规划批前公示：兰州路北、纵二路东，机房楼+动力楼",
+        "Esri z17：围栏内无内院白顶大厅（施工中屋面，35.7326–35.7341N 107.7006–107.7028E）",
+        "东南蓝顶动力楼（35.7322–35.7333N 107.7026–107.7041E）+ 东侧刮地垫层",
+        "2024-07 报道一期 A 模组验收；本幅 Esri 仍是在建"
+      ],
+      "reported_operators": [
+        "秦淮数据"
+      ],
+      "screenshots": [
+        "docs/plates/qingyang/QY01_wenquan_overview.jpg",
+        "docs/plates/qingyang/QY02_chindata.jpg"
+      ]
+    },
+    {
+      "id": "QY-CEEC",
+      "name": "中国能建庆阳大数据中心产业园",
+      "status": "mixed",
+      "confidence": "medium",
+      "lat": 35.736801,
+      "lon": 107.698712,
+      "osm": "way/1412509914 中国能建庆阳大数据中心产业园 landuse=industrial 35.734761–35.738841N 107.696918–107.700505E",
+      "evidence": [
+        "OSM 有名。公示：安定东路与学院路交叉口南、纵二路西，规划 4 栋机房",
+        "2024–2025 报道点亮；华为数字能源是供电方案，不是 OSM 业主",
+        "本幅 Esri 西半旧瓦片仍是耕地，未见大厅"
+      ],
+      "reported_operators": [
+        "中国能建"
+      ],
+      "screenshots": [
+        "screenshots/qingyang/operators_z17.jpg"
+      ]
+    },
+    {
+      "id": "QY-CMCC",
+      "name": "中国移动(甘肃·庆阳)数据中心",
+      "status": "mixed",
+      "confidence": "medium",
+      "lat": 35.725441,
+      "lon": 107.694543,
+      "osm": "way/1552397191 中国移动(甘肃·庆阳)数据中心 landuse=industrial 35.724059–35.726822N 107.692059–107.697028E",
+      "evidence": [
+        "OSM 有名。2026 报道园区东约 3 km、已建 4 栋机楼",
+        "本幅 Esri 仍是村庄与条田，无大厅；卫星未核"
+      ],
+      "reported_operators": [
+        "中国移动"
+      ],
+      "screenshots": [
+        "screenshots/qingyang/operators_z17.jpg"
+      ]
+    },
+    {
+      "id": "QY-CT",
+      "name": "中国电信庆阳智算产业园",
+      "status": "mixed",
+      "confidence": "medium",
+      "lat": 35.726632,
+      "lon": 107.700201,
+      "osm": "way/1552397192 中国电信庆阳智算产业园 landuse=industrial 35.725158–35.728107N 107.697483–107.702919E",
+      "evidence": [
+        "OSM 有名。招标/绿名单：西峰温泉镇八里庙村",
+        "报道一期智算已投运、二期 2# 机房 2026 土建。Esri 多边形内仍是民房耕地，无大厅"
+      ],
+      "reported_operators": [
+        "中国电信"
+      ],
+      "screenshots": [
+        "screenshots/qingyang/overview_wenquan_z16.jpg"
+      ]
+    },
+    {
+      "id": "QY-CU",
+      "name": "中国联通庆阳数据中心",
+      "status": "under_construction",
+      "confidence": "medium",
+      "lat": 35.722781,
+      "lon": 107.695396,
+      "osm": "way/1552397193 中国联通庆阳数据中心 landuse=industrial 35.721033–35.724529N 107.692921–107.697871E",
+      "evidence": [
+        "OSM 有名。2025-06 西峰区稿：规划 4 栋，A 栋在建",
+        "Esri 为村庄条田，无大厅"
+      ],
+      "reported_operators": [
+        "中国联通"
+      ],
+      "screenshots": [
+        "screenshots/qingyang/overview_wenquan_z16.jpg"
+      ]
+    },
+    {
+      "id": "QY-ZHIHUI",
+      "name": "智慧蓝图西部智算中心",
+      "status": "under_construction",
+      "confidence": "medium",
+      "lat": 35.733245,
+      "lon": 107.698387,
+      "osm": "way/1552409409 智慧蓝图西部智算中心 landuse=industrial 35.732226–35.734264N 107.695879–107.700895E",
+      "evidence": [
+        "OSM 有名，紧挨能建西侧",
+        "新华社 2026-07-16：一期在东数西算园区开工，规划 3 栋数据中心+动力中心",
+        "Esri 仍是耕地"
+      ],
+      "reported_operators": [
+        "智慧蓝图"
+      ],
+      "screenshots": [
+        "screenshots/qingyang/operators_z17.jpg"
+      ]
+    },
+    {
+      "id": "QY-URBAN",
+      "name": "庆阳数据中心（城区，排除）",
+      "status": "excluded",
+      "confidence": "high",
+      "lat": 35.723986,
+      "lon": 107.662282,
+      "osm": "way/1339493828 庆阳数据中心 landuse=industrial 35.722678–35.725294N 107.660939–107.663625E",
+      "evidence": [
+        "西峰城区，OSM 有名",
+        "Esri 为住宅和空地，不是机房"
+      ],
+      "screenshots": []
+    }
+  ]
+}

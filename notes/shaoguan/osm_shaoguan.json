@@ -1,0 +1,78 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-08-27T10:36:11Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 13780891344,
+  "lat": 24.7938617,
+  "lon": 113.6256706,
+  "tags": {
+    "addr:city": "韶关市",
+    "addr:district": "浈江区",
+    "addr:province": "广东省",
+    "addr:street": "大学路",
+    "addr:suburb": "新韶镇",
+    "level": "4",
+    "name": "信息中心",
+    "operator": "韶关市职业综合高级中学",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1470175353,
+  "center": {
+    "lat": 24.7597885,
+    "lon": 113.5287964
+  },
+  "tags": {
+    "landuse": "commercial",
+    "name": "粤北云数据中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1474599923,
+  "center": {
+    "lat": 24.7818498,
+    "lon": 113.5047299
+  },
+  "tags": {
+    "landuse": "commercial",
+    "name": "华韶数据谷"
+  }
+},
+{
+  "type": "way",
+  "id": 1474786000,
+  "center": {
+    "lat": 24.7886768,
+    "lon": 113.5002626
+  },
+  "tags": {
+    "landuse": "commercial",
+    "name": "华南数谷智算中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1536927107,
+  "center": {
+    "lat": 24.7788658,
+    "lon": 113.5025983
+  },
+  "tags": {
+    "construction": "commercial",
+    "landuse": "construction",
+    "name": "华韶数据谷二期项目"
+  }
+}
+
+  ]
+}
