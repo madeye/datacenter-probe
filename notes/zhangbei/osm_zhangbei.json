@@ -1,0 +1,60 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.7 375dc00a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-08-27T10:58:36Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 699984314,
+  "center": {
+    "lat": 41.1870991,
+    "lon": 114.8608605
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "上海数据港张北A2数据中心"
+  }
+},
+{
+  "type": "way",
+  "id": 699984315,
+  "center": {
+    "lat": 41.1887155,
+    "lon": 114.8622510
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "阿里数据港张家口张北数据中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1068446080,
+  "center": {
+    "lat": 41.2811996,
+    "lon": 114.6821698
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "阿里巴巴张北中都草原数据中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1256794600,
+  "center": {
+    "lat": 41.1833938,
+    "lon": 114.7301975
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "张北数据中心"
+  }
+}
+
+  ]
+}

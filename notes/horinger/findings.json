@@ -1,0 +1,70 @@
+{
+  "city": "和林格尔",
+  "origin": {
+    "name": "盛乐经济园区 / 云谷（中国移动呼和浩特数据中心 × 中国电信云计算内蒙古信息园）",
+    "lat": 40.539,
+    "lon": 111.823,
+    "note": "圆心取两处 OSM 具名园区之间，不是和林格尔县城、也不是呼和浩特城区。距乌兰察布益武堂约 110 km。"
+  },
+  "search_radius_km": 50,
+  "imagery": {
+    "source": "Esri World Imagery tiles, 2026-08-27",
+    "caveat": "华为云和林格尔报道在新区，本次 50 km Overpass 没有华为具名要素，不写入业主。北侧黑顶模组组无 OSM 名，只标候选。"
+  },
+  "sites": [
+    {
+      "id": "HG-CMCC",
+      "name": "中国移动呼和浩特数据中心",
+      "status": "operational_plus_construction",
+      "confidence": "high",
+      "lat": 40.5369,
+      "lon": 111.8164,
+      "osm": "way/699967332 中国移动呼和浩特数据中心 landuse=industrial 40.531479–40.542275N 111.808712–111.824007E",
+      "evidence": [
+        "OSM 具名工业用地，盛乐园区格子路网里的超大超级街区",
+        "Esri z17：街区北半多栋无内院白顶/灰顶大厅并排，屋顶机电密布",
+        "南半基坑、蓝顶临建、未闭合屋面，仍在扩"
+      ],
+      "reported_operators": ["中国移动"],
+      "screenshots": [
+        "docs/plates/horinger/HG01_yungu_overview.jpg",
+        "docs/plates/horinger/HG02_cmcc.jpg"
+      ]
+    },
+    {
+      "id": "HG-CT",
+      "name": "中国电信云计算内蒙古信息园",
+      "status": "mixed",
+      "confidence": "medium_high",
+      "lat": 40.5411,
+      "lon": 111.8291,
+      "osm": "way/566233416 中国电信云计算内蒙古信息园 landuse=industrial 40.536461–40.545724N 111.822759–111.835348E",
+      "evidence": [
+        "OSM 具名，紧贴移动园区东侧，中间隔一条南北向干道",
+        "Esri z17：环形广场四周有矩形楼和空地；广场北侧几栋曲面楼更像办公，不单独当机房",
+        "南侧仍有土建。大厅不如移动园区典型，园区名可钉、楼要现场分"
+      ],
+      "reported_operators": ["中国电信"],
+      "screenshots": [
+        "docs/plates/horinger/HG03_telecom.jpg"
+      ]
+    },
+    {
+      "id": "HG-NORTH",
+      "name": "移动园区北黑顶模组组（候选）",
+      "status": "operational",
+      "confidence": "medium",
+      "lat": 40.5415,
+      "lon": 111.8125,
+      "osm": "",
+      "evidence": [
+        "移动 OSM 多边形北外侧，若干黑顶模块化矩形、屋顶设备条带",
+        "形态像机房。无 OSM 名，不写成某家"
+      ],
+      "reported_operators": [],
+      "screenshots": [
+        "docs/plates/horinger/HG02_cmcc.jpg"
+      ]
+    }
+  ]
+}

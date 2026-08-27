@@ -298,6 +298,20 @@
     .method li { margin: 0.3rem 0; color: var(--dust); }
     .exclude { color: var(--mute); }
 
+    .city-nav {
+      max-width: 1200px;
+      margin: 2rem auto 0;
+      padding: 0 1.25rem 1.5rem;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      opacity: 0.85;
+      line-height: 1.8;
+    }
+    .city-nav span { margin-right: 0.75rem; margin-left: 0.85rem; opacity: 0.6; }
+    .city-nav span:first-child { margin-left: 0; }
+    .city-nav a { text-decoration: none; border-bottom: 1px dotted currentColor; }
+
     footer {
       border-top: 1px solid var(--rule);
       padding: 1.2rem 1.25rem 2rem;
@@ -543,6 +557,13 @@
     </ul>
     <p><a href="https://www.google.com/maps/@41.0181414,113.1155004,100000m/data=!3m1!1e3" target="_blank" rel="noopener">打开圆心 50 km 卫星总图 ↗</a></p>
   </section>
+
+  <nav class="city-nav" aria-label="其他城市">
+    <span>五座城</span>
+    <a href="../guian/">贵安</a> · <a href="../ulanqab/">乌兰察布</a> · <a href="../yangquan/">阳泉</a> · <a href="../zhongwei/">中卫</a> · <a href="../karamay/">克拉玛依</a>
+    <span>续卷</span>
+    <a href="../zhangbei/">张北</a> · <a href="../huailai/">怀来</a> · <a href="../qingyang/">庆阳</a> · <a href="../horinger/">和林格尔</a> · <a href="../shaoguan/">韶关</a> · <a href="../wuhu/">芜湖</a>
+  </nav>
 
   <footer>
     <div>

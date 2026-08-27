@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>张北数据中心建设情况</title>
+  <meta name="description" content="以小二台阿里数据港为圆心：两排大厅可指认，中都草原 8–10 栋白顶模组，庙滩互通大厅业主待核。">
+  <link rel="canonical" href="https://madeye.github.io/datacenter-probe/zhangbei/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="张北数据中心建设情况">
+  <meta property="og:description" content="以小二台阿里数据港为圆心：两排大厅可指认，中都草原 8–10 栋白顶模组，庙滩互通大厅业主待核。">
+  <meta property="og:url" content="https://madeye.github.io/datacenter-probe/zhangbei/">
+  <meta property="og:image" content="https://madeye.github.io/datacenter-probe/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../probe.css">
+</head>
+<body>
+  <div class="neatline">
+    <span><a href="../">Datacenter Probe</a>  ·  张北</span>
+    <span id="tick">41.1887°N  114.8623°E  ·  r = 50 km</span>
+    <span class="hide-narrow">Esri World Imagery  ·  2026-08-27</span>
+  </div>
+  <header class="mast">
+    <p class="series">Satellite reconnaissance  ·  Hebei</p>
+    <h1>张北周边数据中心建设情况</h1>
+    <p class="lede">张北的机房不在县城里。圆心取 OSM way/699984315 阿里数据港：小二台围墙里两排各约五栋无内院长厅，南端两栋更大白顶。馒头营东、中都草原南还有一处孤立方院，约八到十栋白顶模组。县城北高速互通旁（庙滩）和 OSM 具名「张北数据中心」另有两组大厅，业主未钉。腾讯、秦淮的公开项目在怀来，不写入张北。</p>
+    <figure class="hero">
+      <img src="../plates/zhangbei/ZB01_xiaodai_overview.jpg" alt="张北小二台阿里数据港总览" width="1200" height="1200">
+      <figcaption>HERO  ·  小二台  ·  OSM 阿里数据港 / 上海数据港 A2</figcaption>
+    </figure>
+  </header>
+  <div id="map" role="region" aria-label="卫星地图"></div>
+  <p class="map-caption">
+    <span><i class="legend-chip" style="background:#c23b22"></i>在建 / 高置信机房</span>
+    <span><i class="legend-chip" style="background:#2ec4b6"></i>已投运 / OSM 具名</span>
+    <span><i class="legend-chip" style="background:#c45c26"></i>候选 / 业主待核</span>
+    <span><i class="legend-chip" style="background:#7a7164"></i>排除或不像机房</span>
+    <span>底图 Esri World Imagery（WGS84）</span>
+  </p>
+  <section class="findings" aria-label="候选">
+    <article class="finding">
+      <div class="id">ZB-DATAPORT  ·  两排大厅</div>
+      <h2><a href="#xiaodai">小二台阿里数据港</a></h2>
+      <p>OSM 两块相邻工业用地。两排各约 5 栋无内院长厅，南端两栋白顶厅。</p>
+      <span class="badge high">高置信 · 已投运</span>
+    </article>
+    <article class="finding">
+      <div class="id">ZB-ALI-ZHONGDU  ·  8–10 栋</div>
+      <h2><a href="#zhongdu">中都草原</a></h2>
+      <p>OSM 具名孤立方院。白顶模组 + 西侧光伏。</p>
+      <span class="badge high">高置信 · 已投运</span>
+    </article>
+    <article class="finding">
+      <div class="id">ZB-MIAOTAN  ·  互通旁</div>
+      <h2><a href="#miaotan">庙滩机房组</a></h2>
+      <p>无 OSM 业主。多组无内院长厅 + 蓝顶冷却/光伏，大厅算机房。</p>
+      <span class="badge mid">高 · 形态 / 候选 · 业主</span>
+    </article>
+    <article class="finding">
+      <div class="id">ZB-OSM-DC  ·  县城北</div>
+      <h2><a href="#osmdc">张北数据中心</a></h2>
+      <p>OSM way/1256794600。两簇灰顶模组；体育馆/大棚/大跨厂房排除。</p>
+      <span class="badge mid">中高 · 业主未标</span>
+    </article>
+  </section>
+  <section class="site" id="xiaodai">
+    <div class="site-rail">
+      <p class="coord">41.1887°N  114.8623°E</p>
+      <h2>小二台阿里数据港</h2>
+      <p class="meta">小二台数据街。OSM：阿里数据港张家口张北数据中心 + 上海数据港张北A2。河北日报 2025-06 把灰色与橘色建筑写成阿里数据港，是线索不是牌匾。</p>
+      <p class="badge high">高置信 · 已投运</p>
+      <ul>
+        <li>两排各约 5 栋无内院长厅，屋顶深色机电/光伏条带（41.1876–41.1906N 114.8601–114.8646E）</li>
+        <li>南端两栋更大白顶厅落在 A2 多边形北缘</li>
+        <li>西侧蓝/红顶厂房按仓储/工厂排除</li>
+      </ul>
+      <div class="ops"><span>阿里巴巴</span><span>上海数据港</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@41.1887,114.8623,800m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/zhangbei/ZB02_xiaodai_halls.jpg" alt="小二台两排大厅与南端白顶厅">
+        <figcaption>PLATE ZB02  ·  小二台大厅  ·  Esri z17</figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="sat" src="../plates/zhangbei/ZB01_xiaodai_overview.jpg" alt="小二台阿里数据港总图">
+        <figcaption>PLATE ZB01  ·  总图  ·  风电光伏之间</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="site" id="zhongdu">
+    <div class="site-rail">
+      <p class="coord">41.2812°N  114.6822°E</p>
+      <h2>中都草原</h2>
+      <p class="meta">馒头营乡以东。OSM way/1068446080 阿里巴巴张北中都草原数据中心，41.2794–41.2830N 114.6798–114.6845E。</p>
+      <p class="badge high">高置信 · 已投运</p>
+      <ul>
+        <li>孤立方院约 8–10 栋白顶矩形模组，屋顶设备条带</li>
+        <li>西侧贴一块光伏，本身不是机房</li>
+        <li>形态与报道里阿里「一点三中心」的中都草原备份点一致</li>
+      </ul>
+      <div class="ops"><span>阿里巴巴</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@41.2812,114.6822,800m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/zhangbei/ZB03_zhongdu.jpg" alt="中都草原孤立方院">
+        <figcaption>PLATE ZB03  ·  中都草原  ·  41.2812°N 114.6822°E</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="site" id="miaotan">
+    <div class="site-rail">
+      <p class="coord">41.1910°N  114.6930°E</p>
+      <h2>庙滩 / 县城北</h2>
+      <p class="meta">庙滩村东南、县城北高速互通旁。无 OSM 业主名。东 2.7 km 是 way/1256794600 张北数据中心。</p>
+      <p class="badge mid">高 · 是机房 / 候选 · 业主</p>
+      <ul>
+        <li>互通东侧无内院长厅 + 蓝顶冷却/光伏（41.1875–41.1919N 114.6915–114.6968E）</li>
+        <li>东北、东南还有模组；北侧大棚不计</li>
+        <li>OSM「张北数据中心」两簇灰顶模组，体育馆/住宅/大跨白顶厂房排除</li>
+        <li>阿里云联/庙滩、万国、榕泰都只是报道线索</li>
+      </ul>
+      <div class="ops"><span>业主待核</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@41.191,114.693,1200m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/zhangbei/ZB04_miaotan.jpg" alt="庙滩互通旁机房组">
+        <figcaption>PLATE ZB04  ·  庙滩互通  ·  业主待核</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="site" id="osmdc">
+    <div class="site-rail">
+      <p class="coord">41.1834°N  114.7302°E</p>
+      <h2>张北数据中心（OSM）</h2>
+      <p class="meta">县城北、距庙滩互通约 2.7 km。OSM way/1256794600 landuse=industrial，41.1815–41.1853N 114.7268–114.7336E。无 operator 标签。</p>
+      <p class="badge mid">中高 · 是机房 / 业主未标</p>
+      <ul>
+        <li>两簇灰顶模组大厅、屋顶深色条带（西簇 41.1835–41.1863N 114.7275–114.7325E；东簇 41.1835–41.1861N 114.7328–114.7368E）</li>
+        <li>南侧体育馆/住宅、东侧大棚、中间大跨白顶厂房排除</li>
+        <li>万国/榕泰/阿里庙滩二期都只是报道线索</li>
+      </ul>
+      <div class="ops"><span>业主待核</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@41.1834,114.7302,800m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/zhangbei/ZB05_osm_dc.jpg" alt="OSM 具名张北数据中心两簇模组">
+        <figcaption>PLATE ZB05  ·  OSM 张北数据中心  ·  业主未标</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="method">
+    <h2>怎么判，什么不算</h2>
+    <p>圆心在小二台园区，不在张北县城。中都、庙滩相距十余公里，不能指望一张 z16 总图罩住。</p>
+    <h3>算作机房</h3>
+    <ul><li>无内院矩形大厅、屋顶机电/光伏条带、模块化并排</li><li>OSM 具名 industrial（数据中心/数据港）</li></ul>
+    <h3>明确排除</h3>
+    <ul class="exclude"><li>蓝/红顶仓储厂房</li><li>体育馆、住宅、大棚、大跨白顶厂房</li><li>风电和光伏阵列本身</li><li>腾讯/秦淮（在怀来，不写入张北）</li></ul>
+    <p><a href="https://www.google.com/maps/@41.1887,114.8623,8000m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开圆心 ↗</a></p>
+  </section>
+  <nav class="city-nav" aria-label="其他城市">
+    <span>五座城</span>
+    <a href="../guian/">贵安</a> · <a href="../ulanqab/">乌兰察布</a> · <a href="../yangquan/">阳泉</a> · <a href="../zhongwei/">中卫</a> · <a href="../karamay/">克拉玛依</a>
+    <span>续卷</span>
+    <a href="../zhangbei/">张北</a> · <a href="../huailai/">怀来</a> · <a href="../qingyang/">庆阳</a> · <a href="../horinger/">和林格尔</a> · <a href="../shaoguan/">韶关</a> · <a href="../wuhu/">芜湖</a>
+  </nav>
+  <footer>
+    <div>
+      Datacenter Probe  ·  张北  ·  标注截图仅供复核，不是权属证明。
+      影像 © Esri, Maxar, Earthstar Geographics。续卷 · 东数西算枢纽，不是 2022 智东西原文里的五座城。
+    </div>
+  </footer>
+  <div class="lightbox" id="lb" hidden>
+    <button type="button" id="lb-close">关闭</button>
+    <img id="lb-img" alt="">
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>window.PROBE = {"origin":[41.1887,114.8623],"originName":"圆心 · 小二台阿里数据港","radiusKm":50,"zoom":12,"sites":[{"id":"xiaodai","name":"小二台阿里数据港","pos":[41.1887,114.8623],"color":"#2ec4b6","note":"两排大厅 + 南端白顶"},{"id":"zhongdu","name":"中都草原","pos":[41.2812,114.6822],"color":"#2ec4b6","note":"8–10 栋白顶模组"},{"id":"miaotan","name":"庙滩机房组","pos":[41.191,114.693],"color":"#c45c26","note":"大厅形态、业主待核"},{"id":"osmdc","name":"张北数据中心","pos":[41.1834,114.7302],"color":"#2ec4b6","note":"OSM 具名、两簇灰顶"}]};</script>
+  <script src="../probe.js"></script>
+</body>
+</html>

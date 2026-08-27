@@ -1,0 +1,77 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-08-27T10:14:41Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 1341908873,
+  "center": {
+    "lat": 31.3422842,
+    "lon": 118.2973178
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "1",
+    "building:levels:underground": "1",
+    "name": "硅立方智算机房"
+  }
+},
+{
+  "type": "way",
+  "id": 1341908874,
+  "center": {
+    "lat": 31.3424654,
+    "lon": 118.2970404
+  },
+  "tags": {
+    "building": "commercial",
+    "building:levels": "15",
+    "building:levels:underground": "2",
+    "height": "71.4",
+    "name": "数据中心楼"
+  }
+},
+{
+  "type": "way",
+  "id": 1341908877,
+  "center": {
+    "lat": 31.3424135,
+    "lon": 118.2970813
+  },
+  "tags": {
+    "landuse": "commercial",
+    "name": "芜湖一体化智算中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1341908908,
+  "center": {
+    "lat": 31.3484127,
+    "lon": 118.2862255
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "华为云华东（芜湖）数据中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1374164018,
+  "center": {
+    "lat": 31.6952243,
+    "lon": 118.5724863
+  },
+  "tags": {
+    "landuse": "commercial",
+    "name": "东华金融云计算中心"
+  }
+}
+
+  ]
+}

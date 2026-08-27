@@ -1,0 +1,87 @@
+{
+  "city": "韶关",
+  "origin": {
+    "name": "华韶数据谷 / 华南数谷（沐溪湖西、高新区西联一带）",
+    "lat": 24.783,
+    "lon": 113.5025,
+    "note": "圆心取 OSM 华韶—华南数谷组团，不是韶关市政府、也不是城区职业中学那个 data_center 节点。"
+  },
+  "search_radius_km": 50,
+  "imagery": {
+    "source": "Esri World Imagery tiles, 2026-08-27",
+    "caveat": "沿路白顶大跨厂房是普通工业，不要算机房。粤北云数据中心 OSM 多边形只有约 150 m，落在城区混杂地块。"
+  },
+  "sites": [
+    {
+      "id": "SG-HUANAN",
+      "name": "华南数谷智算中心",
+      "status": "under_construction",
+      "confidence": "medium_high",
+      "lat": 24.7887,
+      "lon": 113.5003,
+      "osm": "way/1474786000 华南数谷智算中心 landuse=commercial 24.786618–24.790736N 113.499166–113.501360E",
+      "evidence": [
+        "OSM 具名，沐溪湖半岛",
+        "Esri z17：半岛上超大矩形在建，屋面未完、脚手架，形态像机房大厅而不是住宅",
+        "东侧山坡别墅和沿路厂房不计"
+      ],
+      "reported_operators": [],
+      "screenshots": [
+        "docs/plates/shaoguan/SG01_huashao_overview.jpg",
+        "docs/plates/shaoguan/SG02_huanan.jpg"
+      ]
+    },
+    {
+      "id": "SG-HUASHAO",
+      "name": "华韶数据谷",
+      "status": "mixed",
+      "confidence": "medium",
+      "lat": 24.7818,
+      "lon": 113.5047,
+      "osm": "way/1474599923 华韶数据谷 landuse=commercial 24.780955–24.782745N 113.503692–113.505767E",
+      "evidence": [
+        "OSM 具名，公路交叉口一块约 200 m 地块",
+        "Esri：路口一栋深色方楼 + 北侧在建橙顶，体量小于半岛大厅",
+        "沿路白顶厂房是普通工业"
+      ],
+      "reported_operators": [],
+      "screenshots": [
+        "docs/plates/shaoguan/SG01_huashao_overview.jpg"
+      ]
+    },
+    {
+      "id": "SG-PHASE2",
+      "name": "华韶数据谷二期",
+      "status": "under_construction",
+      "confidence": "medium",
+      "lat": 24.7789,
+      "lon": 113.5026,
+      "osm": "way/1536927107 华韶数据谷二期项目 landuse=construction 24.776229–24.781503N 113.499946–113.505250E",
+      "evidence": [
+        "OSM 明确标 construction",
+        "Esri z17：多边形内有整平垫层和在建点，大部分还是林地/公路边坡",
+        "南侧大跨白顶厂房按普通工业排除"
+      ],
+      "reported_operators": [],
+      "screenshots": [
+        "docs/plates/shaoguan/SG03_phase2.jpg"
+      ]
+    },
+    {
+      "id": "SG-YUEBEI",
+      "name": "粤北云数据中心",
+      "status": "operational_small",
+      "confidence": "low",
+      "lat": 24.7598,
+      "lon": 113.5288,
+      "osm": "way/1470175353 粤北云数据中心 landuse=commercial 24.759025–24.760552N 113.528072–113.529521E",
+      "evidence": [
+        "OSM 有名，但多边形只有约 150×150 m，落在曲江城区立交旁",
+        "Esri 是混杂街区，看不见超大无内院大厅",
+        "只记 OSM 名，不算集群主园区"
+      ],
+      "reported_operators": [],
+      "screenshots": []
+    }
+  ]
+}

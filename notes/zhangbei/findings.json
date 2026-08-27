@@ -1,0 +1,100 @@
+{
+  "city": "张北",
+  "origin": {
+    "name": "阿里数据港张家口张北数据中心（小二台数据街）",
+    "lat": 41.1887,
+    "lon": 114.8623,
+    "note": "圆心取 OSM way/699984315，不是张北县城。50 km 圈覆盖小二台、中都草原、庙滩县城北工业带。"
+  },
+  "search_radius_km": 50,
+  "imagery": {
+    "source": "Esri World Imagery tiles, 2026-08-27",
+    "caveat": "小二台、中都、庙滩三处相距十余公里，一张 z16 总图罩不住。腾讯、秦淮的公开项目在怀来，不写入张北业主。"
+  },
+  "sites": [
+    {
+      "id": "ZB-DATAPORT",
+      "name": "小二台 阿里数据港 / 上海数据港 A2",
+      "status": "operational",
+      "confidence": "high",
+      "lat": 41.1887,
+      "lon": 114.8623,
+      "osm": "way/699984315 阿里数据港张家口张北数据中心 landuse=industrial 41.186563–41.190869N 114.859448–114.865054E; way/699984314 上海数据港张北A2数据中心 41.185351–41.188848N 114.858847–114.862874E",
+      "evidence": [
+        "Overpass 50 km 内 0 条 telecom=data_center，但两块相邻 industrial 具名",
+        "Esri z17：围墙大院内两排各约 5 栋无内院长厅（41.1876–41.1906N 114.8601–114.8646E），屋顶深色机电/光伏条带",
+        "南端两栋更大白顶厅（41.1864–41.1876N 114.8603–114.8629E），落在 A2 多边形北缘",
+        "河北日报 2025-06 写小二台数据街灰色与橘色建筑为阿里数据港，是线索不是牌匾",
+        "西侧蓝/红顶厂房按仓储/工厂排除"
+      ],
+      "reported_operators": [
+        "阿里巴巴",
+        "上海数据港"
+      ],
+      "screenshots": [
+        "docs/plates/zhangbei/ZB01_xiaodai_overview.jpg",
+        "docs/plates/zhangbei/ZB02_xiaodai_halls.jpg"
+      ]
+    },
+    {
+      "id": "ZB-ALI-ZHONGDU",
+      "name": "阿里巴巴张北中都草原数据中心",
+      "status": "operational",
+      "confidence": "high",
+      "lat": 41.2812,
+      "lon": 114.6822,
+      "osm": "way/1068446080 阿里巴巴张北中都草原数据中心 landuse=industrial 41.279443–41.282957N 114.679823–114.684517E",
+      "evidence": [
+        "馒头营乡以东、中都草原南，孤立方院",
+        "Esri z17：约 8–10 栋白顶矩形模组，屋顶设备条带",
+        "西侧贴一块光伏（41.2790–41.2822N 114.6762–114.6797E）",
+        "形态与报道中阿里「一点三中心」的中都草原备份点一致"
+      ],
+      "reported_operators": [
+        "阿里巴巴"
+      ],
+      "screenshots": [
+        "docs/plates/zhangbei/ZB03_zhongdu.jpg"
+      ]
+    },
+    {
+      "id": "ZB-MIAOTAN",
+      "name": "庙滩产业园机房组（云联/庙滩报道选址，业主待核）",
+      "status": "mixed",
+      "confidence": "high",
+      "lat": 41.191,
+      "lon": 114.693,
+      "osm": "",
+      "evidence": [
+        "庙滩村东南、张北县城北高速互通旁，无 OSM 业主名",
+        "Esri z17：互通东侧多组无内院长厅 + 蓝顶冷却/光伏厂房（41.1875–41.1919N 114.6915–114.6968E）",
+        "东北侧沿路另一组模组大厅（41.1919–41.1957N 114.6952–114.7006E），东南再一组",
+        "2016 起政府稿把阿里云联/庙滩放在庙滩工业园；Epoch/FAS 把 41.193,114.698 标成阿里张北，本园大厅算机房，业主仍是候选",
+        "北侧大棚、西侧村庄不计"
+      ],
+      "reported_operators": [],
+      "screenshots": [
+        "docs/plates/zhangbei/ZB04_miaotan.jpg"
+      ]
+    },
+    {
+      "id": "ZB-OSM-DC",
+      "name": "张北数据中心（OSM 具名，庙滩东/县城北）",
+      "status": "operational",
+      "confidence": "medium_high",
+      "lat": 41.1834,
+      "lon": 114.7302,
+      "osm": "way/1256794600 张北数据中心 landuse=industrial 41.181511–41.185277N 114.726821–114.733574E",
+      "evidence": [
+        "距庙滩互通机房组约 2.7 km，同属县城北工业带",
+        "Esri z17：两簇灰顶模组大厅、屋顶深色条带（西簇 41.1835–41.1863N 114.7275–114.7325E；东簇 41.1835–41.1861N 114.7328–114.7368E）",
+        "南侧体育馆/住宅、东侧大棚、中间大跨白顶厂房不计入",
+        "无 operator 标签；万国/榕泰/阿里庙滩二期都只是报道线索"
+      ],
+      "reported_operators": [],
+      "screenshots": [
+        "docs/plates/zhangbei/ZB05_osm_dc.jpg"
+      ]
+    }
+  ]
+}

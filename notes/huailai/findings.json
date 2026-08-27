@@ -1,0 +1,118 @@
+{
+  "city": "怀来",
+  "origin": {
+    "name": "腾讯华北东园信息技术产业基地",
+    "lat": 40.324848,
+    "lon": 115.819336,
+    "note": "圆心取 OSM way/867231234（landuse=construction），东花园葡萄大道北、京藏 G6 南。不是张北，也不是怀来县城。"
+  },
+  "search_radius_km": 50,
+  "imagery": {
+    "source": "Esri World Imagery tiles, 2026-08-27",
+    "caveat": "50 km 圈东缘扫进北京昌平若干银行数据中心（中行、建行、农行、人行、国开行、中石油），不属怀来，排除。合盈无 OSM 名，业主按环评坐标写入。"
+  },
+  "sites": [
+    {
+      "id": "HL-TENCENT",
+      "name": "腾讯华北东园信息技术产业基地",
+      "status": "mixed",
+      "confidence": "high",
+      "lat": 40.324848,
+      "lon": 115.819336,
+      "osm": "way/867231234 landuse=construction 腾讯华北东园信息技术产业基地 40.322378–40.327319N 115.815366–115.823306E",
+      "evidence": [
+        "OSM 命名园区",
+        "Esri z17：多边形内多栋无内院大厅；东侧约六栋屋顶光伏条带（40.3232–40.3264N 115.8175–115.8229E）",
+        "北侧基坑、蓝水塘、柴发院（40.3264–40.3291N 115.8165–115.8224E）续建",
+        "南侧葡萄大道、北侧京藏 G6。报道称腾讯怀来东园/瑞北，东园已钉在此多边形"
+      ],
+      "reported_operators": [
+        "腾讯"
+      ],
+      "screenshots": [
+        "docs/plates/huailai/HL01_donghuayuan_overview.jpg",
+        "docs/plates/huailai/HL02_tencent_cmcc.jpg"
+      ]
+    },
+    {
+      "id": "HL-CMCC",
+      "name": "中国移动京津冀（张家口）数据中心",
+      "status": "operational",
+      "confidence": "high",
+      "lat": 40.324274,
+      "lon": 115.813861,
+      "osm": "way/1481173783 landuse=industrial 中国移动京津冀（张家口）数据中心 40.322904–40.325645N 115.812175–115.815548E",
+      "evidence": [
+        "紧贴腾讯东园西侧",
+        "Esri z16/z17 同规格白顶/条带屋顶大厅（40.3228–40.3256N 115.8125–115.8157E）",
+        "同属东花园葡萄大道组团，不是张北"
+      ],
+      "reported_operators": [
+        "中国移动"
+      ],
+      "screenshots": [
+        "docs/plates/huailai/HL02_tencent_cmcc.jpg"
+      ]
+    },
+    {
+      "id": "HL-QINHUAI",
+      "name": "河北秦淮数据东花园基地",
+      "status": "operational",
+      "confidence": "high",
+      "lat": 40.315059,
+      "lon": 115.824444,
+      "osm": "way/867231233 landuse=industrial 河北秦淮数据东花园基地 40.312867–40.317252N 115.821761–115.827126E",
+      "evidence": [
+        "OSM 具名，腾讯东园南约 1.1 km，葡萄大道南侧",
+        "Esri z16 总图可见独立大院与白顶大厅，与东园不是同一块多边形"
+      ],
+      "reported_operators": [
+        "秦淮数据"
+      ],
+      "screenshots": [
+        "docs/plates/huailai/HL01_donghuayuan_overview.jpg"
+      ]
+    },
+    {
+      "id": "HL-HOYINN",
+      "name": "合盈数据（怀来）科技产业园",
+      "status": "mixed",
+      "confidence": "medium_high",
+      "lat": 40.329828,
+      "lon": 115.864606,
+      "osm": "",
+      "evidence": [
+        "2022-01 环评第二次公示中心点 40°19′47.38″N 115°51′52.58″E，南侧葡萄大道",
+        "Esri z17：十余栋超大无内院矩形网格、屋顶机电（约 40.3280–40.3385N 115.8514–115.8665E）",
+        "西/北侧垫层续建。无 OSM 名，业主按环评/规划公示写入",
+        "与腾讯/移动组团隔大南辛堡村约 4 km"
+      ],
+      "reported_operators": [
+        "合盈数据"
+      ],
+      "screenshots": [
+        "docs/plates/huailai/HL03_hoyinn.jpg"
+      ]
+    },
+    {
+      "id": "HL-CUNRUI",
+      "name": "存瑞镇头二营北机房组（候选）",
+      "status": "operational",
+      "confidence": "medium_high",
+      "lat": 40.487,
+      "lon": 115.567,
+      "osm": "node/6541383304 头二营村 40.4758,115.5596（村庄，不是机房名）",
+      "evidence": [
+        "Photon/OSM 头二营村北侧田间独立大院",
+        "Esri z17：路南四栋超大白顶条带大厅（40.4847–40.4879N 115.5581–115.5702E）",
+        "路北多排模块化白顶机房+屋顶机电（40.4884–40.4918N 115.5611–115.5695E）",
+        "形态算机房。报道腾讯瑞北在头二营/葫芦套、秦淮存瑞在 G239，图上无牌匾/OSM，业主保持候选",
+        "路西体育场不计"
+      ],
+      "reported_operators": [],
+      "screenshots": [
+        "docs/plates/huailai/HL04_cunrui.jpg"
+      ]
+    }
+  ]
+}

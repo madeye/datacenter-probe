@@ -1,0 +1,166 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.7 375dc00a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-08-27T11:00:41Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 10171383675,
+  "lat": 40.0339057,
+  "lon": 116.2632981,
+  "tags": {
+    "name": "中国银行数据中心",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 733523114,
+  "center": {
+    "lat": 40.0493661,
+    "lon": 116.2777945
+  },
+  "tags": {
+    "addr:city": "北京",
+    "addr:district": "海淀区",
+    "addr:province": "北京市",
+    "addr:street": "北京市海淀区西北旺东路10号院",
+    "building": "yes",
+    "building:levels": "3",
+    "name": "云计算中心"
+  }
+},
+{
+  "type": "way",
+  "id": 733523115,
+  "center": {
+    "lat": 40.0490114,
+    "lon": 116.2779172
+  },
+  "tags": {
+    "addr:city": "北京",
+    "addr:district": "海淀区",
+    "addr:province": "北京市",
+    "addr:street": "北京市海淀区西北旺东路10号院",
+    "building": "yes",
+    "building:levels": "3",
+    "name": "云计算中心"
+  }
+},
+{
+  "type": "way",
+  "id": 768393620,
+  "center": {
+    "lat": 40.1605843,
+    "lon": 116.2372812
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "中国石油数据中心"
+  }
+},
+{
+  "type": "way",
+  "id": 867231233,
+  "center": {
+    "lat": 40.3150593,
+    "lon": 115.8244437
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "河北秦淮数据东花园基地"
+  }
+},
+{
+  "type": "way",
+  "id": 867231234,
+  "center": {
+    "lat": 40.3248483,
+    "lon": 115.8193359
+  },
+  "tags": {
+    "landuse": "construction",
+    "name": "腾讯华北东园信息技术产业基地"
+  }
+},
+{
+  "type": "way",
+  "id": 1030678431,
+  "center": {
+    "lat": 40.0698213,
+    "lon": 116.1742433
+  },
+  "tags": {
+    "landuse": "commercial",
+    "name": "中国建设银行数据中心西区"
+  }
+},
+{
+  "type": "way",
+  "id": 1059228118,
+  "center": {
+    "lat": 40.0795377,
+    "lon": 116.1775194
+  },
+  "tags": {
+    "landuse": "commercial",
+    "name": "中国农业银行北京数据中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1059228119,
+  "center": {
+    "lat": 40.0783379,
+    "lon": 116.1734986
+  },
+  "tags": {
+    "landuse": "commercial",
+    "name": "中国人民银行清算总中心数据中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1059228120,
+  "center": {
+    "lat": 40.0765472,
+    "lon": 116.1741671
+  },
+  "tags": {
+    "landuse": "commercial",
+    "name": "国家开发银行数据中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1481173783,
+  "center": {
+    "lat": 40.3242743,
+    "lon": 115.8138613
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "中国移动京津冀（张家口）数据中心"
+  }
+},
+{
+  "type": "way",
+  "id": 1510513670,
+  "center": {
+    "lat": 40.1386531,
+    "lon": 116.2295956
+  },
+  "tags": {
+    "building": "university",
+    "name": "数据中心",
+    "name:en": "Data Center",
+    "name:zh": "数据中心"
+  }
+}
+
+  ]
+}

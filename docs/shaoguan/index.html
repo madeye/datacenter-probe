@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>韶关数据中心建设情况</title>
+  <meta name="description" content="沐溪湖西：华南数谷半岛在建超大矩形可指认。沿路白顶厂房不是机房。">
+  <link rel="canonical" href="https://madeye.github.io/datacenter-probe/shaoguan/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="韶关数据中心建设情况">
+  <meta property="og:description" content="沐溪湖西：华南数谷半岛在建超大矩形可指认。沿路白顶厂房不是机房。">
+  <meta property="og:url" content="https://madeye.github.io/datacenter-probe/shaoguan/">
+  <meta property="og:image" content="https://madeye.github.io/datacenter-probe/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../probe.css">
+</head>
+<body>
+  <div class="neatline">
+    <span><a href="../">Datacenter Probe</a>  ·  韶关</span>
+    <span id="tick">24.7830°N  113.5025°E  ·  r = 50 km</span>
+    <span class="hide-narrow">Esri World Imagery  ·  2026-08-27</span>
+  </div>
+  <header class="mast">
+    <p class="series">Satellite reconnaissance  ·  Guangdong</p>
+    <h1>韶关周边数据中心建设情况</h1>
+    <p class="lede">韶关枢纽不在市政府。圆心取高新区西联、沐溪湖西的华韶—华南数谷组团。卫星上最像机房的是湖心半岛那栋在建超大矩形（OSM 华南数谷智算中心）。华韶一期是路口小地块，二期 OSM 标 construction、地面主要是垫层。沿路白顶大跨厂房是普通工业。城区粤北云只有 150 m 级多边形，没有大厅。</p>
+    <figure class="hero">
+      <img src="../plates/shaoguan/SG01_huashao_overview.jpg" alt="韶关沐溪湖西：华南数谷与华韶相对位置" width="1200" height="1200">
+      <figcaption>HERO  ·  沐溪湖西  ·  半岛在建大厅</figcaption>
+    </figure>
+  </header>
+  <div id="map" role="region" aria-label="卫星地图"></div>
+  <p class="map-caption">
+    <span><i class="legend-chip" style="background:#c23b22"></i>在建 / 高置信机房</span>
+    <span><i class="legend-chip" style="background:#2ec4b6"></i>已投运 / OSM 具名</span>
+    <span><i class="legend-chip" style="background:#c45c26"></i>候选 / 业主待核</span>
+    <span><i class="legend-chip" style="background:#7a7164"></i>排除或不像机房</span>
+    <span>底图 Esri World Imagery（WGS84）</span>
+  </p>
+  <section class="findings" aria-label="候选">
+    <article class="finding">
+      <div class="id">SG-HUANAN  ·  半岛</div>
+      <h2><a href="#huanan">华南数谷智算</a></h2>
+      <p>OSM 具名。湖心半岛超大矩形在建，屋面未完。</p>
+      <span class="badge high">中高 · 在建</span>
+    </article>
+    <article class="finding">
+      <div class="id">SG-HUASHAO  ·  路口</div>
+      <h2><a href="#huanan">华韶数据谷</a></h2>
+      <p>OSM 约 200 m 地块。方楼 + 北侧在建，体量小。</p>
+      <span class="badge mid">中 · 小地块</span>
+    </article>
+    <article class="finding">
+      <div class="id">SG-PHASE2  ·  垫层</div>
+      <h2><a href="#phase2">华韶二期</a></h2>
+      <p>OSM construction。多边形内主要是垫层。</p>
+      <span class="badge mid">中 · 垫层</span>
+    </article>
+    <article class="finding">
+      <div class="id">SG-YUEBEI  ·  城区</div>
+      <h2><a href="#huanan">粤北云数据中心</a></h2>
+      <p>OSM 有名，150 m 级，立交旁看不见大厅。</p>
+      <span class="badge low">低</span>
+    </article>
+  </section>
+  <section class="site" id="huanan">
+    <div class="site-rail">
+      <p class="coord">24.7887°N  113.5003°E</p>
+      <h2>华南数谷智算中心</h2>
+      <p class="meta">沐溪湖半岛。OSM way/1474786000，24.7866–24.7907N 113.4992–113.5014E。</p>
+      <p class="badge high">中高置信 · 在建大厅</p>
+      <ul>
+        <li>超大矩形、脚手架、屋面未完，形态像机房而不是住宅</li>
+        <li>东侧山坡别墅不计</li>
+        <li>路口华韶一期是另一块约 200 m OSM 多边形</li>
+      </ul>
+      <div class="ops"><span>业主待核</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@24.7887,113.5003,700m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/shaoguan/SG02_huanan.jpg" alt="沐溪湖半岛在建大厅">
+        <figcaption>PLATE SG02  ·  华南数谷  ·  Esri z17</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="site" id="phase2">
+    <div class="site-rail">
+      <p class="coord">24.7789°N  113.5026°E</p>
+      <h2>华韶数据谷二期</h2>
+      <p class="meta">OSM way/1536927107 landuse=construction，24.7762–24.7815N 113.4999–113.5053E。</p>
+      <p class="badge mid">中 · 垫层 / OSM 在建</p>
+      <ul>
+        <li>多边形内整平垫层和边坡，大厅尚未出</li>
+        <li>南侧大跨白顶厂房按普通工业排除</li>
+      </ul>
+      <div class="ops"><span>业主待核</span></div>
+      <p><a class="maps-link" href="https://www.google.com/maps/@24.7789,113.5026,800m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开 ↗</a></p>
+    </div>
+    <div class="plates">
+      <figure class="plate">
+        <img class="sat" src="../plates/shaoguan/SG03_phase2.jpg" alt="华韶二期垫层与沿路厂房">
+        <figcaption>PLATE SG03  ·  二期  ·  厂房排除</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="method">
+    <h2>怎么判，什么不算</h2>
+    <p>圆心在沐溪湖西园区，不在韶关市政府。职业中学那个 telecom=data_center 节点排除。</p>
+    <h3>算作机房</h3>
+    <ul><li>半岛超大无内院矩形（在建）</li><li>OSM 具名（华南数谷、华韶）须对照形态</li></ul>
+    <h3>明确排除</h3>
+    <ul class="exclude"><li>沿路白顶大跨厂房、采石场</li><li>山坡别墅、城区立交住宅</li><li>职业中学信息中心</li></ul>
+    <p><a href="https://www.google.com/maps/@24.783,113.5025,8000m/data=!3m1!1e3" target="_blank" rel="noopener">在 Google 卫星图打开圆心 ↗</a></p>
+  </section>
+  <nav class="city-nav" aria-label="其他城市">
+    <span>五座城</span>
+    <a href="../guian/">贵安</a> · <a href="../ulanqab/">乌兰察布</a> · <a href="../yangquan/">阳泉</a> · <a href="../zhongwei/">中卫</a> · <a href="../karamay/">克拉玛依</a>
+    <span>续卷</span>
+    <a href="../zhangbei/">张北</a> · <a href="../huailai/">怀来</a> · <a href="../qingyang/">庆阳</a> · <a href="../horinger/">和林格尔</a> · <a href="../shaoguan/">韶关</a> · <a href="../wuhu/">芜湖</a>
+  </nav>
+  <footer>
+    <div>
+      Datacenter Probe  ·  韶关  ·  标注截图仅供复核，不是权属证明。
+      影像 © Esri, Maxar, Earthstar Geographics。续卷 · 东数西算枢纽，不是 2022 智东西原文里的五座城。
+    </div>
+  </footer>
+  <div class="lightbox" id="lb" hidden>
+    <button type="button" id="lb-close">关闭</button>
+    <img id="lb-img" alt="">
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>window.PROBE = {"origin":[24.783,113.5025],"originName":"圆心 · 华韶/华南数谷","radiusKm":50,"zoom":13,"sites":[{"id":"huanan","name":"华南数谷","pos":[24.7887,113.5003],"color":"#c23b22","note":"半岛在建大厅"},{"id":"phase2","name":"华韶二期","pos":[24.7789,113.5026],"color":"#c45c26","note":"垫层"}]};</script>
+  <script src="../probe.js"></script>
+</body>
+</html>
