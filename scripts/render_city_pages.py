@@ -17,8 +17,13 @@ HEAD = """<!DOCTYPE html>
   <meta property="og:title" content="{title}">
   <meta property="og:description" content="{desc}">
   <meta property="og:url" content="https://madeye.github.io/datacenter-probe/{slug}/">
-  <meta property="og:image" content="https://madeye.github.io/datacenter-probe/social-card.png">
+  <meta property="og:image" content="https://madeye.github.io/datacenter-probe/{slug}/social-card.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{h1}">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://madeye.github.io/datacenter-probe/{slug}/social-card.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap">

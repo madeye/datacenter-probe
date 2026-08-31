@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <title>乌兰察布 social card</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500&family=Noto+Serif+SC:wght@700&display=block">
+  <style>
+    :root {
+      --darkroom: #12100c;
+      --bone: #e8e1d4;
+      --dust: #c9b896;
+      --rust: #c45c26;
+      --rule: rgba(201, 184, 150, 0.22);
+      --serif: "Noto Serif SC", "Songti SC", serif;
+      --sans: "Noto Sans SC", "PingFang SC", sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, monospace;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: var(--darkroom);
+      color: var(--bone);
+    }
+    body {
+      display: grid;
+      grid-template-columns: 548px 1fr;
+      grid-template-rows: 630px;
+    }
+    .copy {
+      display: flex;
+      flex-direction: column;
+      height: 630px;
+      padding: 44px 48px 36px;
+      border-right: 1px solid var(--rule);
+    }
+    .brand {
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--dust);
+    }
+    .kicker {
+      margin: 32px 0 0;
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rust);
+    }
+    h1 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 46px;
+      line-height: 1.24;
+      letter-spacing: 0.02em;
+      margin: 14px 0 0;
+    }
+    h1 span { display: block; white-space: nowrap; }
+    .lede {
+      margin: 18px 0 0;
+      font-family: var(--sans);
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--dust);
+    }
+    .meta {
+      margin-top: auto;
+      padding-top: 22px;
+      border-top: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      color: var(--dust);
+    }
+    .viz {
+      position: relative;
+      height: 630px;
+      overflow: hidden;
+      background: #1a1712;
+    }
+    .viz img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 72% 62%;
+    }
+    .viz::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(18,16,12,0.28) 0%, transparent 28%);
+      pointer-events: none;
+    }
+    .caption {
+      position: absolute;
+      left: 18px;
+      bottom: 16px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--bone);
+      background: rgba(18,16,12,0.72);
+      padding: 6px 10px;
+    }
+  </style>
+</head>
+<body>
+  <section class="copy">
+    <div class="brand">Datacenter Probe</div>
+    <p class="kicker">Satellite reconnaissance · Inner Mongolia</p>
+    <h1><span>乌兰察布周边</span><span>数据中心建设情况</span></h1>
+    <p class="lede">以集宁城区为圆心，50 公里卫星核查。<br>机房全部落在东面 G110 走廊。</p>
+    <p class="meta">41.0181°N  113.1155°E  ·  r = 50 km</p>
+  </section>
+  <div class="viz">
+    <img src="../plates/ulanqab/hero_corridor.jpg" alt="">
+    <span class="caption">乌兰察布 · 集宁 · G110 走廊</span>
+  </div>
+  <script>
+    (async () => {
+      const imgs = [...document.images].map((img) =>
+        img.complete && img.naturalWidth
+          ? Promise.resolve()
+          : new Promise((res) => {
+              img.addEventListener("load", res, { once: true });
+              img.addEventListener("error", res, { once: true });
+            })
+      );
+      await Promise.all([document.fonts.ready, ...imgs]);
+      document.documentElement.dataset.ready = "1";
+    })();
+    setTimeout(() => { document.documentElement.dataset.ready = "1"; }, 8000);
+  </script>
+</body>
+</html>
