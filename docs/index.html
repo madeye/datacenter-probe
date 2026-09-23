@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>数据中心造就的五座城 · 卫星核查</title>
-  <meta name="description" content="按智东西《数据中心造就的五座城》逐城做卫星核查：贵安、乌兰察布、阳泉、中卫、克拉玛依。">
+  <title>中国数据中心 · 十一座城市卫星核查</title>
+  <meta name="description" content="十一座城市的数据中心卫星核查：园区位置、标注影像与核查依据。">
   <link rel="canonical" href="https://madeye.github.io/datacenter-probe/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:site_name" content="Datacenter Probe">
-  <meta property="og:title" content="数据中心造就的五座城 · 卫星核查">
+  <meta property="og:title" content="中国数据中心 · 十一座城市卫星核查">
   <meta property="og:description" content="贵安、乌兰察布、阳泉、中卫、克拉玛依：卫星上能看见的机房，和还对不上业主的地块。">
   <meta property="og:url" content="https://madeye.github.io/datacenter-probe/">
   <meta property="og:image" content="https://madeye.github.io/datacenter-probe/social-card.png">
@@ -17,67 +17,118 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="数据中心造就的五座城 · 卫星核查">
+  <meta name="twitter:title" content="中国数据中心 · 十一座城市卫星核查">
   <meta name="twitter:description" content="贵安、乌兰察布、阳泉、中卫、克拉玛依：卫星上能看见的机房。">
   <meta name="twitter:image" content="https://madeye.github.io/datacenter-probe/social-card.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="probe.css">
 </head>
-<body>
+<body class="index-page">
+  <a class="skip-link" href="#map">跳到地图</a>
   <div class="neatline">
     <span>Datacenter Probe</span>
-    <span>五座城  ·  卫星核查</span>
+    <span>11 座城  ·  卫星核查</span>
     <span class="hide-narrow">Esri / Google  ·  2026-08</span>
   </div>
 
   <header class="mast">
-    <p class="series">Satellite reconnaissance  ·  five cities</p>
-    <h1>数据中心造就的五座城</h1>
-    <p class="lede">智东西 2022 年那篇<a href="https://zhidx.com/p/314607.html">《数据中心造就的五座城》</a>点了贵安、乌兰察布、阳泉、中卫、克拉玛依。乌兰察布已经按 50 公里走廊查过一遍。这一卷把另外四座城补上：同一套形态判据，圆心取主园区，半径仍是 50 公里。影像以 Esri World Imagery 为主，Google 只给外链复核。</p>
+    <p class="series">中国数据中心 · 卫星核查图集</p>
+    <h1>从卫星上，看见算力的落点。</h1>
+    <p class="lede">从贵安、乌兰察布到张北、怀来，逐城核查十一座城市的数据中心园区。以各城市选定圆心周边 50 公里为范围，用同一套形态判据，对照卫星影像、地图标注与公开报道。影像以 Esri World Imagery 为主，Google 提供外链复核。</p>
   </header>
 
-  <nav class="city-grid" aria-label="五座城">
+  <section class="atlas" aria-labelledby="atlas-title">
+    <div class="section-heading"><div><h2 id="atlas-title">十一座城，一张核查地图</h2><p>从园区进入详情，对照地块、标注影像与核查依据。</p></div><span>11 座核查城市</span></div>
+    <div id="map" role="region" aria-label="十一座城市核查地图"></div>
+    <p class="atlas-note">点位为各卷核查圆心；点位不代表建设状态。核查记录：2026 年 8 月。</p>
+  </section>
+  <div class="section-heading directory-heading"><div><h2>城市目录</h2><p>查看各城市的园区位置、卫星影像和核查结果。</p></div></div>
+  <nav class="city-grid" aria-label="核查城市">
     <a class="city-card" href="guian/">
       <div class="id">01  ·  贵州  ·  南贵</div>
       <h2>贵安</h2>
       <p>数谷大道一条走廊。华为云上屯和腾讯七星隔路相望，苹果两栋超大白顶已投运。腾讯在山体地下，地面只见山丘和路西四栋大厅。</p>
       <span class="badge high">高 · 三处具名</span>
-      <span class="go">打开贵安卷宗 ↗</span>
+      <span class="go">打开贵安详情 ↗</span>
     </a>
     <a class="city-card" href="ulanqab/">
       <div class="id">02  ·  内蒙古  ·  北乌</div>
       <h2>乌兰察布</h2>
       <p>机房不在集宁城里，全部落在以东 G110 走廊：益武堂、四号村、圣家营。</p>
       <span class="badge high">高 · 走廊已查</span>
-      <span class="go">打开乌兰察布卷宗 ↗</span>
+      <span class="go">打开乌兰察布详情 ↗</span>
     </a>
     <a class="city-card" href="yangquan/">
       <div class="id">03  ·  山西</div>
       <h2>阳泉</h2>
-      <p>五座城里最小的一处。大连街：百度南端三栋加东北约 8 栋模组可指认，云峰在北侧。</p>
+      <p>机房集中在一处街区。大连街：百度南端三栋加东北约 8 栋模组可指认，云峰在北侧。</p>
       <span class="badge mid">高 / 中高 · 一处街区</span>
-      <span class="go">打开阳泉卷宗 ↗</span>
+      <span class="go">打开阳泉详情 ↗</span>
     </a>
     <a class="city-card" href="zhongwei/">
       <div class="id">04  ·  宁夏</div>
       <h2>中卫</h2>
-      <p>不在城区，在北面戈壁。西部云基地六栋白顶大厅是五座城里最典型的风冷机房，东邻还有三栋，西侧在建。</p>
+      <p>不在城区，在北面戈壁。西部云基地六栋白顶大厅具有典型风冷机房形态，东邻还有三栋，西侧在建。</p>
       <span class="badge high">高 · 形态 / 中 · 业主</span>
-      <span class="go">打开中卫卷宗 ↗</span>
+      <span class="go">打开中卫详情 ↗</span>
     </a>
     <a class="city-card" href="karamay/">
       <div class="id">05  ·  新疆</div>
       <h2>克拉玛依</h2>
       <p>六座机房都写在同一座园。卫星能确认园，钉不死楼。体量小于贵安和中卫。</p>
       <span class="badge mid">中 · 园区确认</span>
-      <span class="go">打开克拉玛依卷宗 ↗</span>
+      <span class="go">打开克拉玛依详情 ↗</span>
+    </a>
+
+    <a class="city-card" href="zhangbei/">
+      <div class="id">06  ·  河北  ·  坝上</div>
+      <h2>张北</h2>
+      <p>小二台阿里数据港两排大厅，中都草原 8–10 栋白顶模组。庙滩互通有大厅，业主未钉。腾讯不在这里。</p>
+      <span class="badge high">高 · 两处具名</span>
+      <span class="go">打开张北详情 ↗</span>
+    </a>
+    <a class="city-card" href="huailai/">
+      <div class="id">07  ·  河北  ·  官厅</div>
+      <h2>怀来</h2>
+      <p>东花园：腾讯东园和中国移动西邻，秦淮在南，合盈在东。头二营北另有一组，业主候选。</p>
+      <span class="badge high">高 · 三处 OSM 名</span>
+      <span class="go">打开怀来详情 ↗</span>
+    </a>
+    <a class="city-card" href="qingyang/">
+      <div class="id">08  ·  甘肃  ·  西峰</div>
+      <h2>庆阳</h2>
+      <p>温泉镇。Esri 瓦片接缝以东能看见秦淮一栋在建白顶大厅；其余运营商多边形仍是村庄。</p>
+      <span class="badge mid">中高 · 一处大厅</span>
+      <span class="go">打开庆阳详情 ↗</span>
+    </a>
+    <a class="city-card" href="horinger/">
+      <div class="id">09  ·  内蒙古  ·  盛乐</div>
+      <h2>和林格尔</h2>
+      <p>不是乌兰察布。盛乐园区：中国移动白顶大厅可指认，电信信息园能钉园。华为无 OSM 名。</p>
+      <span class="badge high">高 / 中高 · 两园</span>
+      <span class="go">打开和林格尔详情 ↗</span>
+    </a>
+    <a class="city-card" href="shaoguan/">
+      <div class="id">10  ·  广东  ·  沐溪</div>
+      <h2>韶关</h2>
+      <p>不在市政府。沐溪湖半岛一栋在建超大矩形（华南数谷）。沿路白顶厂房不是机房。</p>
+      <span class="badge mid">中高 · 一处在建</span>
+      <span class="go">打开韶关详情 ↗</span>
+    </a>
+    <a class="city-card" href="wuhu/">
+      <div class="id">11  ·  安徽  ·  三山</div>
+      <h2>芜湖</h2>
+      <p>田里一座华为云在建大厅，钢结构加塔吊。智算中心 OSM 多边形很小。冷却塔是电厂。</p>
+      <span class="badge high">高 · 一处在建</span>
+      <span class="go">打开芜湖详情 ↗</span>
     </a>
   </nav>
 
   <section class="method">
-    <h2>这一卷怎么查</h2>
+    <h2>核查方法</h2>
     <p>每座城圆心取主园区或新区组团，扫 50 公里。先 OSM / 路名钉点，再拉 Esri 瓦片看形态，最后和 2022 原文及 2024–2026 政府稿交叉。</p>
     <h3>算作机房</h3>
     <ul>
@@ -92,64 +143,17 @@
       <li>光伏阵列本身（可以当机房配套）</li>
       <li>没有名称就只标候选，不写成某家的产权</li>
     </ul>
-    <p>乌兰察布旧址（<code>/</code> 根路径上的 50 km 走廊页）已迁到 <a href="ulanqab/">/ulanqab/</a>。</p>
   </section>
-
-  <section class="method continuation">
-    <h2>续卷 · 东数西算枢纽</h2>
-    <p>2022 原文只点了五座城。这一节是后加的东数西算枢纽：张家口集群、内蒙古和林格尔、甘肃庆阳、粤北韶关、长三角芜湖。圆心同样取主园区、半径 50 km，判据不变。不是智东西那篇文章里的名单。</p>
-  </section>
-  <nav class="city-grid" aria-label="续卷">
-    <a class="city-card" href="zhangbei/">
-      <div class="id">06  ·  河北  ·  坝上</div>
-      <h2>张北</h2>
-      <p>小二台阿里数据港两排大厅，中都草原 8–10 栋白顶模组。庙滩互通有大厅，业主未钉。腾讯不在这里。</p>
-      <span class="badge high">高 · 两处具名</span>
-      <span class="go">打开张北卷宗 ↗</span>
-    </a>
-    <a class="city-card" href="huailai/">
-      <div class="id">07  ·  河北  ·  官厅</div>
-      <h2>怀来</h2>
-      <p>东花园：腾讯东园和中国移动西邻，秦淮在南，合盈在东。头二营北另有一组，业主候选。</p>
-      <span class="badge high">高 · 三处 OSM 名</span>
-      <span class="go">打开怀来卷宗 ↗</span>
-    </a>
-    <a class="city-card" href="qingyang/">
-      <div class="id">08  ·  甘肃  ·  西峰</div>
-      <h2>庆阳</h2>
-      <p>温泉镇。Esri 瓦片接缝以东能看见秦淮一栋在建白顶大厅；其余运营商多边形仍是村庄。</p>
-      <span class="badge mid">中高 · 一处大厅</span>
-      <span class="go">打开庆阳卷宗 ↗</span>
-    </a>
-    <a class="city-card" href="horinger/">
-      <div class="id">09  ·  内蒙古  ·  盛乐</div>
-      <h2>和林格尔</h2>
-      <p>不是乌兰察布。盛乐园区：中国移动白顶大厅可指认，电信信息园能钉园。华为无 OSM 名。</p>
-      <span class="badge high">高 / 中高 · 两园</span>
-      <span class="go">打开和林格尔卷宗 ↗</span>
-    </a>
-    <a class="city-card" href="shaoguan/">
-      <div class="id">10  ·  广东  ·  沐溪</div>
-      <h2>韶关</h2>
-      <p>不在市政府。沐溪湖半岛一栋在建超大矩形（华南数谷）。沿路白顶厂房不是机房。</p>
-      <span class="badge mid">中高 · 一处在建</span>
-      <span class="go">打开韶关卷宗 ↗</span>
-    </a>
-    <a class="city-card" href="wuhu/">
-      <div class="id">11  ·  安徽  ·  三山</div>
-      <h2>芜湖</h2>
-      <p>田里一座华为云在建大厅，钢结构加塔吊。智算中心 OSM 多边形很小。冷却塔是电厂。</p>
-      <span class="badge high">高 · 一处在建</span>
-      <span class="go">打开芜湖卷宗 ↗</span>
-    </a>
-  </nav>
 
   <footer>
     <div>
-      Datacenter Probe  ·  五座城 + 续卷。
+      Datacenter Probe  ·  十一座城市卫星核查。
       对照：智东西 2022-03-11 <a href="https://zhidx.com/p/314607.html">《数据中心造就的五座城》</a>。
-      影像 © Esri, Maxar, Earthstar Geographics；乌兰察布卷另有 Google / Airbus 截图。
+      影像 © Esri, Maxar, Earthstar Geographics；乌兰察布页另有 Google / Airbus 截图。
     </div>
   </footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="cities.js"></script>
+  <script src="probe.js"></script>
 </body>
 </html>

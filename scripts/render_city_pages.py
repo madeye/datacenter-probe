@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Render city survey pages from a small data dict."""
 from pathlib import Path
+import json
 
 ROOT = Path(__file__).resolve().parents[1] / "docs"
 
@@ -31,6 +32,7 @@ HEAD = """<!DOCTYPE html>
   <link rel="stylesheet" href="../probe.css">
 </head>
 <body>
+  <a class="skip-link" href="#map">跳到地图</a>
   <div class="neatline">
     <span><a href="../">Datacenter Probe</a>  ·  {city}</span>
     <span id="tick">{tick}</span>
@@ -63,9 +65,9 @@ HEAD = """<!DOCTYPE html>
     <p><a href="{maps}" target="_blank" rel="noopener">在 Google 卫星图打开圆心 ↗</a></p>
   </section>
   <nav class="city-nav" aria-label="其他城市">
-    <span>五座城</span>
+    <span>全部城市</span>
     <a href="../guian/">贵安</a> · <a href="../ulanqab/">乌兰察布</a> · <a href="../yangquan/">阳泉</a> · <a href="../zhongwei/">中卫</a> · <a href="../karamay/">克拉玛依</a>
-    <span>续卷</span>
+    ·
     <a href="../zhangbei/">张北</a> · <a href="../huailai/">怀来</a> · <a href="../qingyang/">庆阳</a> · <a href="../horinger/">和林格尔</a> · <a href="../shaoguan/">韶关</a> · <a href="../wuhu/">芜湖</a>
   </nav>
   <footer>
@@ -100,7 +102,7 @@ def site(sid, coord, title, meta, badge, klass, bullets, ops, maps, plates):
     op = "".join(f"<span>{o}</span>" for o in ops)
     figs = "\n".join(
         f"""      <figure class="plate">
-        <img class="sat" src="{src}" alt="{alt}">
+        <img loading="lazy" decoding="async" class="sat" src="{src}" alt="{alt}">
         <figcaption>{cap}</figcaption>
       </figure>"""
         for src, alt, cap in plates
@@ -193,7 +195,7 @@ PAGES.append(dict(
     desc="以经开区东区大连街为圆心：百度云计算中心 8 栋模组可指认，云峰智算在北侧。",
     tick="37.8600°N  113.6230°E  ·  r = 50 km",
     h1="阳泉周边数据中心建设情况",
-    lede="五座城里阳泉的机房最少，也最集中。能指认的只有大连街这一块：OSM 百度多边形南端三栋屋顶机电密布的楼，东北侧约 8 栋灰顶模组，模组东边一栋屋顶机电密布的新楼。再往北是 OSM 标的云峰智算，地块很小。50 公里圈里没有第二条走廊。",
+    lede="阳泉的机房集中在大连街一带。能指认的只有大连街这一块：OSM 百度多边形南端三栋屋顶机电密布的楼，东北侧约 8 栋灰顶模组，模组东边一栋屋顶机电密布的新楼。再往北是 OSM 标的云峰智算，地块很小。50 公里圈里没有第二条走廊。",
     hero="../plates/yangquan/Y03_dalian_overview.jpg",
     hero_alt="阳泉经开区东区大连街：百度和云峰",
     hero_cap="HERO  ·  大连街  ·  百度在南、云峰在北",
@@ -357,7 +359,7 @@ PAGES.append(dict(
     <h3>明确排除</h3>
     <ul class="exclude"><li>蓝/红顶仓储厂房</li><li>体育馆、住宅、大棚、大跨白顶厂房</li><li>风电和光伏阵列本身</li><li>腾讯/秦淮（在怀来，不写入张北）</li></ul>""",
     maps=gmaps(41.1887, 114.8623, 8000),
-    footer="续卷 · 东数西算枢纽，不是 2022 智东西原文里的五座城。",
+    footer="东数西算枢纽核查。",
     probe='{"origin":[41.1887,114.8623],"originName":"圆心 · 小二台阿里数据港","radiusKm":50,"zoom":12,"sites":[{"id":"xiaodai","name":"小二台阿里数据港","pos":[41.1887,114.8623],"color":"#2ec4b6","note":"两排大厅 + 南端白顶"},{"id":"zhongdu","name":"中都草原","pos":[41.2812,114.6822],"color":"#2ec4b6","note":"8–10 栋白顶模组"},{"id":"miaotan","name":"庙滩机房组","pos":[41.191,114.693],"color":"#c45c26","note":"大厅形态、业主待核"},{"id":"osmdc","name":"张北数据中心","pos":[41.1834,114.7302],"color":"#2ec4b6","note":"OSM 具名、两簇灰顶"}]}',
 ))
 
@@ -421,7 +423,7 @@ PAGES.append(dict(
     <h3>明确排除</h3>
     <ul class="exclude"><li>北京昌平中行/建行/农行/人行/国开行/中石油数据中心</li><li>大南辛堡村住宅、葡萄园</li><li>头二营路西体育场</li><li>阿里（在张北，不写入怀来）</li></ul>""",
     maps=gmaps(40.324848, 115.819336, 8000),
-    footer="续卷 · 东数西算枢纽，不是 2022 智东西原文里的五座城。",
+    footer="东数西算枢纽核查。",
     probe='{"origin":[40.324848,115.819336],"originName":"圆心 · 腾讯华北东园","radiusKm":50,"zoom":12,"sites":[{"id":"tencent","name":"腾讯东园","pos":[40.324848,115.819336],"color":"#c23b22","note":"大厅+北侧基坑"},{"id":"cmcc","name":"中国移动","pos":[40.324274,115.813861],"color":"#2ec4b6","note":"OSM 具名已投运"},{"id":"qinhuai","name":"秦淮东花园","pos":[40.315059,115.824444],"color":"#2ec4b6","note":"OSM way/867231233"},{"id":"hoyinn","name":"合盈数据","pos":[40.329828,115.864606],"color":"#c45c26","note":"环评坐标、大厅网格"},{"id":"cunrui","name":"头二营北","pos":[40.487,115.567],"color":"#c45c26","note":"路南四栋、业主待核"}]}',
 ))
 
@@ -458,7 +460,7 @@ PAGES.append(dict(
     <h3>明确排除</h3>
     <ul class="exclude"><li>城区「庆阳数据中心」住宅空地</li><li>接缝以西尚未出大厅的 OSM 多边形</li><li>华为数字能源供电方案</li><li>民房、条田、体育场</li></ul>""",
     maps=gmaps(35.7335, 107.7044, 5000),
-    footer="续卷 · 东数西算枢纽，不是 2022 智东西原文里的五座城。",
+    footer="东数西算枢纽核查。",
     probe='{"origin":[35.7335,107.7044],"originName":"圆心 · 秦淮零碳基地","radiusKm":50,"zoom":14,"sites":[{"id":"chindata","name":"秦淮零碳基地","pos":[35.7334,107.7018],"color":"#c23b22","note":"一栋在建白顶大厅"},{"id":"chindata","name":"能建多边形","pos":[35.7368,107.6987],"color":"#c45c26","note":"OSM 有名、本幅未见大厅"}]}',
 ))
 
@@ -501,7 +503,7 @@ PAGES.append(dict(
     <h3>明确排除</h3>
     <ul class="exclude"><li>曲面办公楼、体育场、住宅</li><li>大跨蓝顶仓储厂房</li><li>没有 OSM 名的华为报道</li></ul>""",
     maps=gmaps(40.539, 111.823, 8000),
-    footer="续卷 · 东数西算枢纽，不是 2022 智东西原文里的五座城。",
+    footer="东数西算枢纽核查。",
     probe='{"origin":[40.539,111.823],"originName":"圆心 · 盛乐园区","radiusKm":50,"zoom":13,"sites":[{"id":"cmcc","name":"中国移动","pos":[40.5369,111.8164],"color":"#2ec4b6","note":"白顶大厅+南扩"},{"id":"telecom","name":"中国电信信息园","pos":[40.5411,111.8291],"color":"#c45c26","note":"园可钉、楼要分"}]}',
 ))
 
@@ -544,7 +546,7 @@ PAGES.append(dict(
     <h3>明确排除</h3>
     <ul class="exclude"><li>沿路白顶大跨厂房、采石场</li><li>山坡别墅、城区立交住宅</li><li>职业中学信息中心</li></ul>""",
     maps=gmaps(24.783, 113.5025, 8000),
-    footer="续卷 · 东数西算枢纽，不是 2022 智东西原文里的五座城。",
+    footer="东数西算枢纽核查。",
     probe='{"origin":[24.783,113.5025],"originName":"圆心 · 华韶/华南数谷","radiusKm":50,"zoom":13,"sites":[{"id":"huanan","name":"华南数谷","pos":[24.7887,113.5003],"color":"#c23b22","note":"半岛在建大厅"},{"id":"phase2","name":"华韶二期","pos":[24.7789,113.5026],"color":"#c45c26","note":"垫层"}]}',
 ))
 
@@ -588,12 +590,26 @@ PAGES.append(dict(
     <h3>明确排除</h3>
     <ul class="exclude"><li>冷却塔 / 电厂</li><li>罐区、大跨白顶厂房</li><li>蔬菜大棚、水田、住宅</li></ul>""",
     maps=gmaps(31.3484, 118.2862, 6000),
-    footer="续卷 · 东数西算枢纽，不是 2022 智东西原文里的五座城。",
+    footer="东数西算枢纽核查。",
     probe='{"origin":[31.3484,118.2862],"originName":"圆心 · 华为云华东芜湖","radiusKm":50,"zoom":13,"sites":[{"id":"huawei","name":"华为云","pos":[31.3484,118.2862],"color":"#c23b22","note":"超大矩形在建"},{"id":"zhisuan","name":"一体化智算","pos":[31.3424,118.2971],"color":"#c45c26","note":"OSM 小地块"}]}',
 ))
 
 
+def render_overview():
+    cities = []
+    for page in PAGES:
+        probe = json.loads(page["probe"])
+        cities.append(dict(id=page["slug"], name=page["city"], pos=probe["origin"],
+                           href=page["slug"] + "/", note=page["desc"],
+                           color="#167b83"))
+    cities.insert(1, dict(id="ulanqab", name="乌兰察布", pos=[41.0181414, 113.1155004],
+                          href="ulanqab/", note="集宁以东 G110 走廊：益武堂、四号村、圣家营。", color="#167b83"))
+    config = dict(overview=True, origin=[35, 105], zoom=4, sites=cities)
+    (ROOT / "cities.js").write_text("// Generated by scripts/render_city_pages.py\nwindow.PROBE = " + json.dumps(config, ensure_ascii=False) + ";\n")
+
+
 def main():
+    render_overview()
     for p in PAGES:
         out = ROOT / p["slug"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
