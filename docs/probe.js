@@ -141,9 +141,10 @@
     return marker;
   });
   function fitSites() {
-    if (markers.length) map.fitBounds(L.featureGroup(markers).getBounds(), { padding: [36, 36], maxZoom: cfg.overview ? 5 : 14, animate: false });
     map.closePopup();
+    if (markers.length) map.fitBounds(L.featureGroup(markers).getBounds(), { padding: [36, 36], maxZoom: cfg.overview ? 5 : 14, animate: false });
     buttons.forEach((button) => button.setAttribute("aria-pressed", "false"));
+    sidebar.scrollTop = 0;
   }
   function action(label, callback) {
     const button = document.createElement("button");
@@ -152,7 +153,12 @@
     button.addEventListener("click", callback);
     toolbar.append(button);
   }
-  action(cfg.overview ? "显示全部城市" : "显示全部点位", fitSites);
+  action("重置地图视野", () => {
+    fitSites();
+    status.textContent = cfg.overview
+      ? `已重置地图视野，显示全部 ${markers.length} 座城市。点击城市名称可放大查看。`
+      : `已重置地图视野，显示全部 ${markers.length} 个核查点。`;
+  });
   if (circle) action(`${cfg.radiusKm} km 核查范围`, () => map.fitBounds(circle.getBounds(), { padding: [20, 20], animate: false }));
   fitSites();
 })();
