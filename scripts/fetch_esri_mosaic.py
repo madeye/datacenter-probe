@@ -13,6 +13,8 @@ from __future__ import annotations
 import argparse
 import io
 import math
+import os
+import tempfile
 import time
 import urllib.error
 import urllib.request
@@ -40,8 +42,14 @@ def mosaic_origin(lat: float, lon: float, z: int, half: int) -> tuple[int, int]:
 
 def fetch_tile(z: int, x: int, y: int, dest: Path, retries: int = 4) -> Image.Image:
     dest.parent.mkdir(parents=True, exist_ok=True)
-    if dest.exists() and dest.stat().st_size > 800:
-        return Image.open(dest).convert("RGB")
+    if dest.exists():
+        try:
+            with Image.open(dest) as cached:
+                cached.load()
+                if cached.size == (TILE, TILE):
+                    return cached.convert("RGB")
+        except OSError:
+            pass
     url = ESRI.format(z=z, x=x, y=y)
     last_err: Exception | None = None
     for attempt in range(retries):
@@ -49,8 +57,16 @@ def fetch_tile(z: int, x: int, y: int, dest: Path, retries: int = 4) -> Image.Im
             req = urllib.request.Request(url, headers={"User-Agent": UA})
             with urllib.request.urlopen(req, timeout=30) as resp:
                 data = resp.read()
-            dest.write_bytes(data)
-            return Image.open(io.BytesIO(data)).convert("RGB")
+            with Image.open(io.BytesIO(data)) as downloaded:
+                downloaded.load()
+                if downloaded.size != (TILE, TILE):
+                    raise OSError(f"Unexpected tile dimensions: {downloaded.size}")
+                result = downloaded.convert("RGB")
+            with tempfile.NamedTemporaryFile(dir=dest.parent, delete=False) as temp:
+                temp.write(data)
+                temp_path = Path(temp.name)
+            os.replace(temp_path, dest)
+            return result
         except (urllib.error.URLError, TimeoutError, OSError) as e:
             last_err = e
             time.sleep(0.6 * (attempt + 1))

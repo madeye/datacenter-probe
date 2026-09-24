@@ -3,3 +3,5 @@ docs/preview/
 *.pyc
 .venv/
 screenshots/**/_tiles/
+
+_site/

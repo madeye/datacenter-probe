@@ -1,0 +1,844 @@
+{
+  "fetched_at": "2026-09-23T15:34:27.904221+08:00",
+  "completed_at": "2026-09-23T15:44:42.895834+08:00",
+  "source": "Esri World Imagery",
+  "tile_url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+  "acquisition_date": "unknown; varies by tile",
+  "note": "获取日期不是拍摄日期；原核查文字与框线未因重新获取影像而自动更新。",
+  "tile_count": 4408,
+  "mosaics": [
+    {
+      "path": "guian/overview_shugu_z15.jpg",
+      "lat": 26.365,
+      "lon": 106.49,
+      "z": 15,
+      "half": 6,
+      "origin_tile": [
+        26070,
+        13888
+      ],
+      "size": [
+        3328,
+        3328
+      ],
+      "sha256": "f6b87edb1793765cdbcb1a237eb63becb0ff0c828218939e78ae1b2dc9d64c7a",
+      "tile_set_sha256": "85a566b27e2d3140327eb521e57a73fbe7064ae73f3e1d1dc6c0f04f49805996",
+      "previous_sha256": "b0d6600dbbb5dd08d383258d8d25ea221ee9949ac33c9d05ad79123893644a21",
+      "mean_pixel_difference_0_255": 0.1712
+    },
+    {
+      "path": "guian/tencent_qixing_z17.jpg",
+      "lat": 26.3696,
+      "lon": 106.5007,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        104306,
+        55572
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "524e6b5afa0e92e866f765968d5883eae0c60d12896911976d0ad16ccdddec09",
+      "tile_set_sha256": "b014b8a568c75ec4298d84ddfdc4edfd5a0afae1455179d5802321aa41528b09",
+      "previous_sha256": "f6bbf8a6cc2386313f8483ca0f99bbbaba31868e64dd5aca7d7fbc613da06aed",
+      "mean_pixel_difference_0_255": 0.2008
+    },
+    {
+      "path": "guian/apple_icloud_z17.jpg",
+      "lat": 26.3628,
+      "lon": 106.4672,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        104294,
+        55574
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "978235b771fe6d00ea906d57cb58481d4b2e9b8678f00e376b465e1fb9f8aef3",
+      "tile_set_sha256": "35afce34b7351477149ceaf33021f41a973f7072554628204146543366c49aea",
+      "previous_sha256": "c0a9bb9f9a7cffb54da476d2e74ab992463470f2ee4d9a3d26ee1c2db7b47c75",
+      "mean_pixel_difference_0_255": 0.2112
+    },
+    {
+      "path": "yangquan/baidu_z17.jpg",
+      "lat": 37.8597,
+      "lon": 113.6225,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        106899,
+        50617
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "5914a1b215f8568c2cc7409cb7ebd1f259e16ddbc65a63b6d63486b96bc63b91",
+      "tile_set_sha256": "ee32138e0106a8d09f5a7e9ce0b68b346257bda7983ddc9b1fdf7f053511dfcd",
+      "previous_sha256": "dbac4d60fb4d102d89629beeae38b094f909861357ba7be65cc17d919b8f7c4b",
+      "mean_pixel_difference_0_255": 0.2178
+    },
+    {
+      "path": "yangquan/yunfeng_z17.jpg",
+      "lat": 37.8693,
+      "lon": 113.6273,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        106901,
+        50613
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "748c8e9b077b2db979a2ac6358acae3d49bcabf0ebf120f8cf575443770bbcc1",
+      "tile_set_sha256": "fe92861fd2c432020b95eeb21953bdef6b97e60b5c371fd4ccb14cbec4ca1543",
+      "previous_sha256": "4ab4428630aba75b8b6729ce560380c8a8269500e23b01572586a9d78b465844",
+      "mean_pixel_difference_0_255": 0.219
+    },
+    {
+      "path": "yangquan/overview_dalian_z16.jpg",
+      "lat": 37.864,
+      "lon": 113.625,
+      "z": 16,
+      "half": 5,
+      "origin_tile": [
+        53447,
+        25305
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "c8b63f6b5c09318dc39d60b1717998d12ba37e8194744c8432649b90396cb97c",
+      "tile_set_sha256": "87f4c3bea70409ea47c96655bcdb4beb244ca4db564d661cb16e849684f927e3",
+      "previous_sha256": "1cc042b6f84c767f6a9536a3120909750d74abbe1b6372b9f6cfbd2850717143",
+      "mean_pixel_difference_0_255": 0.2245
+    },
+    {
+      "path": "zhongwei/overview_cloudbase_z15.jpg",
+      "lat": 37.622,
+      "lon": 105.328,
+      "z": 15,
+      "half": 6,
+      "origin_tile": [
+        25965,
+        12677
+      ],
+      "size": [
+        3328,
+        3328
+      ],
+      "sha256": "fc942f418daf15cc016941ba38c6d70f693ea758e4a70188ad1eedfd0be1feba",
+      "tile_set_sha256": "2c9528eede1eb9a0ffa3045088b4e9cdf2470d49abc2f00d0c248ae842789baa",
+      "previous_sha256": "e7e0a3137a09a4de5871f83a013b499171c0b484c5b74f25061e44da2abd4e41",
+      "mean_pixel_difference_0_255": 0.1767
+    },
+    {
+      "path": "zhongwei/aws_z17.jpg",
+      "lat": 37.6368,
+      "lon": 105.3468,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        103886,
+        50720
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "f95eb4fb03662e623fcc5868a544b6091eb511b00e5762d49f57d453be434eb5",
+      "tile_set_sha256": "a7a4a8583697edbc29c7b85d32001971b01fd6d62769634e3d4b71a7bc25605d",
+      "previous_sha256": "8a9c23f5c98b6a0e895303cf5e2a13bdddb1b2c4725f1de576e62315b7f036c8",
+      "mean_pixel_difference_0_255": 0.2051
+    },
+    {
+      "path": "karamay/overview_park_z16.jpg",
+      "lat": 45.545,
+      "lon": 84.87,
+      "z": 16,
+      "half": 6,
+      "origin_tile": [
+        48212,
+        23427
+      ],
+      "size": [
+        3328,
+        3328
+      ],
+      "sha256": "3569debd9a53f1a57d9e32a9cbef0df29fd136c684a0404ea82cefc4fc72b3c1",
+      "tile_set_sha256": "874f8cb5e2b217d9fbf5f26c2a0570e05c4e1e48b1166f468e2bff6703f870be",
+      "previous_sha256": "8ba9a026febd8827a8bdaeadd78fb98252359c429c18e876d8105537ae917df5",
+      "mean_pixel_difference_0_255": 0.1795
+    },
+    {
+      "path": "karamay/core_industrial_z17.jpg",
+      "lat": 45.546,
+      "lon": 84.868,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        96430,
+        46862
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "2b82876da7129e083fa1ce1db46308c5323f87d34cef4348cb688db31d160e6e",
+      "tile_set_sha256": "f10d0491d3a0a7ad54fdc5dd19f9b5e6cb041f47ce4041eef2f5a15e3eec528b",
+      "previous_sha256": "1dfc9c1f7a1a4386903d76b52cdb7b4a59f18b73cd86b9e4f459190518789651",
+      "mean_pixel_difference_0_255": 0.2076
+    },
+    {
+      "path": "zhangbei/overview_xiaodai_z16.jpg",
+      "lat": 41.1887,
+      "lon": 114.8623,
+      "z": 16,
+      "half": 6,
+      "origin_tile": [
+        53672,
+        24519
+      ],
+      "size": [
+        3328,
+        3328
+      ],
+      "sha256": "ef668635e12b52e1029a464ccb6a395ee08718bdf3a3a84c014b8797507e08fe",
+      "tile_set_sha256": "ebc97833c64053d6dc61c8a2c22c55c872b97460ffd18398e50a9fb9e764eed1",
+      "previous_sha256": "ef668635e12b52e1029a464ccb6a395ee08718bdf3a3a84c014b8797507e08fe",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "zhangbei/xiaodai_z17.jpg",
+      "lat": 41.1887,
+      "lon": 114.8623,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        107351,
+        49046
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "2971c0bce815e4847be35f7ca4a90b008c1d795d78ffd4c222ace988a23a2b71",
+      "tile_set_sha256": "7069cf9300a725d35942fd9849eea865aef34c16ebefd4d9ed1dd7ecbecf7c96",
+      "previous_sha256": "2971c0bce815e4847be35f7ca4a90b008c1d795d78ffd4c222ace988a23a2b71",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "zhangbei/zhongdu_z17.jpg",
+      "lat": 41.2812,
+      "lon": 114.6822,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        107285,
+        49001
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "d428aa6fcca2287adcd28198f28543aa75084805c5283d9290b91b17bfdc5268",
+      "tile_set_sha256": "3bb3a320919ff37ec2d1480558e7ecc52fb9227dba4ae8aba7906af714d8c42e",
+      "previous_sha256": "d428aa6fcca2287adcd28198f28543aa75084805c5283d9290b91b17bfdc5268",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "zhangbei/miaotan_z17.jpg",
+      "lat": 41.191,
+      "lon": 114.693,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        107289,
+        49045
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "b11c5ac7c2d4257bd8bbaad73eb72de926599381ce4cc77d41c1f76b738e2bd2",
+      "tile_set_sha256": "258d1f43bf7dbc7b5acbbe55c5e8835bcc784720466d32d3da31a04c3822d800",
+      "previous_sha256": "b11c5ac7c2d4257bd8bbaad73eb72de926599381ce4cc77d41c1f76b738e2bd2",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "zhangbei/osm_dc_z17.jpg",
+      "lat": 41.1834,
+      "lon": 114.7302,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        107302,
+        49048
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "4eec0201438668b0de7f45ec36b8385c2b716a3e7562ca4b2c365ab8c57ffc3e",
+      "tile_set_sha256": "3bb2d3c8b0233640938524cd7fa849cf00a9e35c3b5fcb70d8953b17892f28a6",
+      "previous_sha256": "4eec0201438668b0de7f45ec36b8385c2b716a3e7562ca4b2c365ab8c57ffc3e",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "huailai/overview_donghuayuan_z16.jpg",
+      "lat": 40.327,
+      "lon": 115.842,
+      "z": 16,
+      "half": 6,
+      "origin_tile": [
+        53850,
+        24726
+      ],
+      "size": [
+        3328,
+        3328
+      ],
+      "sha256": "2fa180aa35a23585092209ee6c734d9744cfbdcae968e21040c4b1d408b165bb",
+      "tile_set_sha256": "ef045aaf502ca03b49c6fcdca9e73d961fe97bef6765b3dd1d32561795e9c866",
+      "previous_sha256": "2fa180aa35a23585092209ee6c734d9744cfbdcae968e21040c4b1d408b165bb",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "huailai/tencent_z17.jpg",
+      "lat": 40.324848,
+      "lon": 115.819336,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        107699,
+        49461
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "d8ad06053cb9ede0af68e1585d43f91bbc79b46b1e2e09713ccf7f85595e0054",
+      "tile_set_sha256": "9f422679055f6645973de1e9ef4de22cd28811a799b0d7884efe3cf10eeb1133",
+      "previous_sha256": "d8ad06053cb9ede0af68e1585d43f91bbc79b46b1e2e09713ccf7f85595e0054",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "huailai/hoyinn_z17.jpg",
+      "lat": 40.329828,
+      "lon": 115.864606,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        107716,
+        49458
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "e303e831bec3201c5301767d1e7bc128537ab472f9042df87ed9c90af38a4856",
+      "tile_set_sha256": "00fa9a33c14acf92fb259125f1fcd55a7eb5a12993288cad53d4629995aa7823",
+      "previous_sha256": "e303e831bec3201c5301767d1e7bc128537ab472f9042df87ed9c90af38a4856",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "huailai/cunrui_z17.jpg",
+      "lat": 40.487,
+      "lon": 115.567,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        107607,
+        49383
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "c8787792c1ac7a43beb948397e4a263de589bfeb32d09c192f3042b4ae497ce8",
+      "tile_set_sha256": "ddef411d2e58a63b7bacbd2a16e1d9ccb21840574aea0ea43bbcc622f1933439",
+      "previous_sha256": "c8787792c1ac7a43beb948397e4a263de589bfeb32d09c192f3042b4ae497ce8",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "qingyang/overview_wenquan_z16.jpg",
+      "lat": 35.7335,
+      "lon": 107.7044,
+      "z": 16,
+      "half": 6,
+      "origin_tile": [
+        52368,
+        25788
+      ],
+      "size": [
+        3328,
+        3328
+      ],
+      "sha256": "ddac95550f3eee448c0fb404216878f29a970762739d7cc9ea680b45089c7dd2",
+      "tile_set_sha256": "5197f0d988bab146c735a223f1637acf31f242dc6a31f1e7f8203719e50d715a",
+      "previous_sha256": "ddac95550f3eee448c0fb404216878f29a970762739d7cc9ea680b45089c7dd2",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "qingyang/chindata_z17.jpg",
+      "lat": 35.7334,
+      "lon": 107.7018,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        104744,
+        51584
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "ecace25c331d88b9418cbad027423bc851a579121e37a98833929f96dd56b2dd",
+      "tile_set_sha256": "5664e4b34292aa4d378000277778188999d255698a474fc34f2f536477cb2fff",
+      "previous_sha256": "ecace25c331d88b9418cbad027423bc851a579121e37a98833929f96dd56b2dd",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "horinger/overview_yungu_z16.jpg",
+      "lat": 40.539,
+      "lon": 111.823,
+      "z": 16,
+      "half": 6,
+      "origin_tile": [
+        53118,
+        24675
+      ],
+      "size": [
+        3328,
+        3328
+      ],
+      "sha256": "44de1555847bd8fac19fbbbd8a799875da04b7011d83e4f741bb88191f49d72f",
+      "tile_set_sha256": "19746fda41a88ae901ff17fce7147f9e27d734c9ada0fe8586a92eef3c741d94",
+      "previous_sha256": "44de1555847bd8fac19fbbbd8a799875da04b7011d83e4f741bb88191f49d72f",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "horinger/cmcc_z17.jpg",
+      "lat": 40.5369,
+      "lon": 111.8164,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        106242,
+        49359
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "6ae1aa8dd1c535ae1f22e7860fa589b1959493810b39b3aba878236ef85662f5",
+      "tile_set_sha256": "cf00450653d648c764773df5c2bbcd94173ab4f79978dffd28a2d47e13b0c469",
+      "previous_sha256": "6ae1aa8dd1c535ae1f22e7860fa589b1959493810b39b3aba878236ef85662f5",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "horinger/telecom_z17.jpg",
+      "lat": 40.5411,
+      "lon": 111.8291,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        106246,
+        49357
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "bd1d8c7d92dbbb91c47af9bfad99a5084335d5a34120997bcc48701f09bb7fe6",
+      "tile_set_sha256": "04f760783e7cb368baa966401d3bd37c92df50d10c2a289b0c60bc8805384586",
+      "previous_sha256": "bd1d8c7d92dbbb91c47af9bfad99a5084335d5a34120997bcc48701f09bb7fe6",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "shaoguan/overview_huashao_z16.jpg",
+      "lat": 24.783,
+      "lon": 113.5025,
+      "z": 16,
+      "half": 6,
+      "origin_tile": [
+        53424,
+        28102
+      ],
+      "size": [
+        3328,
+        3328
+      ],
+      "sha256": "951206f20a4d242e28c1a5b85cc89b4e95078f8f054eee400018a0a7184c21f1",
+      "tile_set_sha256": "44c27a757f0884685c99d1947044d0825f7dff56312421628b3ed484489f28f4",
+      "previous_sha256": "951206f20a4d242e28c1a5b85cc89b4e95078f8f054eee400018a0a7184c21f1",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "shaoguan/huanan_z17.jpg",
+      "lat": 24.7887,
+      "lon": 113.5003,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        106855,
+        56210
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "11a6d526c4b7abe12a84669ad24747481f973a092ce622b1fa0b7989697d966d",
+      "tile_set_sha256": "b7842d50971b4c2898e4b588cccbbf63790dfe8b9ffc6974c00a5b21491fb249",
+      "previous_sha256": "11a6d526c4b7abe12a84669ad24747481f973a092ce622b1fa0b7989697d966d",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "shaoguan/phase2_z17.jpg",
+      "lat": 24.7789,
+      "lon": 113.5026,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        106856,
+        56214
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "b82921cd352e0cf25997310b4cfa3b1595c3b0eef90185954d8a32def485f82b",
+      "tile_set_sha256": "27798823b76881c85c2f21eda7e664ace47b831b2ba819b19317dc8ad5800be3",
+      "previous_sha256": "b82921cd352e0cf25997310b4cfa3b1595c3b0eef90185954d8a32def485f82b",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "wuhu/overview_cluster_z16.jpg",
+      "lat": 31.3455,
+      "lon": 118.29,
+      "z": 16,
+      "half": 6,
+      "origin_tile": [
+        54296,
+        26747
+      ],
+      "size": [
+        3328,
+        3328
+      ],
+      "sha256": "f96bc651927a6b5eeb0822098363ab1be5bbe5917e3f5bba581fce6674561921",
+      "tile_set_sha256": "12c3f1c7b4a2226fd7614f213a000220e14e3f4dcf860370657f3e11695f1ed3",
+      "previous_sha256": "f96bc651927a6b5eeb0822098363ab1be5bbe5917e3f5bba581fce6674561921",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "wuhu/huawei_z17.jpg",
+      "lat": 31.3484,
+      "lon": 118.2862,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        108597,
+        53501
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "c2432c8a85ecc59f6e3295449dfe34e2042e951e45b23520c1768505111f2527",
+      "tile_set_sha256": "a3f5f44966ffd9c0641b3d3b9fb4d2bff87cd2da1fdb4bdcce9d396ded9ddd3c",
+      "previous_sha256": "c2432c8a85ecc59f6e3295449dfe34e2042e951e45b23520c1768505111f2527",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "wuhu/zhisuan_z17.jpg",
+      "lat": 31.3424,
+      "lon": 118.2971,
+      "z": 17,
+      "half": 5,
+      "origin_tile": [
+        108601,
+        53503
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "04d596c2106ece835087a7965d5388053f79bdacb6a4ed1cb4c6dc9e60508918",
+      "tile_set_sha256": "815244283d4e8e4aecb3ca598bef41bc5795b836d79339df642389f376af9431",
+      "previous_sha256": "04d596c2106ece835087a7965d5388053f79bdacb6a4ed1cb4c6dc9e60508918",
+      "mean_pixel_difference_0_255": 0.0
+    },
+    {
+      "path": "ulanqab/U01_corridor.jpg",
+      "lat": 41.0,
+      "lon": 113.25,
+      "z": 13,
+      "half": 5,
+      "origin_tile": [
+        6668,
+        3066
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "435463c6ff37505b539e2b212b6ab8106c15cfd4324651db7638eb16f206bfa5",
+      "tile_set_sha256": "25d696dbda38b7971e1b887bfb103af24b55a75274655437f522ec822e1f7767"
+    },
+    {
+      "path": "ulanqab/U02_yiwutang.jpg",
+      "lat": 40.985,
+      "lon": 113.238,
+      "z": 16,
+      "half": 5,
+      "origin_tile": [
+        53377,
+        24569
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "12a6222fd72ead7891cd0556b91de9bf7724f39c812007f95c6efe0cb0a51399",
+      "tile_set_sha256": "0e7ab105a945a950832796d5df36406453395c023cfb07b060fa7ee997d6b415"
+    },
+    {
+      "path": "ulanqab/U03_sihao.jpg",
+      "lat": 40.99,
+      "lon": 113.318,
+      "z": 16,
+      "half": 5,
+      "origin_tile": [
+        53391,
+        24568
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "9af21e4b9999ec554a216e730e8019585330626fe0fcafe68ffaa0dfa52cd8c9",
+      "tile_set_sha256": "66adcb6fb3407af2e40a1598d18f4e70ac0f550e57d4f3fa0d5a0243cf958635"
+    },
+    {
+      "path": "ulanqab/U04_shengjiaying.jpg",
+      "lat": 41.041,
+      "lon": 113.31,
+      "z": 16,
+      "half": 5,
+      "origin_tile": [
+        53390,
+        24556
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "7bffe9a192537e0b4b069cb0730599763c7616d120a45d96e2a51db02a845157",
+      "tile_set_sha256": "04c4a6c858b9c6d636d71934254b0010eaa5bad5a6ec666b69116950073e0e5e"
+    },
+    {
+      "path": "ulanqab/U05_qianqi.jpg",
+      "lat": 40.786,
+      "lon": 113.221,
+      "z": 16,
+      "half": 5,
+      "origin_tile": [
+        53374,
+        24617
+      ],
+      "size": [
+        2816,
+        2816
+      ],
+      "sha256": "ebdbfaa2a7961cd3f9f9ccd1586d823b1c7c1dec4f5d9820d71bf43b927a38dc",
+      "tile_set_sha256": "7fa08f0de1dbc2c007065bad6e8f64e32fc7e81daa391ee1b73d88f11624227b"
+    }
+  ],
+  "plates": [
+    {
+      "path": "guian/G01_cluster_overview.jpg",
+      "source": "guian/overview_shugu_z15.jpg",
+      "sha256": "1ff35c96a9a6d53df17510442cf51742a967d245e9d15ec4eb86f51e32b739b6"
+    },
+    {
+      "path": "guian/G02_huawei_tencent.jpg",
+      "source": "guian/tencent_qixing_z17.jpg",
+      "sha256": "5f4350039597ceec7d2ad99d3aab4b0caabc8a8b5c3f5ebd0c244174687db510"
+    },
+    {
+      "path": "guian/G03_apple_icloud.jpg",
+      "source": "guian/apple_icloud_z17.jpg",
+      "sha256": "06d16448c403457d00c65936781f9ddf0ca1c17324890f5e281f9dca68461f21"
+    },
+    {
+      "path": "yangquan/Y01_baidu.jpg",
+      "source": "yangquan/baidu_z17.jpg",
+      "sha256": "cf20b1a9a92702a8adde259300d175abade3fa2540aa6e29ff73b09ac61460a5"
+    },
+    {
+      "path": "yangquan/Y02_yunfeng.jpg",
+      "source": "yangquan/yunfeng_z17.jpg",
+      "sha256": "6fe66702b6925ba8f5026063cbc05541b9cb16ccf10bf8fef227db2479de2405"
+    },
+    {
+      "path": "yangquan/Y03_dalian_overview.jpg",
+      "source": "yangquan/overview_dalian_z16.jpg",
+      "sha256": "f15af9b4a7a235075a5ecd889b33fe4f018da97ba7ac50e68b1e952e896440ec"
+    },
+    {
+      "path": "zhongwei/Z01_cloudbase_overview.jpg",
+      "source": "zhongwei/overview_cloudbase_z15.jpg",
+      "sha256": "6e0af8c8a330e4fc1a2ed74d9bd5e98583a0a27f488046307abc35d7b3049930"
+    },
+    {
+      "path": "zhongwei/Z02_white_halls.jpg",
+      "source": "zhongwei/aws_z17.jpg",
+      "sha256": "547369a35b162f8623218fb394e7a1a2fa6822c8fe3ca834303aab6797b4ef38"
+    },
+    {
+      "path": "karamay/K01_park_overview.jpg",
+      "source": "karamay/overview_park_z16.jpg",
+      "sha256": "d6962bce3f1005a851f334aa21039d60ba0f8c3eb5d0718a9309e611009e08fc"
+    },
+    {
+      "path": "karamay/K02_halls_candidate.jpg",
+      "source": "karamay/core_industrial_z17.jpg",
+      "sha256": "9d5227eac0c1162af9d93ec2b7b8390487b04dff394abde44cc458bb3ba42500"
+    },
+    {
+      "path": "zhangbei/ZB01_xiaodai_overview.jpg",
+      "source": "zhangbei/overview_xiaodai_z16.jpg",
+      "sha256": "8acc9b4d022a0e9bc1367f789ca6efd9a9db4504b6f5665cbda666f73d905c19"
+    },
+    {
+      "path": "zhangbei/ZB02_xiaodai_halls.jpg",
+      "source": "zhangbei/xiaodai_z17.jpg",
+      "sha256": "c955a389b6ed3969f75b69e2725ed264a1307e44585112bb015d414b8ff5e862"
+    },
+    {
+      "path": "zhangbei/ZB03_zhongdu.jpg",
+      "source": "zhangbei/zhongdu_z17.jpg",
+      "sha256": "325b07a670e3a31e09dc610b9a41a7447461876bfe067e0adde367e592973719"
+    },
+    {
+      "path": "zhangbei/ZB04_miaotan.jpg",
+      "source": "zhangbei/miaotan_z17.jpg",
+      "sha256": "1d8538dc55aef0489bf18642a3148f8d3e5d858c542f37458490523f5c424084"
+    },
+    {
+      "path": "zhangbei/ZB05_osm_dc.jpg",
+      "source": "zhangbei/osm_dc_z17.jpg",
+      "sha256": "134ac2dcf99d57bd183a079943fb33cf9da6698a37992cb43a098dddd2b444eb"
+    },
+    {
+      "path": "huailai/HL01_donghuayuan_overview.jpg",
+      "source": "huailai/overview_donghuayuan_z16.jpg",
+      "sha256": "a07860e4a13580827d7966b7e77ec0cf839fcdfbebc52ecac6d67deb45b4dbaa"
+    },
+    {
+      "path": "huailai/HL02_tencent_cmcc.jpg",
+      "source": "huailai/tencent_z17.jpg",
+      "sha256": "9ad1a9d7df2106b1e83d355629c27a18c6910fbde64e335382e44da1a3a78d6c"
+    },
+    {
+      "path": "huailai/HL03_hoyinn.jpg",
+      "source": "huailai/hoyinn_z17.jpg",
+      "sha256": "8e1de65871759597825332be5c8fb5b299317e8228c28e25b78c76d2081ef773"
+    },
+    {
+      "path": "huailai/HL04_cunrui.jpg",
+      "source": "huailai/cunrui_z17.jpg",
+      "sha256": "db5a8639a4cb6f13689c183e6f995bd5b42e9695ad786eeea3347928120bf6c1"
+    },
+    {
+      "path": "qingyang/QY01_wenquan_overview.jpg",
+      "source": "qingyang/overview_wenquan_z16.jpg",
+      "sha256": "a2cd11a33b34fb865e2fa5bc471db6a644038e7387c51bddb2cd843cf4f175ce"
+    },
+    {
+      "path": "qingyang/QY02_chindata.jpg",
+      "source": "qingyang/chindata_z17.jpg",
+      "sha256": "7117850a3ecbd948da345646a6e9ca96319d75644dc2bcba84213d6bfcceaf0e"
+    },
+    {
+      "path": "horinger/HG01_yungu_overview.jpg",
+      "source": "horinger/overview_yungu_z16.jpg",
+      "sha256": "e57485955b32855dc2f854f017ceb6ef86dbb9257ba8cebc29ee043859b03f2b"
+    },
+    {
+      "path": "horinger/HG02_cmcc.jpg",
+      "source": "horinger/cmcc_z17.jpg",
+      "sha256": "fab5b1b7e7a23595bc6081f9193570ad25bc0e5a99cd565f9342920c04372160"
+    },
+    {
+      "path": "horinger/HG03_telecom.jpg",
+      "source": "horinger/telecom_z17.jpg",
+      "sha256": "3944e45aeec82214d03645ad53aae4d468603dc0c58fbf35569ab38b0aa7a5b7"
+    },
+    {
+      "path": "shaoguan/SG01_huashao_overview.jpg",
+      "source": "shaoguan/overview_huashao_z16.jpg",
+      "sha256": "7c8950dbb1f5074691db4549d318f767f11fd6433c7523657e07de5a90acea1a"
+    },
+    {
+      "path": "shaoguan/SG02_huanan.jpg",
+      "source": "shaoguan/huanan_z17.jpg",
+      "sha256": "f2a925c11e58d424cd2f7bbfb1315c2cbfc261f4f104eb8f9e9d98c3974a8767"
+    },
+    {
+      "path": "shaoguan/SG03_phase2.jpg",
+      "source": "shaoguan/phase2_z17.jpg",
+      "sha256": "429c3bbf9fd74e970110eb343f9b5d306f22348d438cd0d3e0836ab0cacbf290"
+    },
+    {
+      "path": "wuhu/WH01_cluster_overview.jpg",
+      "source": "wuhu/overview_cluster_z16.jpg",
+      "sha256": "023f3bff4454675416f5e314d3111bafad6c7f4ad8c914e8cf95d2e130af88e0"
+    },
+    {
+      "path": "wuhu/WH02_huawei.jpg",
+      "source": "wuhu/huawei_z17.jpg",
+      "sha256": "833ef7f9c015933768b57c8b6d771fddd52c8707393ee82333c527ac1e349dca"
+    },
+    {
+      "path": "wuhu/WH03_zhisuan.jpg",
+      "source": "wuhu/zhisuan_z17.jpg",
+      "sha256": "e53dd71be7de0c096cdc0dad43e4ab133fff3df38af91e6c2a81fb7f2c7f18bb"
+    },
+    {
+      "path": "ulanqab/U01_corridor.jpg",
+      "source": "ulanqab/U01_corridor.jpg",
+      "sha256": "36f19a2412bc4b2c684519d165dc04d5a07fbdf332e2e78673ac313871b62a4d"
+    },
+    {
+      "path": "ulanqab/U02_yiwutang.jpg",
+      "source": "ulanqab/U02_yiwutang.jpg",
+      "sha256": "e566cf092af55a5392a185773d55d3684c8a78158984f791712d9010caa078f3"
+    },
+    {
+      "path": "ulanqab/U03_sihao.jpg",
+      "source": "ulanqab/U03_sihao.jpg",
+      "sha256": "34be4621d8840b1d6e414c739fcffa5e90fd0e9099aa0bdeaf50d0baca0d4c05"
+    },
+    {
+      "path": "ulanqab/U04_shengjiaying.jpg",
+      "source": "ulanqab/U04_shengjiaying.jpg",
+      "sha256": "26e635d91b6a1b61c9391e368ff299193fa68e664d7458d641618f65f3e1cd19"
+    },
+    {
+      "path": "ulanqab/U05_qianqi.jpg",
+      "source": "ulanqab/U05_qianqi.jpg",
+      "sha256": "f308903aa1126e84348fa1db687a1b8183e29cc719bf0b299bc87036c60f7aab"
+    }
+  ],
+  "service_copyright": "Source: Esri, Vantor, Earthstar Geographics, and the GIS User Community"
+}

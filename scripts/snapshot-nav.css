@@ -1,0 +1,20 @@
+/* Separate from archived styles so date navigation also works on the oldest pages. */
+.snapshot-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .7rem max(1rem, calc((100% - 1160px) / 2));
+  background: #e8eff4;
+  color: #172e43;
+  border-bottom: 1px solid #c7d6e0;
+  font: 14px/1.6 "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.snapshot-nav > span { flex: none; font-weight: 600; }
+.snapshot-dates { display: flex; gap: .5rem; overflow-x: auto; min-width: 0; padding: .25rem; }
+.snapshot-dates a { flex: none; color: #496072; padding: .35rem .65rem; border-radius: 5px; text-decoration: none; }
+.snapshot-dates a:hover { background: #d7e5ec; color: #172e43; }
+.snapshot-dates a[aria-current="date"] { background: #17364c; color: #fff; }
+.snapshot-dates a:focus-visible { outline: 3px solid #167b83; outline-offset: 2px; }
+@media (max-width: 560px) {
+  .snapshot-nav { align-items: stretch; flex-direction: column; gap: .2rem; font-size: 13px; }
+}
