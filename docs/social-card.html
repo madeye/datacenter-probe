@@ -116,14 +116,23 @@
 <body>
   <section class="copy">
     <div class="brand">Datacenter Probe</div>
-    <p class="kicker">Satellite reconnaissance · five cities</p>
-    <h1><span>数据中心造就的</span><span>五座城</span></h1>
-    <p class="lede">贵安、乌兰察布、阳泉、中卫、克拉玛依。</p>
-    <p class="meta">Esri World Imagery  ·  2026-08  ·  r = 50 km</p>
+    <p class="kicker">Satellite reconnaissance · eleven cities</p>
+    <h1><span>中国数据中心</span><span>十一座城市</span></h1>
+    <p class="lede">逐城核查园区、机房与建设地块。</p>
+    <p class="meta">Esri World Imagery · 获取 2026-09-23 · 原核查 2026-08</p>
   </section>
   <div class="viz">
     <img src="plates/guian/G01_cluster_overview.jpg" alt="">
     <span class="caption">贵安 · 数谷大道 · 华为 / 腾讯 / 苹果</span>
   </div>
+  <script>
+    (async () => {
+      await Promise.all([
+        document.fonts.ready,
+        ...[...document.images].map(img => img.decode()),
+      ]);
+      document.documentElement.dataset.ready = "1";
+    })();
+  </script>
 </body>
 </html>

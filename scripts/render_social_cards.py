@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render 1200×630 PNG social cards for each city page."""
+"""Render 1200×630 PNG social cards for the homepage and city pages."""
 from __future__ import annotations
 
 import subprocess
@@ -170,7 +170,7 @@ CARDS = [
         region="Inner Mongolia",
         lede="以集宁城区为圆心，50 公里卫星核查。<br>机房全部落在东面 G110 走廊。",
         meta="41.0181°N  113.1155°E  ·  r = 50 km",
-        image="../plates/ulanqab/hero_corridor.jpg",
+        image="../plates/ulanqab/U01_corridor.jpg",
         caption="乌兰察布 · 集宁 · G110 走廊",
         pos="72% 62%",
     ),
@@ -178,7 +178,7 @@ CARDS = [
         slug="yangquan",
         city="阳泉",
         region="Shanxi",
-        lede="五座城里最小的一处。<br>大连街百度约 8 栋模组，云峰在北侧。",
+        lede="机房集中在一处街区。<br>大连街百度约 8 栋模组，云峰在北侧。",
         meta="37.8600°N  113.6230°E  ·  r = 50 km",
         image="../plates/yangquan/Y03_dalian_overview.jpg",
         caption="阳泉 · 大连街 · 百度 / 云峰",
@@ -294,9 +294,14 @@ def main() -> int:
     slugs = set(sys.argv[1:])
     cards = [c for c in CARDS if not slugs or c["slug"] in slugs]
     if slugs:
-        missing = slugs - {c["slug"] for c in cards}
+        missing = slugs - {c["slug"] for c in cards} - {"index"}
         if missing:
             raise SystemExit(f"unknown slug(s): {', '.join(sorted(missing))}")
+    if not slugs or "index" in slugs:
+        html = DOCS / "social-card.html"
+        png = html.with_suffix(".png")
+        screenshot(html, png)
+        print("wrote", png.relative_to(ROOT), png.stat().st_size)
     for card in cards:
         html = write_html(card)
         png = html.with_suffix(".png")

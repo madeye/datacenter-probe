@@ -2,7 +2,7 @@ name: GitHub Pages
 
 on:
   push:
-    branches: [main, master, research/ulanqab-50km-dc-satellite, research/five-cities-dc-satellite]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -12,19 +12,31 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image tooling dependencies
+        run: python3 -m pip install -r requirements.txt
+      - name: Test site tooling
+        run: python3 -m unittest discover -s tests -v
+      - name: Build dated snapshots
+        run: python3 scripts/build_snapshots.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4

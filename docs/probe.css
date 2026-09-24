@@ -459,3 +459,7 @@ footer { margin-top: 3rem; font-family: var(--sans); line-height: 1.9; }
   .city-card { min-height: auto; }
   .lightbox { padding: .5rem; }
 }
+
+.imagery-note { grid-column: 1 / -1; font-size: .8rem; color: var(--secondary); padding: .8rem 1rem; background: var(--surface); border-left: 3px solid var(--accent); margin: 1rem 0 0; }
+.historical-plates summary { cursor: pointer; color: var(--accent); padding: .75rem 0; }
+.historical-plates figure { margin-top: 1rem; }
